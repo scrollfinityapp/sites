@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stephanie Mcdonald — Pickleball Coach Lessons in Buena Vista, Colorado</title>
+  <meta name="description" content="Pickleball coaching in Buena Vista, CO. Private lessons, group clinics, tournament prep for all skill levels. Book your first session today.">
+  <meta property="og:title" content="Stephanie Mcdonald — Pickleball Coach Lessons in Buena Vista, Colorado">
+  <meta property="og:description" content="Pickleball coaching in Buena Vista, CO. Private lessons, group clinics, tournament prep for all skill levels. Book your first session today.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1737476997205-b3336182f215?w=800&q=80&fit=crop">
+  <meta property="og:url" content="https://stephanie-mcdonald-pickleball.scrollfinity.com">
+  <meta property="og:type" content="website">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Stephanie Mcdonald Pickleball Coaching",
+    "description": "Pickleball coaching in Buena Vista, CO. Private lessons, group clinics, tournament prep for all skill levels. Book your first session today.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Buena Vista",
+      "addressRegion": "CO",
+      "addressCountry": "US"
+    },
+    "email": "smcdonald1107@hotmail.com",
+    "telephone": "(281) 685-3557",
+    "url": "https://stephanie-mcdonald-pickleball.scrollfinity.com"
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&family=Caveat:wght@700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #0F1D2B;
+      --accent: #A4D907;
+      --bg: #F5F7F8;
+      --text: #1a1a1a;
+      --card: #FFFFFF;
+      --dark: #0F1D2B;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; color: var(--text); background: var(--bg); line-height: 1.6; }
+
+    /* NAV */
+    .nav { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: var(--dark); padding: 0 40px; height: 64px; display: flex; align-items: center; justify-content: space-between; transition: box-shadow .3s; }
+    .nav.scrolled { box-shadow: 0 2px 20px rgba(0,0,0,.3); }
+    .nav-logo { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; font-size: 18px; color: #fff; text-decoration: none; letter-spacing: -0.3px; }
+    .nav-links { display: flex; align-items: center; gap: 28px; }
+    .nav-links a { font-family: 'Inter', sans-serif; font-weight: 500; font-size: 14px; color: rgba(255,255,255,.7); text-decoration: none; text-transform: uppercase; letter-spacing: 1px; transition: color .2s; }
+    .nav-links a:hover { color: #fff; }
+    .nav-cta { background: var(--accent) !important; color: var(--dark) !important; padding: 10px 24px !important; border-radius: 8px; font-weight: 700 !important; font-size: 14px !important; text-transform: uppercase !important; letter-spacing: .5px !important; transition: transform .2s, box-shadow .2s !important; }
+    .nav-cta:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(164,217,7,.3); }
+    .nav-mobile-toggle { display: none; background: none; border: none; cursor: pointer; padding: 4px; }
+    .nav-mobile-toggle span { display: block; width: 24px; height: 2px; background: #fff; margin: 5px 0; transition: .3s; }
+
+    /* HERO */
+    .hero { position: relative; min-height: 100vh; display: flex; align-items: center; background: url('https://images.unsplash.com/photo-1737476997205-b3336182f215?w=1400&q=80&fit=crop') center/cover no-repeat; padding: 120px 40px 80px; }
+    .hero::before { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, rgba(15,29,43,.92) 0%, rgba(15,29,43,.75) 50%, rgba(15,29,43,.5) 100%); }
+    .hero-content { position: relative; z-index: 2; max-width: 680px; }
+    .hero-label { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 700; font-size: 13px; color: var(--accent); text-transform: uppercase; letter-spacing: 3px; margin-bottom: 16px; }
+    .hero h1 { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; font-size: clamp(42px, 5.5vw, 72px); color: #fff; line-height: 1.05; margin-bottom: 8px; letter-spacing: -1px; }
+    .hero-script { font-family: 'Caveat', cursive; font-size: clamp(32px, 4vw, 52px); color: var(--accent); display: block; margin-bottom: 20px; transform: rotate(-1deg); }
+    .hero-sub { font-family: 'Inter', sans-serif; font-size: 18px; color: rgba(255,255,255,.75); line-height: 1.6; max-width: 520px; margin-bottom: 36px; }
+    .hero-btns { display: flex; gap: 16px; flex-wrap: wrap; }
+    .btn-primary { display: inline-flex; align-items: center; gap: 8px; background: var(--accent); color: var(--dark); font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 700; font-size: 15px; padding: 16px 32px; border-radius: 10px; text-decoration: none; text-transform: uppercase; letter-spacing: .5px; transition: transform .2s, box-shadow .2s; }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(164,217,7,.25); }
+    .btn-secondary { display: inline-flex; align-items: center; gap: 8px; background: transparent; color: #fff; font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 600; font-size: 15px; padding: 16px 32px; border-radius: 10px; text-decoration: none; border: 2px solid rgba(255,255,255,.3); transition: border-color .2s, background .2s; }
+    .btn-secondary:hover { border-color: #fff; background: rgba(255,255,255,.05); }
+    .weather-widget { position: absolute; top: 100px; right: 40px; z-index: 5; background: rgba(255,255,255,.12); backdrop-filter: blur(16px); border: 1px solid rgba(255,255,255,.15); border-radius: 12px; padding: 12px 18px; color: #fff; font-size: 13px; display: none; align-items: center; gap: 10px; }
+    .weather-widget.loaded { display: flex; }
+    .weather-temp { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; font-size: 22px; }
+    .weather-msg { opacity: .8; max-width: 160px; line-height: 1.3; }
+
+    /* STATS BAR */
+    .stats-bar { background: var(--dark); padding: 40px; display: flex; justify-content: center; gap: 60px; flex-wrap: wrap; border-bottom: 3px solid var(--accent); }
+    .stat-item { display: flex; align-items: center; gap: 16px; }
+    .stat-icon { width: 52px; height: 52px; border-radius: 50%; background: rgba(164,217,7,.12); border: 2px solid var(--accent); display: flex; align-items: center; justify-content: center; font-size: 22px; flex-shrink: 0; }
+    .stat-text { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 700; font-size: 15px; color: #fff; letter-spacing: .5px; }
+
+    /* SECTIONS */
+    .section { padding: 80px 40px; }
+    .section-dark { background: var(--dark); color: #fff; }
+    .section-light { background: var(--bg); }
+    .section-white { background: var(--card); }
+    .section-label { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 700; font-size: 12px; color: var(--accent); text-transform: uppercase; letter-spacing: 3px; margin-bottom: 12px; }
+    .section-heading { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; font-size: clamp(28px, 3.5vw, 42px); letter-spacing: -0.5px; line-height: 1.1; margin-bottom: 16px; }
+    .section-sub { font-size: 16px; color: #666; max-width: 600px; line-height: 1.7; margin-bottom: 40px; }
+    .section-dark .section-sub { color: rgba(255,255,255,.6); }
+    .container { max-width: 1100px; margin: 0 auto; }
+
+    /* ABOUT */
+    .about-grid { display: grid; grid-template-columns: 220px 1fr; gap: 48px; align-items: start; }
+    .about-photo { width: 220px; height: 220px; border-radius: 50%; object-fit: cover; border: 4px solid var(--accent); }
+    .about-text p { font-size: 16px; line-height: 1.8; color: #555; margin-bottom: 16px; }
+
+    /* SERVICES */
+    .services-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+    .service-card { background: var(--card); border-radius: 16px; padding: 32px; border-top: 4px solid var(--accent); box-shadow: 0 2px 12px rgba(0,0,0,.06); transition: transform .2s, box-shadow .2s; }
+    .service-card:hover { transform: translateY(-4px); box-shadow: 0 8px 32px rgba(0,0,0,.1); }
+    .service-emoji { font-size: 32px; margin-bottom: 16px; display: block; }
+    .service-card h3 { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 700; font-size: 18px; margin-bottom: 8px; }
+    .service-card p { font-size: 14px; color: #666; line-height: 1.6; }
+
+    /* COURT QUOTE */
+    .court-quote-block { max-width: 700px; margin: 0 auto; border-left: 4px solid var(--accent); padding: 32px 40px; background: rgba(255,255,255,.04); border-radius: 0 12px 12px 0; }
+    .court-quote-text { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 600; font-size: 22px; color: #fff; line-height: 1.5; font-style: italic; }
+    .court-quote-attr { margin-top: 16px; font-size: 13px; color: rgba(255,255,255,.4); text-transform: uppercase; letter-spacing: 2px; }
+
+    /* QUIZ */
+    .quiz-container { max-width: 650px; margin: 0 auto; background: var(--card); border-radius: 16px; padding: 40px; box-shadow: 0 4px 24px rgba(0,0,0,.08); }
+    .quiz-question { margin-bottom: 28px; padding-bottom: 24px; border-bottom: 1px solid #eee; }
+    .quiz-question:last-of-type { border-bottom: none; }
+    .quiz-question h4 { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 700; font-size: 16px; margin-bottom: 14px; }
+    .quiz-options { display: flex; flex-direction: column; gap: 8px; }
+    .quiz-option { display: flex; align-items: center; gap: 12px; padding: 12px 16px; border-radius: 10px; border: 2px solid #eee; cursor: pointer; font-size: 14px; transition: border-color .2s, background .2s; }
+    .quiz-option:hover { border-color: var(--accent); background: rgba(164,217,7,.04); }
+    .quiz-option.selected { border-color: var(--accent); background: rgba(164,217,7,.08); }
+    .quiz-option input { display: none; }
+    .quiz-option-letter { width: 28px; height: 28px; border-radius: 50%; background: var(--bg); font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 700; font-size: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; transition: background .2s, color .2s; }
+    .quiz-option.selected .quiz-option-letter { background: var(--accent); color: var(--dark); }
+    .quiz-btn { width: 100%; background: var(--accent); color: var(--dark); font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 700; font-size: 15px; padding: 16px; border: none; border-radius: 10px; cursor: pointer; text-transform: uppercase; letter-spacing: .5px; margin-top: 8px; transition: transform .2s, box-shadow .2s; }
+    .quiz-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(164,217,7,.25); }
+    .quiz-result { display: none; text-align: center; padding: 32px; background: var(--bg); border-radius: 12px; margin-top: 24px; }
+    .quiz-result.show { display: block; }
+    .quiz-result h3 { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; font-size: 24px; margin-bottom: 8px; }
+    .quiz-result p { font-size: 15px; color: #666; margin-bottom: 20px; line-height: 1.6; }
+    .quiz-result a { text-decoration: none; }
+
+    /* TESTIMONIALS */
+    .testimonials-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+    .testimonial-card { background: var(--card); border-radius: 16px; padding: 32px; box-shadow: 0 2px 12px rgba(0,0,0,.06); }
+    .testimonial-stars { color: #F4C430; font-size: 18px; margin-bottom: 16px; letter-spacing: 2px; }
+    .testimonial-text { font-size: 15px; color: #555; line-height: 1.7; margin-bottom: 16px; font-style: italic; }
+    .testimonial-author { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 600; font-size: 14px; color: var(--text); }
+
+    /* FAQ */
+    .faq-list { max-width: 700px; margin: 0 auto; }
+    .faq-list details { border-bottom: 1px solid #eee; }
+    .faq-list summary { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 700; font-size: 16px; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; padding: 20px 0; user-select: none; }
+    .faq-list summary::-webkit-details-marker { display: none; }
+    .faq-list summary::after { content: '+'; color: var(--accent); font-size: 24px; font-weight: 700; transition: transform .2s; }
+    .faq-list details[open] summary::after { content: '−'; }
+    .faq-answer { padding: 0 0 20px; color: #666; line-height: 1.7; font-size: 15px; }
+
+    /* BOOKING */
+    .booking-section { text-align: center; }
+    .booking-section .section-heading { color: #fff; }
+    .booking-section .section-sub { color: rgba(255,255,255,.6); margin: 0 auto 32px; }
+
+    /* CONTACT */
+    .contact-form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; max-width: 900px; margin: 0 auto; }
+    .contact-form { display: flex; flex-direction: column; gap: 16px; }
+    .contact-form input, .contact-form textarea { font-family: 'Inter', sans-serif; font-size: 15px; padding: 14px 18px; border: 2px solid #eee; border-radius: 10px; background: #fff; transition: border-color .2s; width: 100%; }
+    .contact-form input:focus, .contact-form textarea:focus { outline: none; border-color: var(--accent); }
+    .contact-form textarea { min-height: 120px; resize: vertical; }
+    .contact-form button { background: var(--accent); color: var(--dark); font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 700; font-size: 15px; padding: 16px; border: none; border-radius: 10px; cursor: pointer; text-transform: uppercase; letter-spacing: .5px; transition: transform .2s; }
+    .contact-form button:hover { transform: translateY(-2px); }
+    .contact-info { display: flex; flex-direction: column; justify-content: center; gap: 20px; }
+    .contact-info-item { display: flex; align-items: center; gap: 14px; font-size: 15px; }
+    .contact-info-item a { color: var(--text); text-decoration: none; font-weight: 500; }
+    .contact-info-item a:hover { color: var(--accent); }
+    .contact-icon { width: 44px; height: 44px; border-radius: 50%; background: rgba(164,217,7,.1); display: flex; align-items: center; justify-content: center; font-size: 18px; flex-shrink: 0; }
+    .form-success { display: none; padding: 16px; background: rgba(164,217,7,.1); color: #2E7D32; border-radius: 10px; font-weight: 500; text-align: center; }
+    .form-error { display: none; padding: 16px; background: #FFF3F3; color: #D32F2F; border-radius: 10px; font-weight: 500; text-align: center; }
+
+    /* MAP */
+    .map-container { border-radius: 16px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,.08); }
+    .map-container iframe { width: 100%; height: 300px; border: none; }
+
+    /* COURT DIRECTORY */
+    .courts-coach-note { font-style: italic; color: #888; font-size: 15px; margin-bottom: 28px; line-height: 1.6; }
+    .courts-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 32px; }
+    .court-card { background: var(--card); border-radius: 14px; padding: 24px; box-shadow: 0 2px 12px rgba(0,0,0,.06); transition: transform .2s; }
+    .court-card:hover { transform: translateY(-3px); }
+    .court-card h4 { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 700; font-size: 16px; color: var(--primary); margin-bottom: 8px; }
+    .court-badge { display: inline-block; font-size: 11px; font-weight: 600; padding: 3px 10px; border-radius: 12px; margin-bottom: 10px; text-transform: uppercase; letter-spacing: .5px; }
+    .court-badge.outdoor { background: #EDF7ED; color: #2E7D32; border: 1px solid #B5D9B5; }
+    .court-badge.indoor { background: #E8F4FD; color: #1B6B9E; border: 1px solid #B8D9F0; }
+    .court-card .court-addr { font-size: 13px; color: #999; margin-bottom: 6px; }
+    .court-card .court-desc { font-size: 14px; color: #666; line-height: 1.5; margin-bottom: 14px; }
+    .court-directions { display: inline-flex; align-items: center; gap: 6px; font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 600; font-size: 13px; color: var(--primary); text-decoration: none; border: 2px solid var(--primary); padding: 8px 16px; border-radius: 8px; transition: background .2s, color .2s; }
+    .court-directions:hover { background: var(--primary); color: #fff; }
+    .courts-callout { background: var(--primary); color: #fff; border-radius: 14px; padding: 32px 40px; display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
+    .courts-callout p { font-size: 16px; max-width: 600px; line-height: 1.6; }
+    .courts-callout a { display: inline-flex; align-items: center; gap: 8px; background: var(--accent); color: var(--dark); font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 700; font-size: 14px; padding: 14px 28px; border-radius: 10px; text-decoration: none; text-transform: uppercase; letter-spacing: .5px; white-space: nowrap; transition: transform .2s; }
+    .courts-callout a:hover { transform: translateY(-2px); }
+
+    /* FOOTER */
+    .footer { background: var(--dark); color: rgba(255,255,255,.5); padding: 24px 40px; display: flex; justify-content: space-between; align-items: center; font-size: 13px; border-top: 1px solid rgba(255,255,255,.08); }
+    .footer a { color: var(--accent); text-decoration: none; }
+    .footer a:hover { text-decoration: underline; }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      .nav { padding: 0 20px; }
+      .nav-links { display: none; flex-direction: column; position: absolute; top: 64px; left: 0; right: 0; background: var(--dark); padding: 20px; gap: 16px; }
+      .nav-links.open { display: flex; }
+      .nav-mobile-toggle { display: block; }
+      .hero { padding: 100px 20px 60px; min-height: 90vh; }
+      .weather-widget { top: 80px; right: 20px; }
+      .section { padding: 60px 20px; }
+      .stats-bar { gap: 24px; padding: 32px 20px; }
+      .stat-item { flex: 1 1 100%; justify-content: center; }
+      .about-grid { grid-template-columns: 1fr; text-align: center; justify-items: center; }
+      .services-grid { grid-template-columns: 1fr; }
+      .testimonials-grid { grid-template-columns: 1fr; }
+      .contact-form-grid { grid-template-columns: 1fr; gap: 32px; }
+      .courts-grid { grid-template-columns: 1fr; }
+      .courts-callout { flex-direction: column; text-align: center; padding: 24px; }
+      .footer { flex-direction: column; gap: 8px; text-align: center; }
+      .hero h1 { font-size: 36px; }
+      .hero-script { font-size: 28px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="navbar">
+    <a href="#" class="nav-logo">STEPHANIE MCDONALD</a>
+    <div class="nav-links" id="navLinks">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#quiz">Quiz</a>
+      <a href="mailto:smcdonald1107@hotmail.com" class="nav-cta">Book Now</a>
+    </div>
+    <button class="nav-mobile-toggle" id="navToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <div class="hero-label">Pickleball Coaching</div>
+      <h1>Pickleball Coaching<br>in Buena Vista</h1>
+      <span class="hero-script">Your Game, Your Pace.</span>
+      <p class="hero-sub">Professional pickleball coaching for all skill levels in Buena Vista, CO. Whether you're picking up a paddle for the first time or sharpening your competitive edge.</p>
+      <div class="hero-btns">
+        <a href="mailto:smcdonald1107@hotmail.com" class="btn-primary">Book a Session →</a>
+        <a href="#services" class="btn-secondary">See My Services</a>
+      </div>
+    </div>
+    <div class="weather-widget" id="weatherWidget">
+      <div><span class="weather-temp" id="weatherTemp"></span></div>
+      <div class="weather-msg" id="weatherMsg"></div>
+    </div>
+  </section>
+
+  <!-- STATS BAR -->
+  <div class="stats-bar">
+    <div class="stat-item">
+      <div class="stat-icon">🏆</div>
+      <div class="stat-text">5+ Years Coaching</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-icon">👥</div>
+      <div class="stat-text">150+ Players Trained</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-icon">🎯</div>
+      <div class="stat-text">All Skill Levels Welcome</div>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section class="section section-white" id="about">
+    <div class="container">
+      <div class="section-label">ABOUT ME</div>
+      <div class="section-heading">Your court, your pace, your game.</div>
+      <div class="about-grid">
+        <img src="https://images.unsplash.com/photo-1737476997205-b3336182f215?w=400&q=80&fit=crop" alt="Stephanie Mcdonald — Pickleball Coach" class="about-photo">
+        <div class="about-text">
+          <p>I'm Stephanie, a pickleball instructor based in Buena Vista, CO. I love helping players at every level discover the game and find their rhythm on the court. Whether you're brand new to pickleball or looking to sharpen your strategy, I'll meet you where you are and help you build real, lasting skills — all while having a great time doing it.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="section section-light" id="services">
+    <div class="container">
+      <div class="section-label">WHAT I OFFER</div>
+      <div class="section-heading">Training for every level</div>
+      <div class="section-sub">From your first swing to tournament day — programs designed to meet you where you are.</div>
+      <div class="services-grid">
+        <div class="service-card">
+          <span class="service-emoji">🎯</span>
+          <h3>Private Coaching</h3>
+          <p>One-on-one sessions tailored to your skill level, technique, and match strategy.</p>
+        </div>
+        <div class="service-card">
+          <span class="service-emoji">👥</span>
+          <h3>Group Clinics</h3>
+          <p>Small-group sessions (4–8 players) covering drills, point play, and doubles strategy.</p>
+        </div>
+        <div class="service-card">
+          <span class="service-emoji">🏆</span>
+          <h3>Tournament Prep</h3>
+          <p>Intensive sessions for competitive players. Game plans, mental toughness, match simulation.</p>
+        </div>
+        <div class="service-card">
+          <span class="service-emoji">🟢</span>
+          <h3>Beginner Fundamentals</h3>
+          <p>A four-session starter program. Grip, serve, dink, basic court positioning. No experience needed.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COURT QUOTE -->
+  <section class="section section-dark" id="quote">
+    <div class="container" style="text-align:center;">
+      <div class="section-label">DAILY INSPIRATION</div>
+      <div class="section-heading" style="color:#fff; margin-bottom:32px;">Today's Court Wisdom</div>
+      <div class="court-quote-block">
+        <div class="court-quote-text" id="courtQuote"></div>
+        <div class="court-quote-attr">— Daily Court Wisdom</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUIZ -->
+  <section class="section section-light" id="quiz">
+    <div class="container" style="text-align:center;">
+      <div class="section-label">FIND YOUR FIT</div>
+      <div class="section-heading">What kind of player are you?</div>
+      <div class="section-sub" style="margin:0 auto 40px;">Answer three quick questions and we'll recommend the perfect program for your level.</div>
+      <div class="quiz-container" id="quizContainer">
+        <div class="quiz-question">
+          <h4>1. How long have you been playing?</h4>
+          <div class="quiz-options">
+            <label class="quiz-option" onclick="selectOption(this,'q1','A')"><input type="radio" name="q1" value="A"><span class="quiz-option-letter">A</span> Never picked up a paddle</label>
+            <label class="quiz-option" onclick="selectOption(this,'q1','B')"><input type="radio" name="q1" value="B"><span class="quiz-option-letter">B</span> Less than 1 year</label>
+            <label class="quiz-option" onclick="selectOption(this,'q1','C')"><input type="radio" name="q1" value="C"><span class="quiz-option-letter">C</span> 1–3 years</label>
+            <label class="quiz-option" onclick="selectOption(this,'q1','D')"><input type="radio" name="q1" value="D"><span class="quiz-option-letter">D</span> 3+ years / I compete</label>
+          </div>
+        </div>
+        <div class="quiz-question">
+          <h4>2. What's your biggest challenge on the court?</h4>
+          <div class="quiz-options">
+            <label class="quiz-option" onclick="selectOption(this,'q2','A')"><input type="radio" name="q2" value="A"><span class="quiz-option-letter">A</span> I don't know where to start</label>
+            <label class="quiz-option" onclick="selectOption(this,'q2','B')"><input type="radio" name="q2" value="B"><span class="quiz-option-letter">B</span> My shots are inconsistent</label>
+            <label class="quiz-option" onclick="selectOption(this,'q2','C')"><input type="radio" name="q2" value="C"><span class="quiz-option-letter">C</span> I lose points at the net</label>
+            <label class="quiz-option" onclick="selectOption(this,'q2','D')"><input type="radio" name="q2" value="D"><span class="quiz-option-letter">D</span> I struggle in tournament pressure</label>
+          </div>
+        </div>
+        <div class="quiz-question" style="border-bottom:none; padding-bottom:0;">
+          <h4>3. What's your main goal?</h4>
+          <div class="quiz-options">
+            <label class="quiz-option" onclick="selectOption(this,'q3','A')"><input type="radio" name="q3" value="A"><span class="quiz-option-letter">A</span> Learn the basics and have fun</label>
+            <label class="quiz-option" onclick="selectOption(this,'q3','B')"><input type="radio" name="q3" value="B"><span class="quiz-option-letter">B</span> Improve my consistency</label>
+            <label class="quiz-option" onclick="selectOption(this,'q3','C')"><input type="radio" name="q3" value="C"><span class="quiz-option-letter">C</span> Beat players at my level</label>
+            <label class="quiz-option" onclick="selectOption(this,'q3','D')"><input type="radio" name="q3" value="D"><span class="quiz-option-letter">D</span> Win tournaments</label>
+          </div>
+        </div>
+        <button class="quiz-btn" onclick="getQuizResult()">Find My Program →</button>
+        <div class="quiz-result" id="quizResult">
+          <h3 id="quizResultName"></h3>
+          <p id="quizResultDesc"></p>
+          <a href="mailto:smcdonald1107@hotmail.com" class="btn-primary" style="display:inline-flex;">Book This Session →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <!-- PLACEHOLDER: Replace with real testimonials after claiming site -->
+  <section class="section section-white" id="testimonials">
+    <div class="container">
+      <div class="section-label">WHAT PLAYERS SAY</div>
+      <div class="section-heading">Real results from real players</div>
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <div class="testimonial-text">"Stephanie completely changed my approach to dinking. I went from losing every net battle to controlling the kitchen in just a few sessions."</div>
+          <div class="testimonial-author">Rachel T., Buena Vista CO</div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <div class="testimonial-text">"Best coaching I've had in any sport. Stephanie breaks things down so clearly and makes every session fun. Highly recommend for any level."</div>
+          <div class="testimonial-author">Mark L., Buena Vista CO</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ ACCORDION -->
+  <section class="section section-light" id="faq">
+    <div class="container">
+      <div class="section-label">COMMON QUESTIONS</div>
+      <div class="section-heading">Everything you need to know</div>
+      <div class="faq-list">
+        <details>
+          <summary>What paddle should I bring to my first lesson?</summary>
+          <div class="faq-answer">Don't worry about gear yet — I have loaner paddles you can use. Once we identify your playing style, I'll recommend the right paddle for you. Most beginners do fine with any mid-range composite paddle.</div>
+        </details>
+        <details>
+          <summary>How long are lessons and how often should I train?</summary>
+          <div class="faq-answer">Private sessions are 60 minutes. For beginners, once a week is a great start. More serious players often train 2–3 times a week. We'll figure out a schedule that fits your life and your goals.</div>
+        </details>
+        <details>
+          <summary>Do I need any experience to work with you?</summary>
+          <div class="faq-answer">None at all. I work with complete beginners through competitive tournament players. My beginner program is specifically designed for people who have never held a paddle.</div>
+        </details>
+        <details>
+          <summary>Do you teach kids or just adults?</summary>
+          <div class="faq-answer">I primarily coach adults, but I do work with junior players age 12 and up. Reach out and we'll figure out if it's a good fit.</div>
+        </details>
+        <details>
+          <summary>Where do sessions take place?</summary>
+          <div class="faq-answer">Sessions are held at local courts in Buena Vista. I'll send you the exact location when you book. Indoor facilities are available for rain days.</div>
+        </details>
+        <details>
+          <summary>What if I need to cancel or reschedule?</summary>
+          <div class="faq-answer">Life happens. I just ask for 24 hours notice for cancellations so I can open the slot for another player. Same-day cancellations are charged at 50% of the session rate.</div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOOKING -->
+  <section class="section section-dark booking-section" id="booking">
+    <div class="container" style="text-align:center;">
+      <div class="section-label">GET ON THE COURT</div>
+      <div class="section-heading">Ready to level up your game?</div>
+      <p class="section-sub">Spots are limited — serious players only.</p>
+      <a href="mailto:smcdonald1107@hotmail.com" class="btn-primary" style="font-size:16px; padding:18px 40px;">Book a Session →</a>
+    </div>
+  </section>
+
+  <!-- CONTACT FORM -->
+  <!-- Coach: Register this form at formspree.io to receive submissions -->
+  <section class="section section-white" id="contact">
+    <div class="container">
+      <div class="section-label">GET IN TOUCH</div>
+      <div class="section-heading">Have a question? Send Stephanie a message.</div>
+      <div class="contact-form-grid">
+        <form class="contact-form" id="contactForm" action="https://formspree.io/f/scrollfinity-stephanie-mcdonald-pickleball" method="POST">
+          <input type="text" name="name" placeholder="Your Name" required>
+          <input type="email" name="email" placeholder="Your Email" required>
+          <textarea name="message" placeholder="Your Message" required></textarea>
+          <button type="submit">Send Message →</button>
+          <div class="form-success" id="formSuccess">Thanks! Stephanie will get back to you soon.</div>
+          <div class="form-error" id="formError">Something went wrong. Email directly at smcdonald1107@hotmail.com</div>
+        </form>
+        <div class="contact-info">
+          <div class="contact-info-item">
+            <div class="contact-icon">📧</div>
+            <a href="mailto:smcdonald1107@hotmail.com">smcdonald1107@hotmail.com</a>
+          </div>
+          <div class="contact-info-item">
+            <div class="contact-icon">📱</div>
+            <a href="tel:+12816853557">(281) 685-3557</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAP -->
+  <section class="section section-light" id="map">
+    <div class="container">
+      <div class="section-label" style="margin-bottom:16px;">Find me on the courts in Buena Vista, Colorado</div>
+      <div class="map-container">
+        <iframe src="https://maps.google.com/maps?q=Buena+Vista+Colorado&output=embed" allowfullscreen loading="lazy" title="Map of Buena Vista, Colorado"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- COURT DIRECTORY -->
+  <!-- Coach: Update court names and details with your personal recommendations after claiming your site. -->
+  <section class="section section-white" id="courts">
+    <div class="container">
+      <div class="section-label">LOCAL COURTS</div>
+      <div class="section-heading">Best Places to Play in Buena Vista</div>
+      <div class="section-sub">Recommended by Stephanie — courts worth your time in Buena Vista, Colorado.</div>
+      <p class="courts-coach-note">"These are my go-to courts in Buena Vista. Each one has its own vibe — I'll share my honest take once you book a session."</p>
+      <div class="courts-grid">
+        <div class="court-card">
+          <h4>Buena Vista Recreation Center</h4>
+          <span class="court-badge indoor">Indoor</span>
+          <div class="court-addr">Buena Vista, CO</div>
+          <div class="court-desc">Public indoor courts — usually bookable online. Great option for year-round play in the mountains.</div>
+          <a href="https://maps.google.com/maps?q=Buena+Vista+Recreation+Center+CO" target="_blank" rel="noopener noreferrer" class="court-directions">📍 Get Directions</a>
+        </div>
+        <div class="court-card">
+          <h4>Local Park Pickleball Courts</h4>
+          <span class="court-badge outdoor">Outdoor</span>
+          <div class="court-addr">Buena Vista, CO</div>
+          <div class="court-desc">Free public courts with mountain views — arrive early on weekends for the best play.</div>
+          <a href="https://maps.google.com/maps?q=pickleball+courts+Buena+Vista+CO" target="_blank" rel="noopener noreferrer" class="court-directions">📍 Get Directions</a>
+        </div>
+        <div class="court-card">
+          <h4>Your Favorite Hidden Gem</h4>
+          <span class="court-badge outdoor">Outdoor</span>
+          <div class="court-addr">&nbsp;</div>
+          <div class="court-desc">Ask Stephanie for the inside scoop on the best-kept secret courts in Buena Vista.</div>
+          <a href="#contact" class="court-directions">💬 Ask Stephanie</a>
+        </div>
+      </div>
+      <div class="courts-callout">
+        <p>Stephanie runs open play sessions at select courts in Buena Vista. Join the community — all skill levels welcome.</p>
+        <a href="#booking">Book a Spot →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div>© 2026 Stephanie Mcdonald · Pickleball Coaching in Buena Vista, Colorado</div>
+    <div><a href="https://scrollfinity.com" target="_blank" rel="noopener noreferrer">Built by Scrollfinity</a></div>
+  </footer>
+
+  <script>
+    // NAV
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => { navbar.classList.toggle('scrolled', window.scrollY > 20); });
+    document.getElementById('navToggle').addEventListener('click', () => { document.getElementById('navLinks').classList.toggle('open'); });
+    document.querySelectorAll('.nav-links a').forEach(a => { a.addEventListener('click', () => document.getElementById('navLinks').classList.remove('open')); });
+
+    // WEATHER
+    (async function loadWeather() {
+      const ctrl = new AbortController();
+      const timeout = setTimeout(() => ctrl.abort(), 3000);
+      try {
+        const geo = await fetch('https://geocoding-api.open-meteo.com/v1/search?name=Buena+Vista&count=1', { signal: ctrl.signal });
+        const geoData = await geo.json();
+        if (!geoData.results?.length) return;
+        const { latitude: lat, longitude: lon } = geoData.results[0];
+        const wx = await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current=temperature_2m,weather_code&temperature_unit=fahrenheit`, { signal: ctrl.signal });
+        const wxData = await wx.json();
+        clearTimeout(timeout);
+        const temp = Math.round(wxData.current.temperature_2m);
+        const code = wxData.current.weather_code;
+        let emoji, msg;
+        if (temp < 45) { emoji = '🧤'; msg = 'Bundle up — courts are open'; }
+        else if (code >= 61) { emoji = '🌧️'; msg = 'Perfect day for drill videos'; }
+        else if (code >= 45) { emoji = '☁️'; msg = 'Great day for indoor drills'; }
+        else if (code >= 2) { emoji = '⛅'; msg = 'Good day to work on your game'; }
+        else { emoji = '☀️'; msg = 'Perfect day for outdoor courts'; }
+        document.getElementById('weatherTemp').textContent = emoji + ' ' + temp + '°F';
+        document.getElementById('weatherMsg').textContent = msg;
+        document.getElementById('weatherWidget').classList.add('loaded');
+      } catch(e) { clearTimeout(timeout); }
+    })();
+
+    // COURT QUOTE
+    const quotes = [
+      "The serve is the only shot in pickleball you have complete control over. Own it.",
+      "Dinking is not giving up the point. It is setting up the winner.",
+      "Your third shot doesn't have to be perfect. It has to be better than your opponent expects.",
+      "The kitchen is where games are won. Live there.",
+      "Play the ball, not the score.",
+      "Patience is a weapon. Most players don't have it.",
+      "The best pickleball players make the simple shot look easy because they practiced it ten thousand times."
+    ];
+    const dayOfYear = Math.floor((Date.now() - new Date(new Date().getFullYear(),0,0)) / 86400000);
+    document.getElementById('courtQuote').textContent = '"' + quotes[dayOfYear % quotes.length] + '"';
+
+    // QUIZ
+    const answers = { q1: null, q2: null, q3: null };
+    function selectOption(el, q, val) {
+      answers[q] = val;
+      el.closest('.quiz-options').querySelectorAll('.quiz-option').forEach(o => o.classList.remove('selected'));
+      el.classList.add('selected');
+    }
+    function getQuizResult() {
+      if (!answers.q1 || !answers.q2 || !answers.q3) { alert('Please answer all three questions!'); return; }
+      const counts = { A:0, B:0, C:0, D:0 };
+      Object.values(answers).forEach(v => counts[v]++);
+      const top = Object.entries(counts).sort((a,b) => b[1]-a[1])[0][0];
+      const programs = {
+        A: { name: 'Beginner Fundamentals', desc: 'A four-session starter program. Grip, serve, dink, basic court positioning. No experience needed.' },
+        B: { name: 'Group Clinics', desc: 'Small-group sessions (4–8 players) covering drills, point play, and doubles strategy.' },
+        C: { name: 'Private Coaching', desc: 'One-on-one sessions tailored to your skill level, technique, and match strategy.' },
+        D: { name: 'Tournament Prep', desc: 'Intensive sessions for competitive players. Game plans, mental toughness, match simulation.' }
+      };
+      const result = programs[top];
+      document.getElementById('quizResultName').textContent = '→ ' + result.name;
+      document.getElementById('quizResultDesc').textContent = result.desc;
+      document.getElementById('quizResult').classList.add('show');
+      document.getElementById('quizResult').scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+
+    // CONTACT FORM
+    document.getElementById('contactForm').addEventListener('submit', async function(e) {
+      e.preventDefault();
+      try {
+        const res = await fetch(this.action, { method: 'POST', body: new FormData(this), headers: { 'Accept': 'application/json' } });
+        if (res.ok) { document.getElementById('formSuccess').style.display = 'block'; document.getElementById('formError').style.display = 'none'; this.reset(); }
+        else { throw new Error(); }
+      } catch(err) { document.getElementById('formError').style.display = 'block'; document.getElementById('formSuccess').style.display = 'none'; }
+    });
+  </script>
+</body>
+</html>
