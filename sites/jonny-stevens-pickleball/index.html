@@ -1,0 +1,1420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jonny Stevens — Pickleball Coach Lessons in Vail, Colorado</title>
+  <meta name="description" content="Pickleball coaching in Vail, CO. Expert instruction from a former Vail Recreation District program coordinator. All skill levels welcome. Book today." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800&family=Satisfy&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Jonny Stevens Pickleball Coaching",
+    "description": "Pickleball coaching in Vail, CO. Expert instruction from a former Vail Recreation District program coordinator. All skill levels welcome.",
+    "address": { "@type": "PostalAddress", "addressLocality": "Vail", "addressRegion": "CO", "addressCountry": "US" },
+    "email": "jonnybstevens@gmail.com",
+    "url": "https://jonny-stevens-pickleball.scrollfinity.com"
+  }
+  </script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --primary: #1A1A2E;
+      --accent: #00B4D8;
+      --bg: #F4F6F9;
+      --text: #1a1a1a;
+      --card: #FFFFFF;
+      --dark: #1A1A2E;
+      --accent-dark: #0090b0;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.6;
+    }
+
+    /* ===================== NAV ===================== */
+    #nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 1000;
+      background: transparent;
+      transition: background 0.35s ease, box-shadow 0.35s ease;
+      padding: 0 5%;
+    }
+    #nav.scrolled {
+      background: var(--primary);
+      box-shadow: 0 2px 20px rgba(0,0,0,0.4);
+    }
+    .nav-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      height: 68px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .nav-logo {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 800;
+      font-size: 1.2rem;
+      color: #fff;
+      text-decoration: none;
+      letter-spacing: -0.02em;
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      list-style: none;
+    }
+    .nav-links a {
+      color: rgba(255,255,255,0.85);
+      text-decoration: none;
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 500;
+      font-size: 0.9rem;
+      letter-spacing: 0.02em;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--accent); }
+    .nav-btn {
+      background: var(--accent);
+      color: #fff !important;
+      padding: 0.5rem 1.2rem;
+      border-radius: 4px;
+      font-weight: 600 !important;
+      transition: background 0.2s !important;
+    }
+    .nav-btn:hover { background: var(--accent-dark) !important; color: #fff !important; }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 4px;
+    }
+    .hamburger span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: #fff;
+      border-radius: 2px;
+      transition: 0.3s;
+    }
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      top: 68px; left: 0; right: 0;
+      background: var(--primary);
+      padding: 1.5rem 5%;
+      z-index: 999;
+      flex-direction: column;
+      gap: 1.25rem;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+    }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a {
+      color: rgba(255,255,255,0.9);
+      text-decoration: none;
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 500;
+      font-size: 1rem;
+    }
+    .mobile-menu a.nav-btn {
+      display: inline-block;
+      text-align: center;
+      padding: 0.75rem 1.5rem;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+    }
+
+    /* ===================== HERO ===================== */
+    #hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      background: var(--primary);
+      overflow: hidden;
+    }
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background-image: url('https://images.unsplash.com/photo-1737476997205-b3336182f215?w=800&q=80&fit=crop');
+      background-size: cover;
+      background-position: center;
+      opacity: 0.35;
+    }
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(26,26,46,0.92) 40%, rgba(0,180,216,0.18) 100%);
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 120px 5% 80px;
+      width: 100%;
+    }
+    .hero-label {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 1rem;
+    }
+    .hero-script {
+      font-family: 'Satisfy', cursive;
+      font-size: clamp(1.6rem, 4vw, 2.4rem);
+      color: var(--accent);
+      margin-bottom: 0.75rem;
+      display: block;
+    }
+    .hero-headline {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 800;
+      font-size: clamp(2.6rem, 7vw, 5rem);
+      color: #fff;
+      line-height: 1.05;
+      letter-spacing: -0.03em;
+      margin-bottom: 1.25rem;
+    }
+    .hero-subheadline {
+      font-family: 'DM Sans', sans-serif;
+      font-size: clamp(1rem, 2.2vw, 1.2rem);
+      color: rgba(255,255,255,0.78);
+      max-width: 560px;
+      line-height: 1.7;
+      margin-bottom: 2.5rem;
+    }
+    .hero-ctas {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .btn-primary {
+      background: var(--accent);
+      color: #fff;
+      padding: 0.9rem 2rem;
+      border-radius: 4px;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      font-size: 1rem;
+      text-decoration: none;
+      letter-spacing: 0.02em;
+      transition: background 0.2s, transform 0.2s;
+      display: inline-block;
+    }
+    .btn-primary:hover { background: var(--accent-dark); transform: translateY(-2px); }
+    .btn-outline {
+      background: transparent;
+      color: #fff;
+      padding: 0.9rem 2rem;
+      border-radius: 4px;
+      border: 2px solid rgba(255,255,255,0.5);
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      font-size: 1rem;
+      text-decoration: none;
+      letter-spacing: 0.02em;
+      transition: border-color 0.2s, color 0.2s, transform 0.2s;
+      display: inline-block;
+    }
+    .btn-outline:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-2px); }
+
+    /* Weather widget */
+    #weather-widget {
+      position: absolute;
+      top: 90px;
+      right: 5%;
+      z-index: 10;
+      background: rgba(26,26,46,0.85);
+      border: 1px solid rgba(0,180,216,0.3);
+      border-radius: 8px;
+      padding: 0.6rem 1rem;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.9);
+      backdrop-filter: blur(6px);
+      display: none;
+      max-width: 260px;
+    }
+    #weather-widget.visible { display: block; }
+
+    @media (max-width: 600px) {
+      #weather-widget { display: none !important; }
+    }
+
+    /* ===================== STATS BAR ===================== */
+    #stats {
+      background: var(--accent);
+      padding: 2.5rem 5%;
+    }
+    .stats-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 3rem;
+      flex-wrap: wrap;
+    }
+    .stat-item {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      color: #fff;
+    }
+    .stat-badge {
+      width: 52px;
+      height: 52px;
+      background: rgba(255,255,255,0.2);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      flex-shrink: 0;
+    }
+    .stat-text {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      font-size: 1rem;
+      letter-spacing: 0.01em;
+    }
+
+    /* ===================== ABOUT ===================== */
+    #about {
+      background: var(--bg);
+      padding: 6rem 5%;
+    }
+    .about-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: center;
+    }
+    .section-label {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.75rem;
+    }
+    .section-title {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 800;
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      color: var(--primary);
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      margin-bottom: 1.5rem;
+    }
+    .about-bio {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 1.05rem;
+      color: #444;
+      line-height: 1.8;
+      margin-bottom: 2rem;
+    }
+    .about-img-wrap {
+      position: relative;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 20px 60px rgba(26,26,46,0.2);
+    }
+    .about-img-wrap::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom, transparent 60%, rgba(26,26,46,0.5) 100%);
+      z-index: 1;
+    }
+    .about-img-wrap img {
+      width: 100%;
+      height: 480px;
+      object-fit: cover;
+      display: block;
+    }
+    .about-accent-border {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 4px;
+      background: var(--accent);
+      z-index: 2;
+    }
+
+    @media (max-width: 768px) {
+      .about-inner {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
+      .about-img-wrap img { height: 320px; }
+    }
+
+    /* ===================== SERVICES ===================== */
+    #services {
+      background: var(--primary);
+      padding: 6rem 5%;
+    }
+    .services-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .services-header {
+      text-align: center;
+      margin-bottom: 3.5rem;
+    }
+    .services-header .section-label { justify-content: center; display: inline-block; }
+    .services-header .section-title { color: #fff; }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.75rem;
+    }
+    .service-card {
+      background: var(--card);
+      border-radius: 10px;
+      padding: 2rem 1.75rem;
+      border-top: 4px solid var(--accent);
+      transition: transform 0.25s, box-shadow 0.25s;
+    }
+    .service-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 16px 40px rgba(0,0,0,0.25);
+    }
+    .service-icon {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    .service-name {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      font-size: 1.15rem;
+      color: var(--primary);
+      margin-bottom: 0.6rem;
+    }
+    .service-desc {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.92rem;
+      color: #555;
+      line-height: 1.7;
+      margin-bottom: 1.5rem;
+    }
+    .service-link {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--accent);
+      text-decoration: none;
+      letter-spacing: 0.03em;
+      transition: color 0.2s;
+    }
+    .service-link:hover { color: var(--accent-dark); }
+
+    /* ===================== COURT QUOTE ===================== */
+    #quote {
+      background: var(--primary);
+      padding: 5rem 5%;
+      border-top: 1px solid rgba(255,255,255,0.06);
+    }
+    .quote-inner {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .quote-label {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.5rem;
+    }
+    .quote-heading {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      font-size: 1rem;
+      color: rgba(255,255,255,0.5);
+      margin-bottom: 2rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .quote-block {
+      border-left: 5px solid var(--accent);
+      padding: 1.5rem 2rem;
+      background: rgba(0,180,216,0.06);
+      border-radius: 0 8px 8px 0;
+    }
+    .quote-text {
+      font-family: 'Satisfy', cursive;
+      font-size: clamp(1.4rem, 3.5vw, 2rem);
+      color: #fff;
+      line-height: 1.55;
+    }
+
+    /* ===================== QUIZ ===================== */
+    #quiz {
+      background: var(--bg);
+      padding: 6rem 5%;
+    }
+    .quiz-inner {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+    .quiz-header {
+      margin-bottom: 2.5rem;
+    }
+    .quiz-question {
+      margin-bottom: 1.75rem;
+    }
+    .quiz-q-label {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      font-size: 1rem;
+      color: var(--primary);
+      margin-bottom: 0.75rem;
+    }
+    .quiz-options {
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+    .quiz-option {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 0.75rem 1rem;
+      background: var(--card);
+      border: 2px solid #e0e4ea;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: border-color 0.2s, background 0.2s;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.92rem;
+      color: var(--text);
+      user-select: none;
+    }
+    .quiz-option input[type="radio"] { accent-color: var(--accent); }
+    .quiz-option:has(input:checked) {
+      border-color: var(--accent);
+      background: rgba(0,180,216,0.06);
+    }
+    .quiz-btn {
+      background: var(--accent);
+      color: #fff;
+      border: none;
+      padding: 0.9rem 2rem;
+      border-radius: 4px;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.2s;
+      margin-top: 0.75rem;
+    }
+    .quiz-btn:hover { background: var(--accent-dark); transform: translateY(-2px); }
+    .quiz-result {
+      display: none;
+      margin-top: 2rem;
+      padding: 1.75rem;
+      background: var(--primary);
+      border-radius: 10px;
+      border-left: 5px solid var(--accent);
+      color: #fff;
+    }
+    .quiz-result.show { display: block; }
+    .quiz-result-label {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.4rem;
+    }
+    .quiz-result-title {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 800;
+      font-size: 1.4rem;
+      margin-bottom: 0.5rem;
+    }
+    .quiz-result-desc {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.95rem;
+      color: rgba(255,255,255,0.8);
+      margin-bottom: 1.25rem;
+      line-height: 1.7;
+    }
+
+    /* ===================== TESTIMONIALS ===================== */
+    #testimonials {
+      background: var(--primary);
+      padding: 6rem 5%;
+    }
+    .testimonials-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .testimonials-header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    .testimonials-header .section-title { color: #fff; }
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.75rem;
+    }
+    .testimonial-card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 10px;
+      padding: 2rem;
+    }
+    .testimonial-stars {
+      font-size: 1rem;
+      margin-bottom: 1rem;
+    }
+    .testimonial-text {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 1rem;
+      color: rgba(255,255,255,0.85);
+      line-height: 1.75;
+      margin-bottom: 1.25rem;
+      font-style: italic;
+    }
+    .testimonial-author {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      font-size: 0.9rem;
+      color: var(--accent);
+    }
+
+    /* ===================== FAQ ===================== */
+    #faq {
+      background: var(--bg);
+      padding: 6rem 5%;
+    }
+    .faq-inner {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .faq-header {
+      margin-bottom: 2.5rem;
+    }
+    details {
+      border-bottom: 1px solid #dde1e8;
+    }
+    details:first-of-type { border-top: 1px solid #dde1e8; }
+    summary {
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.25rem 0;
+      cursor: pointer;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      font-size: 1rem;
+      color: var(--primary);
+    }
+    summary::-webkit-details-marker { display: none; }
+    summary::after {
+      content: '+';
+      font-size: 1.4rem;
+      color: var(--accent);
+      line-height: 1;
+      transition: transform 0.25s;
+      flex-shrink: 0;
+    }
+    details[open] summary::after {
+      transform: rotate(45deg);
+    }
+    .faq-answer {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.95rem;
+      color: #555;
+      line-height: 1.75;
+      padding: 0 0 1.25rem;
+    }
+
+    /* ===================== BOOKING ===================== */
+    #booking {
+      background: var(--accent);
+      padding: 6rem 5%;
+      text-align: center;
+    }
+    .booking-inner {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .booking-label {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.7);
+      margin-bottom: 0.75rem;
+    }
+    .booking-title {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 800;
+      font-size: clamp(2rem, 5vw, 3rem);
+      color: #fff;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      margin-bottom: 1rem;
+    }
+    .booking-sub {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 1.05rem;
+      color: rgba(255,255,255,0.85);
+      margin-bottom: 2rem;
+    }
+    .btn-white {
+      background: #fff;
+      color: var(--accent-dark);
+      padding: 1rem 2.5rem;
+      border-radius: 4px;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 800;
+      font-size: 1.05rem;
+      text-decoration: none;
+      display: inline-block;
+      transition: background 0.2s, transform 0.2s;
+      letter-spacing: 0.01em;
+    }
+    .btn-white:hover { background: #e6f9fc; transform: translateY(-3px); }
+
+    /* ===================== CONTACT ===================== */
+    #contact {
+      background: var(--bg);
+      padding: 6rem 5%;
+    }
+    .contact-inner {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .contact-form {
+      background: var(--card);
+      padding: 2.5rem;
+      border-radius: 12px;
+      box-shadow: 0 8px 32px rgba(26,26,46,0.08);
+    }
+    .form-group {
+      margin-bottom: 1.25rem;
+    }
+    .form-group label {
+      display: block;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--primary);
+      margin-bottom: 0.4rem;
+    }
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      border: 2px solid #e0e4ea;
+      border-radius: 6px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.95rem;
+      color: var(--text);
+      background: #fff;
+      transition: border-color 0.2s;
+      outline: none;
+    }
+    .form-group input:focus,
+    .form-group textarea:focus,
+    .form-group select:focus {
+      border-color: var(--accent);
+    }
+    .form-group textarea { resize: vertical; min-height: 130px; }
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+    @media (max-width: 500px) {
+      .form-row { grid-template-columns: 1fr; }
+    }
+    .form-submit {
+      background: var(--accent);
+      color: #fff;
+      border: none;
+      padding: 0.9rem 2.5rem;
+      border-radius: 4px;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.2s;
+      width: 100%;
+    }
+    .form-submit:hover { background: var(--accent-dark); transform: translateY(-2px); }
+
+    /* ===================== MAP ===================== */
+    #map-section {
+      background: var(--primary);
+      padding: 0;
+    }
+    #map-section iframe {
+      display: block;
+      width: 100%;
+      height: 380px;
+      border: none;
+      filter: grayscale(20%) brightness(0.85);
+    }
+
+    /* ===================== COURT DIRECTORY ===================== */
+    #courts {
+      background: var(--bg);
+      padding: 6rem 5%;
+    }
+    .courts-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .courts-header {
+      margin-bottom: 3rem;
+    }
+    .courts-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+    @media (max-width: 900px) {
+      .courts-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 580px) {
+      .courts-grid { grid-template-columns: 1fr; }
+    }
+    .court-card {
+      background: var(--card);
+      border-radius: 10px;
+      padding: 1.75rem;
+      border-top: 4px solid var(--accent);
+      box-shadow: 0 4px 16px rgba(26,26,46,0.07);
+    }
+    .court-name {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      font-size: 1.05rem;
+      color: var(--primary);
+      margin-bottom: 0.3rem;
+    }
+    .court-address {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.83rem;
+      color: #888;
+      margin-bottom: 0.75rem;
+    }
+    .court-desc {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.9rem;
+      color: #555;
+      line-height: 1.65;
+      margin-bottom: 1rem;
+    }
+    .court-tags {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      margin-bottom: 0.75rem;
+    }
+    .court-tag {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 0.25rem 0.6rem;
+      background: rgba(0,180,216,0.1);
+      color: var(--accent-dark);
+      border-radius: 3px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .court-phone {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.85rem;
+      color: #777;
+    }
+
+    /* ===================== FOOTER ===================== */
+    footer {
+      background: var(--primary);
+      padding: 2rem 5%;
+      border-top: 1px solid rgba(255,255,255,0.07);
+    }
+    .footer-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .footer-copy {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.5);
+    }
+    .footer-built {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.4);
+    }
+    .footer-built a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    .footer-built a:hover { text-decoration: underline; }
+
+    /* ===================== UTILITIES ===================== */
+    .section-divider {
+      height: 4px;
+      background: linear-gradient(90deg, var(--accent) 0%, transparent 100%);
+    }
+  </style>
+</head>
+<body>
+
+<!-- ===================== NAV ===================== -->
+<nav id="nav" role="navigation" aria-label="Main navigation">
+  <div class="nav-inner">
+    <a href="#hero" class="nav-logo">Jonny Stevens</a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Programs</a></li>
+      <li><a href="#testimonials">Reviews</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#courts">Courts</a></li>
+      <li><a href="mailto:jonnybstevens@gmail.com" class="nav-btn">Book Now</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobile-menu" role="menu">
+  <a href="#about" onclick="closeMobile()">About</a>
+  <a href="#services" onclick="closeMobile()">Programs</a>
+  <a href="#testimonials" onclick="closeMobile()">Reviews</a>
+  <a href="#faq" onclick="closeMobile()">FAQ</a>
+  <a href="#courts" onclick="closeMobile()">Courts</a>
+  <a href="mailto:jonnybstevens@gmail.com" class="nav-btn">Book Now</a>
+</div>
+
+<!-- ===================== HERO ===================== -->
+<section id="hero" aria-label="Hero">
+  <div class="hero-bg" role="img" aria-label="Pickleball player on court"></div>
+  <div class="hero-overlay"></div>
+
+  <div id="weather-widget" aria-live="polite"></div>
+
+  <div class="hero-content">
+    <p class="hero-label">Vail, Colorado &bull; All Skill Levels</p>
+    <span class="hero-script">Elevate Your Game.</span>
+    <h1 class="hero-headline">Pickleball Lessons<br>in Vail</h1>
+    <p class="hero-subheadline">Professional pickleball coaching for all skill levels in Vail, CO. From tournament prep to your very first dink — let's build your game from the ground up.</p>
+    <div class="hero-ctas">
+      <a href="mailto:jonnybstevens@gmail.com" class="btn-primary">Book a Session</a>
+      <a href="#services" class="btn-outline">See Programs</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== STATS BAR ===================== -->
+<section id="stats" aria-label="Credentials overview">
+  <div class="stats-inner">
+    <div class="stat-item">
+      <div class="stat-badge" aria-hidden="true">🏆</div>
+      <span class="stat-text">VRD Program Director</span>
+    </div>
+    <div class="stat-item">
+      <div class="stat-badge" aria-hidden="true">🎾</div>
+      <span class="stat-text">500+ Players Coached</span>
+    </div>
+    <div class="stat-item">
+      <div class="stat-badge" aria-hidden="true">⭐</div>
+      <span class="stat-text">All Skill Levels</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== ABOUT ===================== -->
+<section id="about" aria-label="About Jonny Stevens">
+  <div class="about-inner">
+    <div class="about-text">
+      <p class="section-label">About Your Coach</p>
+      <h2 class="section-title">Hi, I'm Jonny.<br>Let's Talk Pickleball.</h2>
+      <p class="about-bio">I'm Jonny, a pickleball coach based in Vail, CO. I managed the Vail Recreation District's pickleball program — running daily drop-ins, kids camps, adult clinics, and directing tournaments. I bring that same energy and organization to every lesson. Whether you're visiting Vail and want to try pickleball for the first time, or you're a local looking to compete, I'll help you play smarter and have more fun doing it.</p>
+      <a href="mailto:jonnybstevens@gmail.com" class="btn-primary">Book a Session</a>
+    </div>
+    <div class="about-img-wrap">
+      <img src="https://images.unsplash.com/photo-1737476997205-b3336182f215?w=800&q=80&fit=crop" alt="Jonny Stevens — Pickleball Coach, Vail CO" loading="lazy" />
+      <div class="about-accent-border"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== SERVICES ===================== -->
+<section id="services" aria-label="Coaching programs">
+  <div class="services-inner">
+    <div class="services-header">
+      <p class="section-label">Coaching Programs</p>
+      <h2 class="section-title">Find the Right Program for You</h2>
+    </div>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon" aria-hidden="true">🎯</div>
+        <h3 class="service-name">Private Coaching</h3>
+        <p class="service-desc">One-on-one sessions tailored to your skill level, technique, and match strategy.</p>
+        <a href="mailto:jonnybstevens@gmail.com" class="service-link">Book Private Session &rarr;</a>
+      </div>
+      <div class="service-card">
+        <div class="service-icon" aria-hidden="true">👥</div>
+        <h3 class="service-name">Group Clinics</h3>
+        <p class="service-desc">Small-group sessions (4&ndash;8 players) covering drills, point play, and doubles strategy.</p>
+        <a href="mailto:jonnybstevens@gmail.com" class="service-link">Join a Clinic &rarr;</a>
+      </div>
+      <div class="service-card">
+        <div class="service-icon" aria-hidden="true">🏅</div>
+        <h3 class="service-name">Tournament Prep</h3>
+        <p class="service-desc">Intensive sessions for competitive players. Game plans, mental toughness, match simulation.</p>
+        <a href="mailto:jonnybstevens@gmail.com" class="service-link">Get Competitive &rarr;</a>
+      </div>
+      <div class="service-card">
+        <div class="service-icon" aria-hidden="true">🏓</div>
+        <h3 class="service-name">Beginner Fundamentals</h3>
+        <p class="service-desc">A four-session starter program. Grip, serve, dink, basic court positioning. No experience needed.</p>
+        <a href="mailto:jonnybstevens@gmail.com" class="service-link">Start Here &rarr;</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== COURT QUOTE ===================== -->
+<section id="quote" aria-label="Daily court wisdom">
+  <div class="quote-inner">
+    <p class="quote-label">Daily Inspiration</p>
+    <p class="quote-heading">Today&rsquo;s Court Wisdom</p>
+    <div class="quote-block">
+      <p class="quote-text" id="daily-quote"></p>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== QUIZ ===================== -->
+<section id="quiz" aria-label="Find your program">
+  <div class="quiz-inner">
+    <div class="quiz-header">
+      <p class="section-label">Find Your Fit</p>
+      <h2 class="section-title">What Kind of Player Are You?</h2>
+    </div>
+
+    <form id="quiz-form" onsubmit="return false;">
+      <div class="quiz-question">
+        <p class="quiz-q-label">Q1: How long have you been playing?</p>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="q1" value="A" /> A) Never picked up a paddle</label>
+          <label class="quiz-option"><input type="radio" name="q1" value="B" /> B) Less than 1 year</label>
+          <label class="quiz-option"><input type="radio" name="q1" value="C" /> C) 1&ndash;3 years</label>
+          <label class="quiz-option"><input type="radio" name="q1" value="D" /> D) 3+ years / I compete</label>
+        </div>
+      </div>
+
+      <div class="quiz-question">
+        <p class="quiz-q-label">Q2: What&rsquo;s your biggest challenge on the court?</p>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="q2" value="A" /> A) I don&rsquo;t know where to start</label>
+          <label class="quiz-option"><input type="radio" name="q2" value="B" /> B) My shots are inconsistent</label>
+          <label class="quiz-option"><input type="radio" name="q2" value="C" /> C) I lose points at the net</label>
+          <label class="quiz-option"><input type="radio" name="q2" value="D" /> D) I struggle in tournament pressure</label>
+        </div>
+      </div>
+
+      <div class="quiz-question">
+        <p class="quiz-q-label">Q3: What&rsquo;s your main goal?</p>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="q3" value="A" /> A) Learn the basics and have fun</label>
+          <label class="quiz-option"><input type="radio" name="q3" value="B" /> B) Improve my consistency</label>
+          <label class="quiz-option"><input type="radio" name="q3" value="C" /> C) Beat players at my level</label>
+          <label class="quiz-option"><input type="radio" name="q3" value="D" /> D) Win tournaments</label>
+        </div>
+      </div>
+
+      <button class="quiz-btn" onclick="runQuiz()">Find My Program &rarr;</button>
+    </form>
+
+    <div class="quiz-result" id="quiz-result" role="alert">
+      <p class="quiz-result-label">Your Recommended Program</p>
+      <p class="quiz-result-title" id="quiz-result-title"></p>
+      <p class="quiz-result-desc" id="quiz-result-desc"></p>
+      <a href="mailto:jonnybstevens@gmail.com" class="btn-primary">Book This Program</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== TESTIMONIALS ===================== -->
+<!-- PLACEHOLDER: Replace with real testimonials after claiming site -->
+<section id="testimonials" aria-label="Student reviews">
+  <div class="testimonials-inner">
+    <div class="testimonials-header">
+      <p class="section-label">What Students Say</p>
+      <h2 class="section-title">Results That Speak for Themselves</h2>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <div class="testimonial-stars" aria-label="5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="testimonial-text">&ldquo;Jonny completely changed how I think about the third shot drop. My rating jumped from 3.0 to 3.5 in three months.&rdquo;</p>
+        <p class="testimonial-author">Sarah M. &mdash; Vail, CO</p>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-stars" aria-label="5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="testimonial-text">&ldquo;Best investment I&rsquo;ve made in my pickleball game. Jonny is patient, specific, and genuinely fun to learn from.&rdquo;</p>
+        <p class="testimonial-author">David K. &mdash; Vail, CO</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FAQ ===================== -->
+<section id="faq" aria-label="Frequently asked questions">
+  <div class="faq-inner">
+    <div class="faq-header">
+      <p class="section-label">Common Questions</p>
+      <h2 class="section-title">Everything You Need to Know</h2>
+    </div>
+
+    <details>
+      <summary>What paddle should I bring?</summary>
+      <p class="faq-answer">Don&rsquo;t worry about gear — loaner paddles are available for all sessions. If you have your own paddle, feel free to bring it. I can also help you choose the right paddle for your style if you&rsquo;re looking to buy.</p>
+    </details>
+
+    <details>
+      <summary>How long are sessions and how often should I train?</summary>
+      <p class="faq-answer">Sessions are 60 minutes. For beginners, once a week is a great starting cadence. Competitive players typically train 2&ndash;3 times per week to see meaningful improvement.</p>
+    </details>
+
+    <details>
+      <summary>Do I need any experience to sign up?</summary>
+      <p class="faq-answer">None at all. I work with players at every level — from people who&rsquo;ve never held a paddle to seasoned competitors. Each session is tailored to where you are right now.</p>
+    </details>
+
+    <details>
+      <summary>Do you teach kids?</summary>
+      <p class="faq-answer">My programs are primarily designed for adults. That said, juniors aged 12 and up are welcome — especially in private lessons or the Beginner Fundamentals program. Reach out to discuss your situation.</p>
+    </details>
+
+    <details>
+      <summary>Where do sessions take place?</summary>
+      <p class="faq-answer">Sessions are held at local courts in Vail, including Golden Peak Pickleball Center and other nearby facilities. I&rsquo;ll send you the exact location when you book. Indoor options are available during winter months.</p>
+    </details>
+
+    <details>
+      <summary>What is your cancellation policy?</summary>
+      <p class="faq-answer">Please give at least 24 hours notice if you need to cancel or reschedule — no charge. Cancellations with less than 24 hours notice are charged at 50% of the session rate. Same-day no-shows are charged in full.</p>
+    </details>
+  </div>
+</section>
+
+<!-- ===================== BOOKING ===================== -->
+<section id="booking" aria-label="Book a session">
+  <div class="booking-inner">
+    <p class="booking-label">Get on the Court</p>
+    <h2 class="booking-title">Ready to Level Up<br>Your Game?</h2>
+    <p class="booking-sub">Spots are limited — serious players only.</p>
+    <a href="mailto:jonnybstevens@gmail.com" class="btn-white">Book a Session</a>
+  </div>
+</section>
+
+<!-- ===================== CONTACT FORM ===================== -->
+<section id="contact" aria-label="Contact form">
+  <div class="contact-inner">
+    <div class="faq-header" style="margin-bottom: 2rem;">
+      <p class="section-label">Get in Touch</p>
+      <h2 class="section-title">Have a question? Send Jonny a message.</h2>
+    </div>
+    <!-- FORMSPREE: Replace ACTION below with your Formspree endpoint, e.g. https://formspree.io/f/XXXXXXXX -->
+    <form class="contact-form" action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST" aria-label="Contact Jonny">
+      <div class="form-row">
+        <div class="form-group">
+          <label for="contact-name">Your Name</label>
+          <input type="text" id="contact-name" name="name" placeholder="Jane Smith" required autocomplete="name" />
+        </div>
+        <div class="form-group">
+          <label for="contact-email">Email Address</label>
+          <input type="email" id="contact-email" name="email" placeholder="you@example.com" required autocomplete="email" />
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="contact-interest">I&rsquo;m interested in&hellip;</label>
+        <select id="contact-interest" name="interest">
+          <option value="">Select a program</option>
+          <option value="private">Private Coaching</option>
+          <option value="group">Group Clinics</option>
+          <option value="tournament">Tournament Prep</option>
+          <option value="beginner">Beginner Fundamentals</option>
+          <option value="other">Just have a question</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="contact-message">Message</label>
+        <textarea id="contact-message" name="message" placeholder="Tell me a bit about your experience level and what you&rsquo;re hoping to work on..." required></textarea>
+      </div>
+      <button type="submit" class="form-submit">Send Message &rarr;</button>
+    </form>
+  </div>
+</section>
+
+<!-- ===================== MAP ===================== -->
+<section id="map-section" aria-label="Location map">
+  <iframe
+    src="https://maps.google.com/maps?q=Vail+CO&output=embed"
+    title="Vail, Colorado map"
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade"
+  ></iframe>
+</section>
+
+<!-- ===================== COURT DIRECTORY ===================== -->
+<section id="courts" aria-label="Local pickleball courts">
+  <div class="courts-inner">
+    <div class="courts-header">
+      <p class="section-label">Local Courts</p>
+      <h2 class="section-title">Best Places to Play in Vail</h2>
+      <p style="font-family:'DM Sans',sans-serif;color:#666;font-size:0.95rem;margin-top:0.5rem;">Recommended by Jonny &mdash; courts worth your time in Vail, CO.</p>
+    </div>
+    <div class="courts-grid">
+
+      <div class="court-card">
+        <h3 class="court-name">Golden Peak Pickleball Center</h3>
+        <p class="court-address">461 Vail Valley Dr, Vail, CO 81657</p>
+        <p class="court-desc">6 dedicated outdoor courts with pro-cushion surface. Staffed daily, drop-in play, clinics, tournaments. USTA-recognized.</p>
+        <div class="court-tags">
+          <span class="court-tag">Outdoor</span>
+          <span class="court-tag">Public</span>
+          <span class="court-tag">USTA</span>
+        </div>
+        <p class="court-phone">(970) 390-2952</p>
+      </div>
+
+      <div class="court-card">
+        <h3 class="court-name">Donovan Park</h3>
+        <p class="court-address">1600 S Frontage Rd W, Vail, CO 81657</p>
+        <p class="court-desc">3 courts with non-permanent nets. Free public courts, great for casual play and pick-up games.</p>
+        <div class="court-tags">
+          <span class="court-tag">Outdoor</span>
+          <span class="court-tag">Free</span>
+        </div>
+      </div>
+
+      <div class="court-card">
+        <h3 class="court-name">Red Sandstone Elementary School</h3>
+        <p class="court-address">551 N Frontage Rd W, Vail, CO 81657</p>
+        <p class="court-desc">3 courts, winter indoor pickleball venue. Open to the public during winter months — a go-to when outdoor courts are cold.</p>
+        <div class="court-tags">
+          <span class="court-tag">Indoor</span>
+          <span class="court-tag">Free</span>
+          <span class="court-tag">Winter</span>
+        </div>
+      </div>
+
+      <div class="court-card">
+        <h3 class="court-name">EagleVail Courts</h3>
+        <p class="court-address">134 Eagle Dr, Avon, CO 81620</p>
+        <p class="court-desc">9 courts with permanent nets. Beautiful Eagle Valley location just 15 minutes from Vail. One of the best setups in the valley.</p>
+        <div class="court-tags">
+          <span class="court-tag">Outdoor</span>
+          <span class="court-tag">Public</span>
+          <span class="court-tag">9 Courts</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer>
+  <div class="footer-inner">
+    <p class="footer-copy">&copy; 2026 Jonny Stevens &middot; Pickleball Coaching in Vail, CO</p>
+    <p class="footer-built">Built by <a href="https://scrollfinity.com" target="_blank" rel="noopener noreferrer">Scrollfinity</a></p>
+  </div>
+</footer>
+
+<!-- ===================== JAVASCRIPT ===================== -->
+<script>
+  // ---- NAV: transparent to solid on scroll ----
+  (function () {
+    var nav = document.getElementById('nav');
+    function handleScroll() {
+      if (window.scrollY > 40) {
+        nav.classList.add('scrolled');
+      } else {
+        nav.classList.remove('scrolled');
+      }
+    }
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    handleScroll();
+  })();
+
+  // ---- HAMBURGER ----
+  (function () {
+    var btn = document.getElementById('hamburger');
+    var menu = document.getElementById('mobile-menu');
+    btn.addEventListener('click', function () {
+      var isOpen = menu.classList.contains('open');
+      menu.classList.toggle('open');
+      btn.setAttribute('aria-expanded', String(!isOpen));
+    });
+  })();
+  function closeMobile() {
+    document.getElementById('mobile-menu').classList.remove('open');
+    document.getElementById('hamburger').setAttribute('aria-expanded', 'false');
+  }
+
+  // ---- DAILY QUOTE (rotates by day of year) ----
+  (function () {
+    var quotes = [
+      "The serve is the only shot in pickleball you have complete control over. Own it.",
+      "Dinking is not giving up the point. It is setting up the winner.",
+      "Your third shot doesn’t have to be perfect. It has to be better than your opponent expects.",
+      "The kitchen is where games are won. Live there.",
+      "Play the ball, not the score.",
+      "Patience is a weapon. Most players don’t have it.",
+      "The best pickleball players make the simple shot look easy because they practiced it ten thousand times."
+    ];
+    var now = new Date();
+    var start = new Date(now.getFullYear(), 0, 0);
+    var diff = now - start;
+    var oneDay = 1000 * 60 * 60 * 24;
+    var dayOfYear = Math.floor(diff / oneDay);
+    var idx = dayOfYear % quotes.length;
+    document.getElementById('daily-quote').textContent = quotes[idx];
+  })();
+
+  // ---- WEATHER WIDGET ----
+  (function () {
+    var widget = document.getElementById('weather-widget');
+    var timeout = 3000;
+    var controller = new AbortController();
+    var tid = setTimeout(function () { controller.abort(); }, timeout);
+
+    fetch('https://geocoding-api.open-meteo.com/v1/search?name=Vail&count=1', { signal: controller.signal })
+      .then(function (r) { return r.json(); })
+      .then(function (geo) {
+        clearTimeout(tid);
+        if (!geo.results || !geo.results[0]) return;
+        var lat = geo.results[0].latitude;
+        var lon = geo.results[0].longitude;
+        var wController = new AbortController();
+        var wTid = setTimeout(function () { wController.abort(); }, timeout);
+        return fetch(
+          'https://api.open-meteo.com/v1/forecast?latitude=' + lat + '&longitude=' + lon +
+          '&current=temperature_2m,weather_code&temperature_unit=fahrenheit',
+          { signal: wController.signal }
+        ).then(function (r) { return r.json(); }).then(function (wx) {
+          clearTimeout(wTid);
+          var code = wx.current.weather_code;
+          var temp = Math.round(wx.current.temperature_2m);
+          var msg = '';
+          if (temp < 45) {
+            msg = '🧤 Bundle up — courts are open';
+          } else if (code <= 1) {
+            msg = '☀️ Perfect day for outdoor courts';
+          } else if (code <= 3) {
+            msg = '⛅ Good day to work on your game';
+          } else if (code <= 60) {
+            msg = '☁️ Great day for indoor drills';
+          } else {
+            msg = '🌧️ Perfect day for drill videos';
+          }
+          widget.textContent = temp + '°F — ' + msg;
+          widget.classList.add('visible');
+        });
+      })
+      .catch(function () {
+        /* silently hide widget on any error or timeout */
+      });
+  })();
+
+  // ---- QUIZ ----
+  function runQuiz() {
+    var q1 = document.querySelector('input[name="q1"]:checked');
+    var q2 = document.querySelector('input[name="q2"]:checked');
+    var q3 = document.querySelector('input[name="q3"]:checked');
+
+    if (!q1 || !q2 || !q3) {
+      alert('Please answer all three questions to find your program.');
+      return;
+    }
+
+    var answers = [q1.value, q2.value, q3.value];
+    var counts = { A: 0, B: 0, C: 0, D: 0 };
+    answers.forEach(function (a) { counts[a] = (counts[a] || 0) + 1; });
+
+    var top = 'A';
+    var topCount = 0;
+    ['A', 'B', 'C', 'D'].forEach(function (k) {
+      if (counts[k] > topCount) { top = k; topCount = counts[k]; }
+    });
+
+    var programs = {
+      A: {
+        title: 'Beginner Fundamentals',
+        desc: 'You’re in the right place. My four-session Beginner Fundamentals program covers grip, serve, dink, and basic court positioning. No experience needed — just show up ready to learn.'
+      },
+      B: {
+        title: 'Group Clinics',
+        desc: 'You know the game, now let’s sharpen it. Group Clinics are structured small-group sessions focused on consistency drills, point play patterns, and doubles strategy in a fun, competitive environment.'
+      },
+      C: {
+        title: 'Private Coaching',
+        desc: 'You need focused, one-on-one time on your specific weaknesses. Private Coaching sessions are fully tailored to your technique, strategy, and match goals. We’ll close the gaps fast.'
+      },
+      D: {
+        title: 'Tournament Prep',
+        desc: 'You’re ready to compete seriously. Tournament Prep sessions are intensive — game plans, mental toughness training, and full match simulation. Let’s get your name on the podium.'
+      }
+    };
+
+    var result = programs[top];
+    document.getElementById('quiz-result-title').textContent = result.title;
+    document.getElementById('quiz-result-desc').textContent = result.desc;
+    var el = document.getElementById('quiz-result');
+    el.classList.add('show');
+    el.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }
+</script>
+
+</body>
+</html>
