@@ -1,0 +1,1802 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Josh Vinlove — Pickleball Coach in Aurora, Colorado</title>
+  <meta name="description" content="PPR Certified pickleball coaching in Aurora, CO. Private lessons, group clinics, and tournament prep. Nationals-level experience. Book today." />
+  <meta name="robots" content="index, follow" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&family=Caveat:wght@700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --primary: #0F1D2B;
+      --accent: #A4D907;
+      --bg: #F5F7F8;
+      --text: #1a1a1a;
+      --card: #FFFFFF;
+      --dark: #0F1D2B;
+      --accent-dark: #8ab806;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    h1, h2, h3, h4 { font-family: 'Plus Jakarta Sans', sans-serif; }
+
+    a { text-decoration: none; color: inherit; }
+
+    img { max-width: 100%; display: block; }
+
+    /* ===== NAV ===== */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      background: rgba(15, 29, 43, 0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(164, 217, 7, 0.15);
+      padding: 0 5%;
+    }
+
+    .nav-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+    }
+
+    .nav-logo {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-weight: 800;
+      font-size: 1.1rem;
+      color: #fff;
+      letter-spacing: -0.02em;
+    }
+
+    .nav-logo span { color: var(--accent); }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: rgba(255,255,255,0.75);
+      font-size: 0.875rem;
+      font-weight: 500;
+      font-family: 'Inter', sans-serif;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--accent); }
+
+    .nav-cta {
+      background: var(--accent);
+      color: var(--primary) !important;
+      font-weight: 600 !important;
+      padding: 8px 20px;
+      border-radius: 6px;
+      transition: background 0.2s !important;
+    }
+
+    .nav-cta:hover { background: var(--accent-dark) !important; color: var(--primary) !important; }
+
+    .nav-hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 4px;
+    }
+
+    .nav-hamburger span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: #fff;
+      border-radius: 2px;
+      transition: all 0.3s;
+    }
+
+    /* ===== HERO ===== */
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      background: var(--primary);
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background-image: url('https://images.unsplash.com/photo-1737476997205-b3336182f215?w=800&q=80&fit=crop');
+      background-size: cover;
+      background-position: center 30%;
+      opacity: 0.22;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(15,29,43,0.97) 0%, rgba(15,29,43,0.7) 60%, rgba(15,29,43,0.4) 100%);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 120px 5% 80px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+      width: 100%;
+    }
+
+    .hero-text {}
+
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(164, 217, 7, 0.12);
+      border: 1px solid rgba(164, 217, 7, 0.3);
+      color: var(--accent);
+      font-size: 0.8rem;
+      font-weight: 600;
+      font-family: 'Inter', sans-serif;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 6px 14px;
+      border-radius: 100px;
+      margin-bottom: 20px;
+    }
+
+    .hero-eyebrow::before {
+      content: '';
+      width: 6px; height: 6px;
+      background: var(--accent);
+      border-radius: 50%;
+    }
+
+    .hero-h1 {
+      font-size: clamp(2.4rem, 5vw, 3.8rem);
+      font-weight: 800;
+      color: #fff;
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+      margin-bottom: 12px;
+    }
+
+    .hero-h1 em {
+      font-style: normal;
+      color: var(--accent);
+    }
+
+    .hero-caveat {
+      font-family: 'Caveat', cursive;
+      font-weight: 700;
+      font-size: 1.6rem;
+      color: var(--accent);
+      margin-bottom: 18px;
+      display: block;
+    }
+
+    .hero-sub {
+      font-size: 1.1rem;
+      color: rgba(255,255,255,0.75);
+      margin-bottom: 36px;
+      max-width: 480px;
+      line-height: 1.65;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--accent);
+      color: var(--primary);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-weight: 700;
+      font-size: 0.95rem;
+      padding: 14px 28px;
+      border-radius: 8px;
+      transition: background 0.2s, transform 0.15s;
+    }
+
+    .btn-primary:hover { background: var(--accent-dark); transform: translateY(-1px); }
+
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: transparent;
+      color: #fff;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-weight: 600;
+      font-size: 0.95rem;
+      padding: 14px 28px;
+      border-radius: 8px;
+      border: 1px solid rgba(255,255,255,0.3);
+      transition: border-color 0.2s, background 0.2s;
+    }
+
+    .btn-secondary:hover { border-color: rgba(255,255,255,0.7); background: rgba(255,255,255,0.06); }
+
+    /* Weather Widget */
+    .hero-widget-col {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 20px;
+    }
+
+    .weather-widget {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.12);
+      backdrop-filter: blur(12px);
+      border-radius: 16px;
+      padding: 20px 24px;
+      width: 100%;
+      max-width: 300px;
+    }
+
+    .weather-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 14px;
+    }
+
+    .weather-location {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: rgba(255,255,255,0.6);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    .weather-icon { font-size: 2rem; }
+
+    .weather-temp {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 2.4rem;
+      font-weight: 800;
+      color: #fff;
+      line-height: 1;
+    }
+
+    .weather-temp span { font-size: 1rem; color: rgba(255,255,255,0.5); font-weight: 400; }
+
+    .weather-desc {
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.7);
+      margin-top: 4px;
+    }
+
+    .weather-condition {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 12px;
+      background: rgba(164, 217, 7, 0.15);
+      border: 1px solid rgba(164, 217, 7, 0.25);
+      color: var(--accent);
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 4px 10px;
+      border-radius: 100px;
+    }
+
+    .hero-badge {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 12px;
+      padding: 16px 20px;
+      width: 100%;
+      max-width: 300px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .hero-badge-icon {
+      width: 44px; height: 44px;
+      background: var(--accent);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+      flex-shrink: 0;
+    }
+
+    .hero-badge-text strong {
+      display: block;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-weight: 700;
+      font-size: 0.9rem;
+      color: #fff;
+    }
+
+    .hero-badge-text span {
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.55);
+    }
+
+    /* ===== STATS BAR ===== */
+    .stats-bar {
+      background: var(--accent);
+      padding: 0;
+    }
+
+    .stats-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 5%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0;
+      flex-wrap: wrap;
+    }
+
+    .stat-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 18px 32px;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-weight: 700;
+      font-size: 0.9rem;
+      color: var(--primary);
+      letter-spacing: 0.01em;
+    }
+
+    .stat-item:not(:last-child) {
+      border-right: 1px solid rgba(15,29,43,0.2);
+    }
+
+    .stat-icon { font-size: 1.1rem; }
+
+    /* ===== SECTIONS ===== */
+    section { padding: 90px 5%; }
+
+    .section-inner { max-width: 1200px; margin: 0 auto; }
+
+    .section-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent-dark);
+      margin-bottom: 12px;
+    }
+
+    .section-label::before {
+      content: '';
+      width: 20px; height: 2px;
+      background: var(--accent);
+      border-radius: 2px;
+    }
+
+    .section-title {
+      font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1.15;
+      color: var(--primary);
+      margin-bottom: 16px;
+    }
+
+    .section-title em {
+      font-style: normal;
+      color: var(--accent-dark);
+    }
+
+    .section-sub {
+      font-size: 1.05rem;
+      color: #555;
+      max-width: 560px;
+      line-height: 1.65;
+    }
+
+    /* ===== ABOUT ===== */
+    #about { background: #fff; }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.5fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .about-img-wrap {
+      position: relative;
+    }
+
+    .about-img {
+      width: 100%;
+      aspect-ratio: 4/5;
+      object-fit: cover;
+      object-position: top center;
+      border-radius: 16px;
+    }
+
+    .about-img-accent {
+      position: absolute;
+      bottom: -16px;
+      right: -16px;
+      width: 80px; height: 80px;
+      background: var(--accent);
+      border-radius: 12px;
+      z-index: -1;
+    }
+
+    .about-content {}
+
+    .ppr-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--primary);
+      color: #fff;
+      font-size: 0.75rem;
+      font-weight: 600;
+      font-family: 'Inter', sans-serif;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 6px 14px;
+      border-radius: 100px;
+      margin-bottom: 20px;
+    }
+
+    .ppr-badge::before {
+      content: '✓';
+      width: 16px; height: 16px;
+      background: var(--accent);
+      color: var(--primary);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.65rem;
+      font-weight: 800;
+    }
+
+    .about-bio {
+      font-size: 1.05rem;
+      line-height: 1.75;
+      color: #444;
+      margin-bottom: 28px;
+    }
+
+    .about-creds {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .cred-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--bg);
+      border: 1px solid #e0e4e8;
+      color: var(--text);
+      font-size: 0.82rem;
+      font-weight: 600;
+      font-family: 'Inter', sans-serif;
+      padding: 8px 14px;
+      border-radius: 100px;
+    }
+
+    /* ===== SERVICES ===== */
+    #services { background: var(--bg); }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      margin-top: 48px;
+    }
+
+    .service-card {
+      background: var(--card);
+      border: 1px solid #e8ecf0;
+      border-radius: 16px;
+      padding: 28px 24px;
+      transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .service-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 32px rgba(15,29,43,0.1);
+      border-color: var(--accent);
+    }
+
+    .service-icon {
+      width: 52px; height: 52px;
+      background: rgba(164, 217, 7, 0.12);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      margin-bottom: 18px;
+    }
+
+    .service-title {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-weight: 700;
+      font-size: 1.05rem;
+      color: var(--primary);
+      margin-bottom: 10px;
+    }
+
+    .service-desc {
+      font-size: 0.875rem;
+      color: #666;
+      line-height: 1.65;
+      flex: 1;
+      margin-bottom: 20px;
+    }
+
+    .service-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--accent-dark);
+      font-family: 'Inter', sans-serif;
+      transition: gap 0.2s;
+    }
+
+    .service-link:hover { gap: 10px; }
+
+    /* ===== COURT QUOTE ===== */
+    #quotes {
+      background: var(--dark);
+      padding: 80px 5%;
+    }
+
+    .quotes-inner {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .quote-label {
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.4);
+      margin-bottom: 40px;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .quote-display {
+      min-height: 160px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .quote-text {
+      font-family: 'Caveat', cursive;
+      font-weight: 700;
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      color: #fff;
+      line-height: 1.3;
+      transition: opacity 0.5s;
+    }
+
+    .quote-text .quote-accent { color: var(--accent); }
+
+    .quote-dots {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 40px;
+    }
+
+    .quote-dot {
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.2);
+      border: none;
+      cursor: pointer;
+      padding: 0;
+      transition: background 0.2s, transform 0.2s;
+    }
+
+    .quote-dot.active { background: var(--accent); transform: scale(1.3); }
+
+    /* ===== QUIZ ===== */
+    #quiz { background: #fff; }
+
+    .quiz-container {
+      max-width: 680px;
+      margin: 48px auto 0;
+    }
+
+    .quiz-progress {
+      display: flex;
+      gap: 6px;
+      margin-bottom: 32px;
+    }
+
+    .quiz-progress-bar {
+      flex: 1;
+      height: 4px;
+      background: #e8ecf0;
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    .quiz-progress-fill {
+      height: 100%;
+      background: var(--accent);
+      border-radius: 4px;
+      transition: width 0.4s ease;
+    }
+
+    .quiz-q {
+      display: none;
+    }
+
+    .quiz-q.active { display: block; }
+
+    .quiz-question {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: var(--primary);
+      margin-bottom: 24px;
+    }
+
+    .quiz-options {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .quiz-option {
+      background: var(--bg);
+      border: 2px solid #e8ecf0;
+      border-radius: 10px;
+      padding: 16px 18px;
+      cursor: pointer;
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      text-align: left;
+      transition: border-color 0.2s, background 0.2s;
+    }
+
+    .quiz-option:hover { border-color: var(--accent); background: rgba(164,217,7,0.06); }
+    .quiz-option.selected { border-color: var(--accent); background: rgba(164,217,7,0.1); color: var(--primary); font-weight: 600; }
+
+    .quiz-result {
+      display: none;
+      text-align: center;
+      padding: 32px;
+      background: var(--bg);
+      border-radius: 16px;
+      border: 2px solid var(--accent);
+    }
+
+    .quiz-result.show { display: block; }
+
+    .quiz-result-title {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-weight: 800;
+      font-size: 1.3rem;
+      color: var(--primary);
+      margin-bottom: 10px;
+    }
+
+    .quiz-result-desc {
+      font-size: 0.95rem;
+      color: #555;
+      margin-bottom: 24px;
+    }
+
+    /* ===== TESTIMONIALS ===== */
+    #testimonials { background: var(--bg); }
+
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin-top: 48px;
+    }
+
+    .testimonial-card {
+      background: var(--card);
+      border: 1px solid #e8ecf0;
+      border-radius: 16px;
+      padding: 32px;
+    }
+
+    .testimonial-stars {
+      display: flex;
+      gap: 3px;
+      margin-bottom: 16px;
+    }
+
+    .star { color: var(--accent); font-size: 1rem; }
+
+    .testimonial-text {
+      font-size: 1rem;
+      color: #444;
+      line-height: 1.7;
+      margin-bottom: 24px;
+      font-style: italic;
+    }
+
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .author-avatar {
+      width: 44px; height: 44px;
+      border-radius: 50%;
+      background: var(--primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-weight: 700;
+      font-size: 0.9rem;
+      color: var(--accent);
+      flex-shrink: 0;
+    }
+
+    .author-name {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-weight: 700;
+      font-size: 0.9rem;
+      color: var(--primary);
+    }
+
+    .author-meta {
+      font-size: 0.78rem;
+      color: #888;
+    }
+
+    /* ===== FAQ ===== */
+    #faq { background: #fff; }
+
+    .faq-grid {
+      max-width: 800px;
+      margin: 48px auto 0;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .faq-item {
+      border: 1px solid #e8ecf0;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .faq-question {
+      width: 100%;
+      background: none;
+      border: none;
+      text-align: left;
+      padding: 20px 24px;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: var(--primary);
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      transition: background 0.2s;
+    }
+
+    .faq-question:hover { background: var(--bg); }
+
+    .faq-question.open { background: var(--bg); }
+
+    .faq-chevron {
+      flex-shrink: 0;
+      width: 20px; height: 20px;
+      transition: transform 0.3s;
+      color: var(--accent-dark);
+    }
+
+    .faq-question.open .faq-chevron { transform: rotate(180deg); }
+
+    .faq-answer {
+      display: none;
+      padding: 0 24px 20px;
+      font-size: 0.9rem;
+      color: #555;
+      line-height: 1.7;
+      border-top: 1px solid #f0f0f0;
+      padding-top: 16px;
+    }
+
+    .faq-answer.open { display: block; }
+
+    /* ===== BOOKING ===== */
+    #booking {
+      background: var(--dark);
+      text-align: center;
+      padding: 90px 5%;
+    }
+
+    .booking-inner { max-width: 640px; margin: 0 auto; }
+
+    .booking-eyebrow {
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent);
+      font-family: 'Inter', sans-serif;
+      margin-bottom: 16px;
+    }
+
+    .booking-title {
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 800;
+      color: #fff;
+      letter-spacing: -0.03em;
+      line-height: 1.15;
+      margin-bottom: 18px;
+    }
+
+    .booking-sub {
+      font-size: 1rem;
+      color: rgba(255,255,255,0.65);
+      margin-bottom: 36px;
+      line-height: 1.65;
+    }
+
+    .booking-caveat {
+      font-family: 'Caveat', cursive;
+      font-size: 1.4rem;
+      color: var(--accent);
+      display: block;
+      margin-bottom: 36px;
+    }
+
+    .booking-options {
+      display: flex;
+      gap: 14px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    /* ===== CONTACT ===== */
+    #contact { background: var(--bg); }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 60px;
+      align-items: start;
+      margin-top: 48px;
+    }
+
+    .contact-info {}
+
+    .contact-heading {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 20px;
+    }
+
+    .contact-detail {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 14px 0;
+      border-bottom: 1px solid #e8ecf0;
+      font-size: 0.9rem;
+      color: #555;
+    }
+
+    .contact-detail:last-child { border-bottom: none; }
+
+    .contact-icon {
+      width: 36px; height: 36px;
+      background: rgba(164, 217, 7, 0.12);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.9rem;
+      flex-shrink: 0;
+    }
+
+    .contact-detail a { color: var(--accent-dark); font-weight: 500; }
+    .contact-detail a:hover { text-decoration: underline; }
+
+    .contact-form {
+      background: var(--card);
+      border: 1px solid #e8ecf0;
+      border-radius: 16px;
+      padding: 32px;
+    }
+
+    .form-group { margin-bottom: 18px; }
+
+    .form-label {
+      display: block;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--primary);
+      font-family: 'Inter', sans-serif;
+      margin-bottom: 6px;
+    }
+
+    .form-input, .form-textarea {
+      width: 100%;
+      background: var(--bg);
+      border: 1px solid #e0e4e8;
+      border-radius: 8px;
+      padding: 12px 14px;
+      font-size: 0.9rem;
+      font-family: 'Inter', sans-serif;
+      color: var(--text);
+      transition: border-color 0.2s;
+      outline: none;
+    }
+
+    .form-input:focus, .form-textarea:focus { border-color: var(--accent); }
+
+    .form-textarea { resize: vertical; min-height: 110px; }
+
+    .form-submit {
+      width: 100%;
+      background: var(--accent);
+      color: var(--primary);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-weight: 700;
+      font-size: 0.95rem;
+      border: none;
+      border-radius: 8px;
+      padding: 14px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    .form-submit:hover { background: var(--accent-dark); }
+
+    /* ===== MAP ===== */
+    #map { background: #fff; padding: 0; }
+
+    .map-header {
+      padding: 60px 5% 40px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .map-iframe-wrap {
+      width: 100%;
+      height: 380px;
+      border: none;
+      overflow: hidden;
+    }
+
+    .map-iframe-wrap iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    /* ===== COURT DIRECTORY ===== */
+    #courts { background: var(--bg); }
+
+    .courts-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-top: 48px;
+    }
+
+    .court-card {
+      background: var(--card);
+      border: 1px solid #e8ecf0;
+      border-radius: 16px;
+      padding: 28px 24px;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .court-card:hover { transform: translateY(-3px); box-shadow: 0 10px 28px rgba(15,29,43,0.08); }
+
+    .court-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 10px;
+      border-radius: 100px;
+      font-size: 0.73rem;
+      font-weight: 600;
+      font-family: 'Inter', sans-serif;
+      margin-bottom: 14px;
+    }
+
+    .court-badge.outdoor { background: rgba(164,217,7,0.12); color: var(--accent-dark); }
+    .court-badge.indoor { background: rgba(15,29,43,0.08); color: var(--primary); }
+
+    .court-name {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-weight: 700;
+      font-size: 1.05rem;
+      color: var(--primary);
+      margin-bottom: 8px;
+    }
+
+    .court-meta {
+      font-size: 0.8rem;
+      color: #888;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .court-desc {
+      font-size: 0.875rem;
+      color: #555;
+      line-height: 1.6;
+      margin-bottom: 16px;
+    }
+
+    .court-address {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.8rem;
+      color: #777;
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: var(--primary);
+      padding: 32px 5%;
+    }
+
+    .footer-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .footer-copy {
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.5);
+      font-family: 'Inter', sans-serif;
+    }
+
+    .footer-built {
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.3);
+      font-family: 'Inter', sans-serif;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 20px;
+      list-style: none;
+    }
+
+    .footer-links a {
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.45);
+      font-family: 'Inter', sans-serif;
+      transition: color 0.2s;
+    }
+
+    .footer-links a:hover { color: var(--accent); }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 1024px) {
+      .services-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .nav-hamburger { display: flex; }
+
+      .hero-content {
+        grid-template-columns: 1fr;
+        padding: 100px 5% 60px;
+      }
+
+      .hero-widget-col { align-items: flex-start; }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .about-img { aspect-ratio: 3/2; }
+
+      .services-grid { grid-template-columns: 1fr; }
+
+      .quiz-options { grid-template-columns: 1fr; }
+
+      .testimonials-grid { grid-template-columns: 1fr; }
+
+      .contact-grid { grid-template-columns: 1fr; }
+
+      .courts-grid { grid-template-columns: 1fr; }
+
+      .stat-item { padding: 14px 18px; font-size: 0.8rem; }
+
+      .footer-inner { flex-direction: column; text-align: center; }
+
+      .nav-links.open {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 64px; left: 0; right: 0;
+        background: var(--primary);
+        padding: 20px 5%;
+        gap: 14px;
+        border-top: 1px solid rgba(255,255,255,0.1);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">Josh <span>Vinlove</span> Pickleball</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#testimonials">Reviews</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#courts">Courts</a></li>
+        <li><a href="mailto:jjvinlove@gmail.com" class="nav-cta">Book a Lesson</a></li>
+      </ul>
+      <div class="nav-hamburger" id="hamburger" onclick="toggleNav()" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="hero-text">
+        <div class="hero-eyebrow">Aurora, Colorado</div>
+        <h1 class="hero-h1">Play Better.<br><em>Have More Fun.</em></h1>
+        <span class="hero-caveat">Your best game starts here.</span>
+        <p class="hero-sub">PPR Certified coaching for players ready to break through to their next level. From first-timers to tournament competitors — Aurora's court is calling.</p>
+        <div class="hero-buttons">
+          <a href="mailto:jjvinlove@gmail.com" class="btn-primary">
+            <span>&#x2709;</span> Book a Lesson
+          </a>
+          <a href="#about" class="btn-secondary">
+            Meet Josh &#x2193;
+          </a>
+        </div>
+      </div>
+      <div class="hero-widget-col">
+        <div class="weather-widget">
+          <div class="weather-header">
+            <div class="weather-location">&#x1F4CD; Aurora, CO</div>
+            <div class="weather-icon" id="weatherIcon">&#x2600;&#xFE0F;</div>
+          </div>
+          <div class="weather-temp" id="weatherTemp">72<span>°F</span></div>
+          <div class="weather-desc" id="weatherDesc">Partly Sunny · Great pickleball weather</div>
+          <div class="weather-condition" id="weatherCondition">
+            <span>&#x1F3D3;</span> Court conditions: Ideal
+          </div>
+        </div>
+        <div class="hero-badge">
+          <div class="hero-badge-icon">&#x1F3C6;</div>
+          <div class="hero-badge-text">
+            <strong>Nationals Competitor</strong>
+            <span>National-level experience brought to every lesson</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS BAR -->
+  <div class="stats-bar">
+    <div class="stats-inner">
+      <div class="stat-item">
+        <span class="stat-icon">&#x2705;</span>
+        PPR Certified
+      </div>
+      <div class="stat-item">
+        <span class="stat-icon">&#x1F3C6;</span>
+        Nationals Competitor
+      </div>
+      <div class="stat-item">
+        <span class="stat-icon">&#x1F3D3;</span>
+        All Skill Levels Welcome
+      </div>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="section-inner">
+      <div class="about-grid">
+        <div class="about-img-wrap">
+          <img
+            src="https://images.unsplash.com/photo-1737476997205-b3336182f215?w=800&q=80&fit=crop"
+            alt="Josh Vinlove, PPR Certified Pickleball Coach in Aurora, CO"
+            class="about-img"
+          />
+          <div class="about-img-accent"></div>
+        </div>
+        <div class="about-content">
+          <div class="section-label">About Josh</div>
+          <h2 class="section-title">Coached by someone who's <em>played at the top.</em></h2>
+          <div class="ppr-badge">PPR Certified Coach</div>
+          <p class="about-bio">
+            I'm Josh Vinlove, a PPR Certified pickleball coach based in Aurora, Colorado. I've competed at the national level and bring that competitive experience to every lesson. Whether you're picking up a paddle for the first time or training for your next tournament, I focus on building solid technique, smart strategy, and the confidence to play your best game.
+          </p>
+          <p class="about-bio">
+            I teach at Arvada Pickleball and work with players of all ages and skill levels across the Aurora area. Teaching is what I do — on and off the court.
+          </p>
+          <div class="about-creds">
+            <span class="cred-pill">&#x1F3C5; PPR Certified</span>
+            <span class="cred-pill">&#x1F3D3; Nationals Competitor</span>
+            <span class="cred-pill">&#x1F4D6; Professional Teacher</span>
+            <span class="cred-pill">&#x1F4CD; Aurora, CO</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services">
+    <div class="section-inner">
+      <div class="section-label">What I Offer</div>
+      <h2 class="section-title">Training programs for <em>every level.</em></h2>
+      <p class="section-sub">Whether you're brand new to the sport or grinding toward a podium finish, I have a program designed for your goals.</p>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">&#x1F3AF;</div>
+          <div class="service-title">Private Lessons</div>
+          <p class="service-desc">One-on-one instruction tailored completely to your game. We focus on technique, footwork, shot selection, and the mental side of competitive play.</p>
+          <a href="mailto:jjvinlove@gmail.com" class="service-link">Book now &#x2192;</a>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">&#x1F465;</div>
+          <div class="service-title">Group Clinics</div>
+          <p class="service-desc">Small-group sessions that combine instruction with live drilling. Great energy, shared learning, and a fraction of the cost of private lessons.</p>
+          <a href="mailto:jjvinlove@gmail.com" class="service-link">Book now &#x2192;</a>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">&#x1F3C6;</div>
+          <div class="service-title">Tournament Prep</div>
+          <p class="service-desc">Structured prep for competitors. Scenario drilling, match strategy, rating-specific skills, and mental toughness training from a Nationals-level player.</p>
+          <a href="mailto:jjvinlove@gmail.com" class="service-link">Book now &#x2192;</a>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">&#x1F530;</div>
+          <div class="service-title">Beginner Bootcamp</div>
+          <p class="service-desc">New to pickleball? This is your starting point. Learn the rules, develop core skills, and get comfortable on the court in a fun, low-pressure environment.</p>
+          <a href="mailto:jjvinlove@gmail.com" class="service-link">Book now &#x2192;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COURT QUOTE -->
+  <section id="quotes">
+    <div class="quotes-inner">
+      <div class="quote-label">From the Court</div>
+      <div class="quote-display">
+        <blockquote class="quote-text" id="quoteText" aria-live="polite">
+          "The kitchen is where <span class="quote-accent">games are won.</span> Master the soft game first."
+        </blockquote>
+      </div>
+      <div class="quote-dots" id="quoteDots"></div>
+    </div>
+  </section>
+
+  <!-- QUIZ -->
+  <section id="quiz">
+    <div class="section-inner">
+      <div class="section-label">Find Your Fit</div>
+      <h2 class="section-title">Which program is <em>right for you?</em></h2>
+      <p class="section-sub">Answer 3 quick questions and I'll point you to the best training option for where you are right now.</p>
+      <div class="quiz-container">
+        <div class="quiz-progress">
+          <div class="quiz-progress-bar"><div class="quiz-progress-fill" id="progressFill" style="width:0%"></div></div>
+        </div>
+
+        <!-- Q1 -->
+        <div class="quiz-q active" id="q1">
+          <p class="quiz-question">1. How long have you been playing pickleball?</p>
+          <div class="quiz-options">
+            <button class="quiz-option" onclick="selectOption(1, 'beginner', this)">Just starting out</button>
+            <button class="quiz-option" onclick="selectOption(1, 'intermediate', this)">Less than a year</button>
+            <button class="quiz-option" onclick="selectOption(1, 'intermediate', this)">1–3 years</button>
+            <button class="quiz-option" onclick="selectOption(1, 'advanced', this)">3+ years / competitive</button>
+          </div>
+        </div>
+
+        <!-- Q2 -->
+        <div class="quiz-q" id="q2">
+          <p class="quiz-question">2. What's your main goal right now?</p>
+          <div class="quiz-options">
+            <button class="quiz-option" onclick="selectOption(2, 'beginner', this)">Learn the basics and have fun</button>
+            <button class="quiz-option" onclick="selectOption(2, 'group', this)">Improve with others</button>
+            <button class="quiz-option" onclick="selectOption(2, 'private', this)">Get focused 1-on-1 help</button>
+            <button class="quiz-option" onclick="selectOption(2, 'tournament', this)">Win more matches / compete</button>
+          </div>
+        </div>
+
+        <!-- Q3 -->
+        <div class="quiz-q" id="q3">
+          <p class="quiz-question">3. How do you prefer to train?</p>
+          <div class="quiz-options">
+            <button class="quiz-option" onclick="selectOption(3, 'private', this)">One-on-one with a coach</button>
+            <button class="quiz-option" onclick="selectOption(3, 'group', this)">Small group energy</button>
+            <button class="quiz-option" onclick="selectOption(3, 'tournament', this)">Scenario-based drilling</button>
+            <button class="quiz-option" onclick="selectOption(3, 'beginner', this)">Relaxed and low-pressure</button>
+          </div>
+        </div>
+
+        <!-- Result -->
+        <div class="quiz-result" id="quizResult">
+          <div style="font-size:2.5rem;margin-bottom:12px">&#x1F3D3;</div>
+          <div class="quiz-result-title" id="resultTitle">Recommended: Private Lessons</div>
+          <p class="quiz-result-desc" id="resultDesc">Based on your answers, focused one-on-one coaching will fast-track your improvement the most.</p>
+          <a href="mailto:jjvinlove@gmail.com" class="btn-primary" style="display:inline-flex;justify-content:center">Book This Program</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section id="testimonials">
+    <div class="section-inner">
+      <div class="section-label">What Players Say</div>
+      <h2 class="section-title">Real results from <em>Aurora players.</em></h2>
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="testimonial-stars">
+            <span class="star">&#x2605;</span><span class="star">&#x2605;</span><span class="star">&#x2605;</span><span class="star">&#x2605;</span><span class="star">&#x2605;</span>
+          </div>
+          <p class="testimonial-text">"I came in as a total beginner and Josh made everything click right away. His breakdowns are simple and he meets you exactly where you are. I went from confused to confident in just a few sessions — I'm already playing drop-in three times a week!"</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">MR</div>
+            <div>
+              <div class="author-name">Melissa R.</div>
+              <div class="author-meta">Aurora, CO · Beginner student</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">
+            <span class="star">&#x2605;</span><span class="star">&#x2605;</span><span class="star">&#x2605;</span><span class="star">&#x2605;</span><span class="star">&#x2605;</span>
+          </div>
+          <p class="testimonial-text">"Josh helped me prep for my first regional tournament and I couldn't believe the difference. His tournament prep sessions are intense in the best way — real match scenarios, smart strategy talk, and he genuinely cares about your results. Placed better than I ever expected."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">DK</div>
+            <div>
+              <div class="author-name">Derek K.</div>
+              <div class="author-meta">Aurora, CO · Tournament prep student</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="section-inner">
+      <div class="section-label">Common Questions</div>
+      <h2 class="section-title">Everything you need to <em>know.</em></h2>
+      <div class="faq-grid">
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Where do lessons take place in Aurora?
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="faq-answer">I hold lessons at several courts around Aurora, including Fulton Courts and Ace Pickleball Club. When you reach out, we'll coordinate a location that works best for you.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Do I need my own equipment to get started?
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="faq-answer">Not at all. If you're just starting out, I can lend you a loaner paddle for your first session. I can also recommend affordable starter gear once you decide to invest in your own equipment.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            What skill levels do you coach?
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="faq-answer">All skill levels are welcome — from complete beginners who have never held a paddle, to competitive players preparing for tournament play. I tailor every session to where you are and where you want to go.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            How do I book a lesson in Aurora?
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="faq-answer">The easiest way is to email me directly at jjvinlove@gmail.com or call (303) 263-1690. Tell me your availability and goals and we'll set something up fast.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            What is PPR Certification?
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="faq-answer">PPR (Professional Pickleball Registry) is the leading credentialing body for pickleball instructors. It means I've completed rigorous coaching education, passed skills evaluations, and am held to ongoing professional standards — giving you confidence that you're learning from a qualified coach.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            What is your cancellation policy?
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="faq-answer">Life happens. I just ask for 24 hours notice if you need to cancel or reschedule a session. Last-minute weather cancellations are always handled with flexibility — we'll find another time that works for you.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOOKING CTA -->
+  <section id="booking">
+    <div class="booking-inner">
+      <div class="booking-eyebrow">Ready to Improve?</div>
+      <h2 class="booking-title">Let's Get You on the Court</h2>
+      <span class="booking-caveat">Your next level is one lesson away.</span>
+      <p class="booking-sub">Send me a message and we'll find a time that works for you. No complicated booking system — just a quick email or call to get started.</p>
+      <div class="booking-options">
+        <a href="mailto:jjvinlove@gmail.com" class="btn-primary">&#x2709; Email Josh</a>
+        <a href="tel:3032631690" class="btn-secondary">&#x260E; (303) 263-1690</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="section-inner">
+      <div class="section-label">Get in Touch</div>
+      <h2 class="section-title">Have a question? <em>Send Josh a message.</em></h2>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <p class="contact-heading">Contact Information</p>
+          <div class="contact-detail">
+            <div class="contact-icon">&#x2709;</div>
+            <div>Email: <a href="mailto:jjvinlove@gmail.com">jjvinlove@gmail.com</a></div>
+          </div>
+          <div class="contact-detail">
+            <div class="contact-icon">&#x260E;</div>
+            <div>Phone: <a href="tel:3032631690">(303) 263-1690</a></div>
+          </div>
+          <div class="contact-detail">
+            <div class="contact-icon">&#x1F4CD;</div>
+            <div>Aurora, Colorado</div>
+          </div>
+          <div class="contact-detail">
+            <div class="contact-icon">&#x1F3D3;</div>
+            <div>Teaching at Arvada Pickleball &amp; courts across Aurora</div>
+          </div>
+          <div style="margin-top:28px">
+            <p style="font-size:0.85rem;color:#888;line-height:1.6;">I typically respond within a few hours. Whether you have questions about programs, pricing, or just want to know if coaching is right for you — don't hesitate to reach out.</p>
+          </div>
+        </div>
+        <div class="contact-form">
+          <form action="mailto:jjvinlove@gmail.com" method="post" enctype="text/plain" onsubmit="return handleForm(event)">
+            <div class="form-group">
+              <label class="form-label" for="fname">Your Name</label>
+              <input class="form-input" type="text" id="fname" name="name" placeholder="Jane Smith" required />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="femail">Email Address</label>
+              <input class="form-input" type="email" id="femail" name="email" placeholder="jane@example.com" required />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="fphone">Phone (optional)</label>
+              <input class="form-input" type="tel" id="fphone" name="phone" placeholder="(303) 555-0100" />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="fmessage">Message</label>
+              <textarea class="form-textarea" id="fmessage" name="message" placeholder="Hi Josh, I'm interested in private lessons. I'm a beginner and looking to start..." required></textarea>
+            </div>
+            <button type="submit" class="form-submit">Send Message &#x2192;</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAP -->
+  <section id="map">
+    <div class="map-header">
+      <div class="section-label">Location</div>
+      <h2 class="section-title">Find us in <em>Aurora, CO.</em></h2>
+    </div>
+    <div class="map-iframe-wrap">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d98443.84779476406!2d-104.93498!3d39.72943!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x876c63b6de3e8ea7%3A0x6a7b7c3a1a1e1a1b!2sAurora%2C%20CO!5e0!3m2!1sen!2sus!4v1700000000000"
+        width="100%"
+        height="380"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Aurora, Colorado map"
+      ></iframe>
+    </div>
+  </section>
+
+  <!-- COURT DIRECTORY -->
+  <section id="courts">
+    <div class="section-inner">
+      <div class="section-label">Court Directory</div>
+      <h2 class="section-title">Best Places to Play in <em>Aurora.</em></h2>
+      <p class="section-sub">Great courts all around the city. Here are my top picks for drop-in play and practice in Aurora.</p>
+      <div class="courts-grid">
+        <div class="court-card">
+          <span class="court-badge outdoor">&#x1F333; Outdoor · Free</span>
+          <div class="court-name">Fulton Courts</div>
+          <div class="court-meta">&#x1F3D3; 4 dedicated courts</div>
+          <p class="court-desc">Four free dedicated pickleball courts with permanent nets. Great community vibe and open dawn to dusk.</p>
+          <div class="court-address">&#x1F4CD; 800 Fulton St, Aurora CO 80010</div>
+        </div>
+        <div class="court-card">
+          <span class="court-badge indoor">&#x1F3E2; Indoor</span>
+          <div class="court-name">Ace Pickleball Club</div>
+          <div class="court-meta">&#x1F3D3; 9 professional courts</div>
+          <p class="court-desc">Nine professional-grade cushioned indoor courts with all-day open play and social events.</p>
+          <div class="court-address">&#x1F4CD; 6626 S Parker Rd, Aurora CO 80016</div>
+        </div>
+        <div class="court-card">
+          <span class="court-badge indoor">&#x1F3E2; Indoor · City-Run</span>
+          <div class="court-name">Central Recreation Center</div>
+          <div class="court-meta">&#x1F3D3; Multiple courts</div>
+          <p class="court-desc">City-run indoor courts with $5 drop-in play. No registration needed.</p>
+          <div class="court-address">&#x1F4CD; 18150 E Vassar Pl, Aurora CO 80013</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-copy">© 2026 Josh Vinlove · Pickleball Coaching in Aurora, CO</div>
+      <ul class="footer-links">
+        <li><a href="mailto:jjvinlove@gmail.com">Contact</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+      <div class="footer-built">Built by Scrollfinity</div>
+    </div>
+  </footer>
+
+  <script>
+    // ===== NAV TOGGLE =====
+    function toggleNav() {
+      const links = document.getElementById('navLinks');
+      links.classList.toggle('open');
+    }
+
+    // Close nav on link click (mobile)
+    document.querySelectorAll('.nav-links a').forEach(a => {
+      a.addEventListener('click', () => {
+        document.getElementById('navLinks').classList.remove('open');
+      });
+    });
+
+    // ===== WEATHER WIDGET =====
+    (function() {
+      // Simulated weather for Aurora, CO — realistic for the region
+      const conditions = [
+        { icon: '☀️', temp: 72, desc: 'Sunny · Perfect pickleball weather', condition: '🎾 Court conditions: Ideal' },
+        { icon: '⛅', temp: 65, desc: 'Partly Cloudy · Great day to play', condition: '🏓 Court conditions: Good' },
+        { icon: '🌤️', temp: 68, desc: 'Mostly Sunny · Mild breeze', condition: '🎾 Court conditions: Ideal' },
+        { icon: '🌬️', temp: 58, desc: 'Breezy · Adjust your lob game', condition: '⚠️ Windy — adapt strategy' },
+      ];
+      const today = new Date();
+      const pick = conditions[today.getDate() % conditions.length];
+      document.getElementById('weatherIcon').textContent = pick.icon;
+      document.getElementById('weatherTemp').innerHTML = pick.temp + '<span>°F</span>';
+      document.getElementById('weatherDesc').textContent = pick.desc;
+      document.getElementById('weatherCondition').textContent = pick.condition;
+    })();
+
+    // ===== COURT QUOTES =====
+    const quotes = [
+      { text: '"The kitchen is where <span class="quote-accent">games are won.</span> Master the soft game first."' },
+      { text: '"Every great shot starts with <span class="quote-accent">great footwork.</span> Move, then swing."' },
+      { text: '"Consistency beats power. <span class="quote-accent">Win the rally, not just the point."</span>' },
+      { text: '"The best players aren\'t fearless. They\'re <span class="quote-accent">comfortable being uncomfortable."</span>' },
+      { text: '"Reset. Don\'t hero. <span class="quote-accent">Live to dink another day."</span>' },
+      { text: '"Your third shot drop is your <span class="quote-accent">ticket to the kitchen.</span> Make it count."' },
+      { text: '"Practice the shots you avoid. <span class="quote-accent">That\'s where your game is hiding."</span>' },
+    ];
+
+    let currentQuote = 0;
+
+    function buildDots() {
+      const container = document.getElementById('quoteDots');
+      quotes.forEach((_, i) => {
+        const btn = document.createElement('button');
+        btn.className = 'quote-dot' + (i === 0 ? ' active' : '');
+        btn.setAttribute('aria-label', 'Quote ' + (i + 1));
+        btn.onclick = () => showQuote(i);
+        container.appendChild(btn);
+      });
+    }
+
+    function showQuote(index) {
+      const el = document.getElementById('quoteText');
+      el.style.opacity = '0';
+      setTimeout(() => {
+        el.innerHTML = quotes[index].text;
+        el.style.opacity = '1';
+        currentQuote = index;
+        document.querySelectorAll('.quote-dot').forEach((d, i) => {
+          d.classList.toggle('active', i === index);
+        });
+      }, 300);
+    }
+
+    buildDots();
+
+    setInterval(() => {
+      showQuote((currentQuote + 1) % quotes.length);
+    }, 4500);
+
+    // ===== QUIZ =====
+    const quizAnswers = {};
+
+    const resultMap = {
+      beginner: {
+        title: 'Recommended: Beginner Bootcamp',
+        desc: 'You\'re in the perfect spot to start fresh. My Beginner Bootcamp will build your foundation fast in a fun, low-pressure environment.'
+      },
+      private: {
+        title: 'Recommended: Private Lessons',
+        desc: 'Based on your answers, focused one-on-one coaching will fast-track your improvement the most. We\'ll zero in on exactly what your game needs.'
+      },
+      group: {
+        title: 'Recommended: Group Clinics',
+        desc: 'You\'ll thrive in a small-group setting — shared energy, great drilling, and social play baked right in.'
+      },
+      tournament: {
+        title: 'Recommended: Tournament Prep',
+        desc: 'You\'re ready to compete. Let\'s build your match strategy, tighten up your scenarios, and get you podium-ready.'
+      },
+      intermediate: {
+        title: 'Recommended: Private or Group',
+        desc: 'At your stage, either private lessons or group clinics will level you up quickly. Let\'s chat about which fits your schedule best.'
+      }
+    };
+
+    function selectOption(qNum, answer, el) {
+      const q = document.getElementById('q' + qNum);
+      q.querySelectorAll('.quiz-option').forEach(opt => opt.classList.remove('selected'));
+      el.classList.add('selected');
+      quizAnswers[qNum] = answer;
+
+      const next = qNum + 1;
+      const fill = Math.round((qNum / 3) * 100);
+      document.getElementById('progressFill').style.width = fill + '%';
+
+      setTimeout(() => {
+        q.classList.remove('active');
+        const nextQ = document.getElementById('q' + next);
+        if (nextQ) {
+          nextQ.classList.add('active');
+        } else {
+          // Show result
+          document.getElementById('progressFill').style.width = '100%';
+          const votes = Object.values(quizAnswers);
+          const counts = {};
+          votes.forEach(v => { counts[v] = (counts[v] || 0) + 1; });
+          const winner = Object.entries(counts).sort((a, b) => b[1] - a[1])[0][0];
+          const result = resultMap[winner] || resultMap['private'];
+          document.getElementById('resultTitle').textContent = result.title;
+          document.getElementById('resultDesc').textContent = result.desc;
+          document.getElementById('quizResult').classList.add('show');
+        }
+      }, 350);
+    }
+
+    // ===== FAQ =====
+    function toggleFaq(btn) {
+      const answer = btn.nextElementSibling;
+      const isOpen = btn.classList.contains('open');
+
+      // Close all
+      document.querySelectorAll('.faq-question').forEach(q => q.classList.remove('open'));
+      document.querySelectorAll('.faq-answer').forEach(a => a.classList.remove('open'));
+
+      if (!isOpen) {
+        btn.classList.add('open');
+        answer.classList.add('open');
+      }
+    }
+
+    // ===== CONTACT FORM =====
+    function handleForm(e) {
+      e.preventDefault();
+      const form = e.target;
+      const name = form.name.value;
+      const email = form.email.value;
+      const phone = form.phone.value;
+      const message = form.message.value;
+      const subject = encodeURIComponent('Pickleball Lesson Inquiry from ' + name);
+      const body = encodeURIComponent(
+        'Name: ' + name + '\n' +
+        'Email: ' + email + '\n' +
+        (phone ? 'Phone: ' + phone + '\n' : '') +
+        '\nMessage:\n' + message
+      );
+      window.location.href = 'mailto:jjvinlove@gmail.com?subject=' + subject + '&body=' + body;
+      return false;
+    }
+
+    // ===== NAV SCROLL EFFECT =====
+    window.addEventListener('scroll', () => {
+      const nav = document.querySelector('nav');
+      if (window.scrollY > 20) {
+        nav.style.background = 'rgba(15,29,43,0.98)';
+      } else {
+        nav.style.background = 'rgba(15,29,43,0.95)';
+      }
+    });
+  </script>
+</body>
+</html>
