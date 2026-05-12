@@ -1,0 +1,14 @@
+{
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?<slug>[^.]+)\\.scrollfinity\\.com"
+        }
+      ],
+      "destination": "/sites/:slug/$1"
+    }
+  ]
+}
