@@ -1,0 +1,1739 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sean Pummill — Pickleball Coach Lessons in Steamboat Springs, Colorado</title>
+  <meta name="description" content="Pickleball coaching in Steamboat Springs, CO. Fundamentals-first instruction for all skill levels. Book your first session today.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Kalam:wght@700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Sean Pummill Pickleball Coaching",
+    "description": "Pickleball coaching in Steamboat Springs, CO. Fundamentals-first instruction for all skill levels. Book your first session today.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Steamboat Springs",
+      "addressRegion": "CO",
+      "addressCountry": "US"
+    },
+    "email": "steamboatpb1@gmail.com",
+    "url": "https://sean-pummill-pickleball.scrollfinity.com"
+  }
+  </script>
+  <style>
+    :root {
+      --primary: #2D2D3F;
+      --accent: #E8596E;
+      --bg: #F7F5F7;
+      --text: #1a1a1a;
+      --card: #FFFFFF;
+      --dark: #2D2D3F;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Work Sans', sans-serif;
+      font-weight: 400;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3, h4, h5 {
+      font-family: 'Sora', sans-serif;
+      font-weight: 700;
+    }
+
+    .kalam {
+      font-family: 'Kalam', cursive;
+      font-weight: 700;
+    }
+
+    /* ─── STICKY NAV ─── */
+    #main-nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      padding: 0 5%;
+      height: 68px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: transparent;
+      transition: background 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    #main-nav.scrolled {
+      background: var(--dark);
+      box-shadow: 0 2px 20px rgba(0,0,0,0.3);
+    }
+
+    .nav-brand {
+      font-family: 'Sora', sans-serif;
+      font-weight: 800;
+      font-size: 1.15rem;
+      color: #fff;
+      text-decoration: none;
+      letter-spacing: -0.02em;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: rgba(255,255,255,0.85);
+      text-decoration: none;
+      font-family: 'Work Sans', sans-serif;
+      font-weight: 500;
+      font-size: 0.9rem;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: #fff;
+    }
+
+    .nav-cta {
+      background: var(--accent) !important;
+      color: #fff !important;
+      padding: 0.5rem 1.25rem;
+      border-radius: 4px;
+      font-weight: 600 !important;
+      transition: opacity 0.2s !important;
+    }
+
+    .nav-cta:hover {
+      opacity: 0.88;
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 4px;
+    }
+
+    .hamburger span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: #fff;
+      border-radius: 2px;
+      transition: all 0.3s;
+    }
+
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      top: 68px;
+      left: 0;
+      right: 0;
+      background: var(--dark);
+      padding: 1.5rem 5%;
+      z-index: 999;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    .mobile-menu.open {
+      display: flex;
+    }
+
+    .mobile-menu a {
+      color: rgba(255,255,255,0.85);
+      text-decoration: none;
+      font-family: 'Work Sans', sans-serif;
+      font-weight: 500;
+      font-size: 1rem;
+      padding: 0.5rem 0;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .mobile-menu .mobile-cta {
+      background: var(--accent);
+      color: #fff;
+      text-align: center;
+      padding: 0.75rem 1.5rem;
+      border-radius: 4px;
+      font-weight: 600;
+      border-bottom: none;
+      margin-top: 0.5rem;
+    }
+
+    /* ─── HERO ─── */
+    #hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background-image: url('https://images.unsplash.com/photo-1737476997205-b3336182f215?w=800&q=80&fit=crop');
+      background-size: cover;
+      background-position: center;
+      z-index: 0;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(45,45,63,0.88) 0%, rgba(45,45,63,0.72) 60%, rgba(45,45,63,0.55) 100%);
+      z-index: 1;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      max-width: 800px;
+      padding: 2rem 5%;
+      margin-top: 68px;
+    }
+
+    .hero-content h1 {
+      font-family: 'Sora', sans-serif;
+      font-weight: 800;
+      font-size: clamp(2.2rem, 5.5vw, 4rem);
+      color: #fff;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.75rem;
+      text-transform: uppercase;
+    }
+
+    .hero-accent-phrase {
+      font-family: 'Kalam', cursive;
+      font-weight: 700;
+      font-size: clamp(1.5rem, 3.5vw, 2.2rem);
+      color: var(--accent);
+      display: block;
+      margin-bottom: 1.25rem;
+    }
+
+    .hero-sub {
+      color: rgba(255,255,255,0.82);
+      font-family: 'Work Sans', sans-serif;
+      font-weight: 400;
+      font-size: clamp(1rem, 2vw, 1.2rem);
+      max-width: 620px;
+      margin: 0 auto 2rem;
+      line-height: 1.65;
+    }
+
+    .hero-ctas {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      display: inline-block;
+      background: var(--accent);
+      color: #fff;
+      padding: 0.875rem 2rem;
+      border-radius: 4px;
+      font-family: 'Work Sans', sans-serif;
+      font-weight: 600;
+      font-size: 1rem;
+      text-decoration: none;
+      transition: opacity 0.2s, transform 0.2s;
+      letter-spacing: 0.01em;
+    }
+
+    .btn-primary:hover {
+      opacity: 0.88;
+      transform: translateY(-1px);
+    }
+
+    .btn-outline {
+      display: inline-block;
+      background: transparent;
+      color: #fff;
+      padding: 0.875rem 2rem;
+      border-radius: 4px;
+      border: 2px solid rgba(255,255,255,0.6);
+      font-family: 'Work Sans', sans-serif;
+      font-weight: 600;
+      font-size: 1rem;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+
+    .btn-outline:hover {
+      border-color: #fff;
+      background: rgba(255,255,255,0.1);
+    }
+
+    /* Weather Widget */
+    #weather-widget {
+      position: absolute;
+      top: 90px;
+      right: 5%;
+      z-index: 3;
+      background: rgba(255,255,255,0.12);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 8px;
+      padding: 0.65rem 1rem;
+      color: #fff;
+      font-family: 'Work Sans', sans-serif;
+      font-size: 0.82rem;
+      font-weight: 500;
+      max-width: 220px;
+      line-height: 1.4;
+      display: none;
+    }
+
+    #weather-widget .weather-temp {
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 0.2rem;
+    }
+
+    /* ─── STATS BAR ─── */
+    #stats {
+      background: var(--accent);
+      padding: 2.5rem 5%;
+    }
+
+    .stats-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 3rem;
+      flex-wrap: wrap;
+    }
+
+    .stat-item {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      color: #fff;
+    }
+
+    .stat-badge {
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      flex-shrink: 0;
+    }
+
+    .stat-text {
+      font-family: 'Sora', sans-serif;
+      font-weight: 700;
+      font-size: 1.05rem;
+      line-height: 1.3;
+    }
+
+    .stat-text span {
+      display: block;
+      font-family: 'Work Sans', sans-serif;
+      font-weight: 400;
+      font-size: 0.82rem;
+      opacity: 0.85;
+    }
+
+    /* ─── SECTION SHARED STYLES ─── */
+    .section-label {
+      font-family: 'Work Sans', sans-serif;
+      font-weight: 600;
+      font-size: 0.78rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.5rem;
+      display: block;
+    }
+
+    .section-heading {
+      font-family: 'Sora', sans-serif;
+      font-weight: 800;
+      font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+      text-transform: uppercase;
+      letter-spacing: -0.02em;
+      line-height: 1.15;
+      margin-bottom: 1.25rem;
+    }
+
+    .section-heading.white {
+      color: #fff;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 5%;
+    }
+
+    /* ─── ABOUT ─── */
+    #about {
+      background: var(--bg);
+      padding: 6rem 5%;
+    }
+
+    .about-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    .about-img {
+      border-radius: 8px;
+      overflow: hidden;
+      aspect-ratio: 4/5;
+    }
+
+    .about-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .about-text .section-heading {
+      color: var(--primary);
+    }
+
+    .about-bio {
+      font-family: 'Work Sans', sans-serif;
+      font-weight: 400;
+      font-size: 1.05rem;
+      line-height: 1.75;
+      color: #3a3a4a;
+      margin-bottom: 1.75rem;
+    }
+
+    /* ─── SERVICES ─── */
+    #services {
+      background: var(--dark);
+      padding: 6rem 5%;
+    }
+
+    .services-header {
+      text-align: center;
+      margin-bottom: 3.5rem;
+    }
+
+    .services-header .section-heading {
+      color: #fff;
+    }
+
+    .services-grid {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.75rem;
+    }
+
+    .service-card {
+      background: var(--card);
+      border-radius: 6px;
+      padding: 2rem 1.75rem;
+      border-top: 4px solid var(--accent);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .service-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 32px rgba(0,0,0,0.18);
+    }
+
+    .service-icon {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      display: block;
+    }
+
+    .service-card h3 {
+      font-family: 'Sora', sans-serif;
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: var(--primary);
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+      margin-bottom: 0.75rem;
+    }
+
+    .service-card p {
+      font-family: 'Work Sans', sans-serif;
+      font-size: 0.92rem;
+      color: #555;
+      line-height: 1.65;
+      margin-bottom: 1.25rem;
+    }
+
+    .service-link {
+      font-family: 'Work Sans', sans-serif;
+      font-weight: 600;
+      font-size: 0.88rem;
+      color: var(--accent);
+      text-decoration: none;
+      letter-spacing: 0.02em;
+      transition: gap 0.2s;
+    }
+
+    .service-link:hover {
+      text-decoration: underline;
+    }
+
+    /* ─── COURT QUOTE ─── */
+    #court-quote {
+      background: var(--primary);
+      padding: 5rem 5%;
+      border-left: 6px solid var(--accent);
+    }
+
+    .quote-inner {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .quote-label {
+      font-family: 'Work Sans', sans-serif;
+      font-weight: 600;
+      font-size: 0.78rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.75rem;
+      display: block;
+    }
+
+    .quote-heading {
+      font-family: 'Sora', sans-serif;
+      font-weight: 800;
+      font-size: clamp(1.1rem, 2vw, 1.35rem);
+      color: rgba(255,255,255,0.5);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 2rem;
+    }
+
+    #daily-quote {
+      font-family: 'Kalam', cursive;
+      font-weight: 700;
+      font-size: clamp(1.5rem, 3.5vw, 2.2rem);
+      color: #fff;
+      line-height: 1.45;
+      font-style: italic;
+    }
+
+    /* ─── QUIZ ─── */
+    #quiz {
+      background: var(--bg);
+      padding: 6rem 5%;
+    }
+
+    .quiz-header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .quiz-header .section-heading {
+      color: var(--primary);
+    }
+
+    .quiz-wrap {
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    .quiz-question {
+      margin-bottom: 2rem;
+    }
+
+    .quiz-question p {
+      font-family: 'Sora', sans-serif;
+      font-weight: 700;
+      font-size: 1rem;
+      color: var(--primary);
+      margin-bottom: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    }
+
+    .quiz-options {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.65rem;
+    }
+
+    .quiz-option {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.6rem;
+      background: var(--card);
+      border: 2px solid #e0dde0;
+      border-radius: 6px;
+      padding: 0.75rem 1rem;
+      cursor: pointer;
+      transition: all 0.2s;
+      font-family: 'Work Sans', sans-serif;
+      font-size: 0.88rem;
+      color: #444;
+      text-align: left;
+    }
+
+    .quiz-option:hover {
+      border-color: var(--accent);
+      background: #fff5f6;
+    }
+
+    .quiz-option.selected {
+      border-color: var(--accent);
+      background: #fff0f2;
+      color: var(--primary);
+      font-weight: 600;
+    }
+
+    .quiz-option input[type="radio"] {
+      margin-top: 2px;
+      accent-color: var(--accent);
+      flex-shrink: 0;
+    }
+
+    .quiz-btn {
+      display: block;
+      width: 100%;
+      background: var(--accent);
+      color: #fff;
+      border: none;
+      padding: 1rem 2rem;
+      border-radius: 4px;
+      font-family: 'Work Sans', sans-serif;
+      font-weight: 700;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: opacity 0.2s, transform 0.2s;
+      letter-spacing: 0.02em;
+      margin-top: 1.5rem;
+    }
+
+    .quiz-btn:hover {
+      opacity: 0.88;
+      transform: translateY(-1px);
+    }
+
+    .quiz-result {
+      display: none;
+      background: var(--card);
+      border: 2px solid var(--accent);
+      border-radius: 8px;
+      padding: 2rem;
+      margin-top: 2rem;
+      text-align: center;
+    }
+
+    .quiz-result.visible {
+      display: block;
+    }
+
+    .quiz-result h3 {
+      font-family: 'Sora', sans-serif;
+      font-weight: 800;
+      font-size: 1.3rem;
+      color: var(--primary);
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+    }
+
+    .quiz-result p {
+      font-family: 'Work Sans', sans-serif;
+      font-size: 0.95rem;
+      color: #555;
+      margin-bottom: 1.25rem;
+    }
+
+    /* ─── TESTIMONIALS ─── */
+    #testimonials {
+      background: var(--dark);
+      padding: 6rem 5%;
+    }
+
+    .testimonials-header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .testimonials-header .section-heading {
+      color: #fff;
+    }
+
+    .testimonials-grid {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.75rem;
+    }
+
+    .testimonial-card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 8px;
+      padding: 2rem;
+    }
+
+    .stars {
+      color: var(--accent);
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+      letter-spacing: 0.05em;
+    }
+
+    .testimonial-card blockquote {
+      font-family: 'Work Sans', sans-serif;
+      font-size: 0.97rem;
+      color: rgba(255,255,255,0.82);
+      line-height: 1.7;
+      font-style: italic;
+      margin-bottom: 1rem;
+    }
+
+    .testimonial-card cite {
+      font-family: 'Work Sans', sans-serif;
+      font-weight: 600;
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.5);
+      font-style: normal;
+    }
+
+    /* ─── FAQ ─── */
+    #faq {
+      background: var(--bg);
+      padding: 6rem 5%;
+    }
+
+    .faq-header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .faq-header .section-heading {
+      color: var(--primary);
+    }
+
+    .faq-wrap {
+      max-width: 740px;
+      margin: 0 auto;
+    }
+
+    details {
+      border-bottom: 1px solid #eee;
+    }
+
+    details:first-of-type {
+      border-top: 1px solid #eee;
+    }
+
+    summary {
+      list-style: none;
+      font-family: 'Work Sans', sans-serif;
+      font-weight: 700;
+      font-size: 1rem;
+      color: var(--primary);
+      padding: 1.25rem 2.5rem 1.25rem 0;
+      cursor: pointer;
+      position: relative;
+      display: block;
+      user-select: none;
+    }
+
+    summary::-webkit-details-marker {
+      display: none;
+    }
+
+    summary::after {
+      content: '+';
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 1.4rem;
+      color: var(--accent);
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    details[open] summary::after {
+      content: '−';
+    }
+
+    .faq-answer {
+      font-family: 'Work Sans', sans-serif;
+      font-size: 0.95rem;
+      color: #555;
+      line-height: 1.7;
+      padding-bottom: 1.25rem;
+    }
+
+    /* ─── BOOKING ─── */
+    #booking {
+      background: var(--accent);
+      padding: 6rem 5%;
+      text-align: center;
+    }
+
+    .booking-inner {
+      max-width: 640px;
+      margin: 0 auto;
+    }
+
+    #booking .section-label {
+      color: rgba(255,255,255,0.7);
+    }
+
+    #booking .section-heading {
+      color: #fff;
+    }
+
+    .booking-sub {
+      font-family: 'Work Sans', sans-serif;
+      font-size: 1.05rem;
+      color: rgba(255,255,255,0.85);
+      margin-bottom: 2rem;
+    }
+
+    .booking-urgency {
+      font-family: 'Kalam', cursive;
+      font-size: 1.2rem;
+      color: rgba(255,255,255,0.9);
+      margin-bottom: 1.75rem;
+      display: block;
+    }
+
+    .btn-white {
+      display: inline-block;
+      background: #fff;
+      color: var(--accent);
+      padding: 1rem 2.5rem;
+      border-radius: 4px;
+      font-family: 'Work Sans', sans-serif;
+      font-weight: 700;
+      font-size: 1.05rem;
+      text-decoration: none;
+      transition: opacity 0.2s, transform 0.2s;
+      letter-spacing: 0.01em;
+    }
+
+    .btn-white:hover {
+      opacity: 0.92;
+      transform: translateY(-1px);
+    }
+
+    /* ─── CONTACT FORM ─── */
+    #contact {
+      background: var(--card);
+      padding: 6rem 5%;
+    }
+
+    .contact-inner {
+      max-width: 620px;
+      margin: 0 auto;
+    }
+
+    .contact-inner .section-heading {
+      color: var(--primary);
+    }
+
+    .contact-form {
+      margin-top: 2rem;
+    }
+
+    .form-group {
+      margin-bottom: 1.25rem;
+    }
+
+    .form-group label {
+      display: block;
+      font-family: 'Work Sans', sans-serif;
+      font-weight: 600;
+      font-size: 0.88rem;
+      color: var(--primary);
+      margin-bottom: 0.4rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 0.875rem 1rem;
+      border: 2px solid #e0dde0;
+      border-radius: 4px;
+      font-family: 'Work Sans', sans-serif;
+      font-size: 0.95rem;
+      color: var(--text);
+      background: var(--bg);
+      transition: border-color 0.2s;
+      outline: none;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+      border-color: var(--accent);
+    }
+
+    .form-group textarea {
+      min-height: 140px;
+      resize: vertical;
+    }
+
+    .form-submit {
+      background: var(--accent);
+      color: #fff;
+      border: none;
+      padding: 0.95rem 2.5rem;
+      border-radius: 4px;
+      font-family: 'Work Sans', sans-serif;
+      font-weight: 700;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: opacity 0.2s, transform 0.2s;
+      letter-spacing: 0.02em;
+    }
+
+    .form-submit:hover {
+      opacity: 0.88;
+      transform: translateY(-1px);
+    }
+
+    /* ─── MAP ─── */
+    #map {
+      background: var(--bg);
+      padding: 4rem 5%;
+    }
+
+    .map-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .map-label {
+      font-family: 'Work Sans', sans-serif;
+      font-weight: 500;
+      font-size: 0.95rem;
+      color: #666;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+
+    .map-embed {
+      width: 100%;
+      height: 300px;
+      border-radius: 8px;
+      overflow: hidden;
+      border: none;
+    }
+
+    /* ─── COURT DIRECTORY ─── */
+    #courts {
+      background: var(--dark);
+      padding: 6rem 5%;
+    }
+
+    .courts-header {
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    .courts-header .section-heading {
+      color: #fff;
+    }
+
+    .courts-subheading {
+      font-family: 'Work Sans', sans-serif;
+      font-size: 0.97rem;
+      color: rgba(255,255,255,0.6);
+      text-align: center;
+      margin-bottom: 3rem;
+      max-width: 520px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .courts-grid {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+
+    .court-card {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 8px;
+      padding: 1.75rem;
+      transition: background 0.2s;
+    }
+
+    .court-card:hover {
+      background: rgba(255,255,255,0.09);
+    }
+
+    .court-card h3 {
+      font-family: 'Sora', sans-serif;
+      font-weight: 700;
+      font-size: 1rem;
+      color: #fff;
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+      margin-bottom: 0.5rem;
+    }
+
+    .court-address {
+      font-family: 'Work Sans', sans-serif;
+      font-size: 0.83rem;
+      color: rgba(255,255,255,0.5);
+      margin-bottom: 0.75rem;
+      line-height: 1.45;
+    }
+
+    .court-desc {
+      font-family: 'Work Sans', sans-serif;
+      font-size: 0.88rem;
+      color: rgba(255,255,255,0.72);
+      line-height: 1.6;
+      margin-bottom: 1rem;
+    }
+
+    .court-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .badge {
+      font-family: 'Work Sans', sans-serif;
+      font-weight: 600;
+      font-size: 0.73rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      padding: 0.25rem 0.65rem;
+      border-radius: 3px;
+    }
+
+    .badge-indoor {
+      background: rgba(232,89,110,0.2);
+      color: var(--accent);
+      border: 1px solid rgba(232,89,110,0.3);
+    }
+
+    .badge-outdoor {
+      background: rgba(255,255,255,0.08);
+      color: rgba(255,255,255,0.65);
+      border: 1px solid rgba(255,255,255,0.15);
+    }
+
+    .badge-public {
+      background: rgba(255,255,255,0.08);
+      color: rgba(255,255,255,0.65);
+      border: 1px solid rgba(255,255,255,0.15);
+    }
+
+    .badge-free {
+      background: rgba(80,200,120,0.15);
+      color: #7de8a4;
+      border: 1px solid rgba(80,200,120,0.25);
+    }
+
+    .court-phone {
+      font-family: 'Work Sans', sans-serif;
+      font-size: 0.83rem;
+      color: rgba(255,255,255,0.5);
+    }
+
+    /* ─── FOOTER ─── */
+    #footer {
+      background: #1a1a26;
+      padding: 2rem 5%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .footer-copy {
+      font-family: 'Work Sans', sans-serif;
+      font-size: 0.83rem;
+      color: rgba(255,255,255,0.45);
+    }
+
+    .footer-built {
+      font-family: 'Work Sans', sans-serif;
+      font-size: 0.83rem;
+      color: rgba(255,255,255,0.35);
+      text-decoration: none;
+    }
+
+    .footer-built a {
+      color: rgba(255,255,255,0.5);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .footer-built a:hover {
+      color: rgba(255,255,255,0.8);
+    }
+
+    /* ─── RESPONSIVE ─── */
+    @media (max-width: 900px) {
+      .courts-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .nav-links {
+        display: none;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+
+      .about-inner {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
+
+      .about-img {
+        aspect-ratio: 16/9;
+        order: -1;
+      }
+
+      .testimonials-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .courts-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .quiz-options {
+        grid-template-columns: 1fr;
+      }
+
+      #weather-widget {
+        top: auto;
+        bottom: 10%;
+        right: 5%;
+        left: 5%;
+        max-width: none;
+      }
+
+      .stats-inner {
+        gap: 1.75rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero-ctas {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .btn-primary,
+      .btn-outline {
+        width: 100%;
+        max-width: 320px;
+        text-align: center;
+      }
+
+      #footer {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ─── STICKY NAV ─── -->
+  <nav id="main-nav" role="navigation" aria-label="Main navigation">
+    <a href="#hero" class="nav-brand">Sean Pummill</a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Programs</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="mailto:steamboatpb1@gmail.com" class="nav-cta">Book Now</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger-btn" aria-label="Toggle menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobile-menu" role="navigation" aria-label="Mobile navigation">
+    <a href="#about" class="mobile-link">About</a>
+    <a href="#services" class="mobile-link">Programs</a>
+    <a href="#faq" class="mobile-link">FAQ</a>
+    <a href="#contact" class="mobile-link">Contact</a>
+    <a href="mailto:steamboatpb1@gmail.com" class="mobile-cta">Book Now</a>
+  </div>
+
+  <!-- ─── HERO ─── -->
+  <section id="hero" aria-label="Hero">
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="hero-overlay" aria-hidden="true"></div>
+
+    <div id="weather-widget" aria-live="polite">
+      <div class="weather-temp" id="weather-temp"></div>
+      <div id="weather-msg"></div>
+    </div>
+
+    <div class="hero-content">
+      <span class="hero-accent-phrase kalam">Master the Fundamentals.</span>
+      <h1>Pickleball Coaching in Steamboat Springs</h1>
+      <p class="hero-sub">Professional pickleball coaching for all skill levels in Steamboat Springs, CO. Build real fundamentals and get the most out of your game.</p>
+      <div class="hero-ctas">
+        <a href="mailto:steamboatpb1@gmail.com" class="btn-primary">Book a Session</a>
+        <a href="#services" class="btn-outline">See Programs</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── STATS BAR ─── -->
+  <section id="stats" aria-label="Stats">
+    <div class="stats-inner">
+      <div class="stat-item">
+        <div class="stat-badge" aria-hidden="true">🏓</div>
+        <div class="stat-text">
+          Since 2015
+          <span>Playing &amp; Teaching</span>
+        </div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-badge" aria-hidden="true">👥</div>
+        <div class="stat-text">
+          100+ Players Coached
+          <span>And Counting</span>
+        </div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-badge" aria-hidden="true">⭐</div>
+        <div class="stat-text">
+          All Skill Levels
+          <span>Beginner to Competitive</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── ABOUT ─── -->
+  <section id="about" aria-label="About Sean">
+    <div class="about-inner">
+      <div class="about-img">
+        <img src="https://images.unsplash.com/photo-1737476997205-b3336182f215?w=800&q=80&fit=crop" alt="Sean Pummill, pickleball instructor in Steamboat Springs CO" loading="lazy">
+      </div>
+      <div class="about-text">
+        <span class="section-label">About Your Coach</span>
+        <h2 class="section-heading">Hi, I'm Sean Pummill</h2>
+        <p class="about-bio">I'm Sean, a pickleball instructor based in Steamboat Springs, CO. I've been playing since 2015 and I'm all about helping players at every level get the most out of their game. I'm a fundamentals-first coach — strong basics unlock everything else on the court. Whether you're brand new or looking to sharpen your competitive edge, let's get to work.</p>
+        <a href="mailto:steamboatpb1@gmail.com" class="btn-primary">Book a Session</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── SERVICES ─── -->
+  <section id="services" aria-label="Programs and services">
+    <div class="services-header container">
+      <span class="section-label">What I Offer</span>
+      <h2 class="section-heading white">Programs Built for Your Game</h2>
+    </div>
+    <div class="services-grid">
+      <div class="service-card">
+        <span class="service-icon" aria-hidden="true">🎯</span>
+        <h3>Private Coaching</h3>
+        <p>One-on-one sessions tailored to your skill level, technique, and match strategy.</p>
+        <a href="mailto:steamboatpb1@gmail.com" class="service-link">Learn More →</a>
+      </div>
+      <div class="service-card">
+        <span class="service-icon" aria-hidden="true">👥</span>
+        <h3>Group Clinics</h3>
+        <p>Small-group sessions (4–8 players) covering drills, point play, and doubles strategy.</p>
+        <a href="mailto:steamboatpb1@gmail.com" class="service-link">Learn More →</a>
+      </div>
+      <div class="service-card">
+        <span class="service-icon" aria-hidden="true">🏆</span>
+        <h3>Tournament Prep</h3>
+        <p>Intensive sessions for competitive players. Game plans, mental toughness, match simulation.</p>
+        <a href="mailto:steamboatpb1@gmail.com" class="service-link">Learn More →</a>
+      </div>
+      <div class="service-card">
+        <span class="service-icon" aria-hidden="true">🌱</span>
+        <h3>Beginner Fundamentals</h3>
+        <p>A four-session starter program. Grip, serve, dink, basic court positioning. No experience needed.</p>
+        <a href="mailto:steamboatpb1@gmail.com" class="service-link">Learn More →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── COURT QUOTE ─── -->
+  <section id="court-quote" aria-label="Daily court wisdom">
+    <div class="quote-inner">
+      <span class="quote-label">Daily Inspiration</span>
+      <p class="quote-heading">Today's Court Wisdom</p>
+      <p id="daily-quote" class="kalam"></p>
+    </div>
+  </section>
+
+  <!-- ─── QUIZ ─── -->
+  <section id="quiz" aria-label="Skill level finder quiz">
+    <div class="quiz-header container">
+      <span class="section-label">Find Your Fit</span>
+      <h2 class="section-heading">What Kind of Player Are You?</h2>
+    </div>
+    <div class="quiz-wrap">
+      <form id="quiz-form" novalidate>
+        <div class="quiz-question">
+          <p>Q1 — How long have you been playing?</p>
+          <div class="quiz-options">
+            <label class="quiz-option">
+              <input type="radio" name="q1" value="A"> Never picked up a paddle
+            </label>
+            <label class="quiz-option">
+              <input type="radio" name="q1" value="B"> Less than 1 year
+            </label>
+            <label class="quiz-option">
+              <input type="radio" name="q1" value="C"> 1–3 years
+            </label>
+            <label class="quiz-option">
+              <input type="radio" name="q1" value="D"> 3+ years / I compete
+            </label>
+          </div>
+        </div>
+
+        <div class="quiz-question">
+          <p>Q2 — What's your biggest challenge on the court?</p>
+          <div class="quiz-options">
+            <label class="quiz-option">
+              <input type="radio" name="q2" value="A"> I don't know where to start
+            </label>
+            <label class="quiz-option">
+              <input type="radio" name="q2" value="B"> My shots are inconsistent
+            </label>
+            <label class="quiz-option">
+              <input type="radio" name="q2" value="C"> I lose points at the net
+            </label>
+            <label class="quiz-option">
+              <input type="radio" name="q2" value="D"> I struggle in tournament pressure
+            </label>
+          </div>
+        </div>
+
+        <div class="quiz-question">
+          <p>Q3 — What's your main goal?</p>
+          <div class="quiz-options">
+            <label class="quiz-option">
+              <input type="radio" name="q3" value="A"> Learn the basics and have fun
+            </label>
+            <label class="quiz-option">
+              <input type="radio" name="q3" value="B"> Improve my consistency
+            </label>
+            <label class="quiz-option">
+              <input type="radio" name="q3" value="C"> Beat players at my level
+            </label>
+            <label class="quiz-option">
+              <input type="radio" name="q3" value="D"> Win tournaments
+            </label>
+          </div>
+        </div>
+
+        <button type="submit" class="quiz-btn">Find My Program →</button>
+      </form>
+
+      <div id="quiz-result" class="quiz-result" aria-live="polite">
+        <h3 id="result-program"></h3>
+        <p id="result-desc"></p>
+        <a href="mailto:steamboatpb1@gmail.com" class="btn-primary">Book This Session →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── TESTIMONIALS ─── -->
+  <!-- PLACEHOLDER: Replace with real testimonials after claiming site -->
+  <section id="testimonials" aria-label="Testimonials">
+    <div class="testimonials-header container">
+      <span class="section-label">What Players Say</span>
+      <h2 class="section-heading white">Real Results on the Court</h2>
+    </div>
+    <div class="testimonials-grid container">
+      <div class="testimonial-card">
+        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <blockquote>"Sean completely changed how I think about the third shot drop. My rating jumped from 3.0 to 3.5 in three months."</blockquote>
+        <cite>— Sarah M., Steamboat Springs CO</cite>
+      </div>
+      <div class="testimonial-card">
+        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <blockquote>"Best investment I've made in my pickleball game. Sean is patient, specific, and genuinely fun to learn from."</blockquote>
+        <cite>— David K., Steamboat Springs CO</cite>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── FAQ ─── -->
+  <section id="faq" aria-label="Frequently asked questions">
+    <div class="faq-header container">
+      <span class="section-label">Common Questions</span>
+      <h2 class="section-heading">Everything You Need to Know</h2>
+    </div>
+    <div class="faq-wrap">
+      <details>
+        <summary>What paddle should I bring to my first lesson?</summary>
+        <div class="faq-answer">Don't worry about gear yet — I have loaner paddles you can use. Once we identify your playing style, I'll recommend the right paddle for you. Most beginners do fine with any mid-range composite paddle.</div>
+      </details>
+      <details>
+        <summary>How long are lessons and how often should I train?</summary>
+        <div class="faq-answer">Private sessions are 60 minutes. For beginners, once a week is a great start. More serious players often train 2–3 times a week. We'll figure out a schedule that fits your life and your goals.</div>
+      </details>
+      <details>
+        <summary>Do I need any experience to work with you?</summary>
+        <div class="faq-answer">None at all. I work with complete beginners through competitive tournament players. My beginner program is specifically designed for people who have never held a paddle.</div>
+      </details>
+      <details>
+        <summary>Do you teach kids or just adults?</summary>
+        <div class="faq-answer">I primarily coach adults, but I do work with junior players age 12 and up. Reach out and we'll figure out if it's a good fit.</div>
+      </details>
+      <details>
+        <summary>Where do sessions take place?</summary>
+        <div class="faq-answer">Sessions are held at local courts in Steamboat Springs. I'll send you the exact location when you book. Indoor facilities are available for rain days.</div>
+      </details>
+      <details>
+        <summary>What if I need to cancel or reschedule?</summary>
+        <div class="faq-answer">Life happens. I just ask for 24 hours notice for cancellations so I can open the slot for another player. Same-day cancellations are charged at 50% of the session rate.</div>
+      </details>
+    </div>
+  </section>
+
+  <!-- ─── BOOKING ─── -->
+  <section id="booking" aria-label="Book a session">
+    <div class="booking-inner">
+      <span class="section-label">Get on the Court</span>
+      <h2 class="section-heading white">Ready to Level Up Your Game?</h2>
+      <p class="booking-sub">Whether you're a first-timer or a seasoned player, there's a program built for you.</p>
+      <span class="booking-urgency kalam">Spots are limited — serious players only.</span>
+      <a href="mailto:steamboatpb1@gmail.com" class="btn-white">Book a Session</a>
+    </div>
+  </section>
+
+  <!-- ─── CONTACT FORM ─── -->
+  <section id="contact" aria-label="Contact form">
+    <div class="contact-inner container">
+      <span class="section-label">Get in Touch</span>
+      <h2 class="section-heading">Have a question? Send Sean a message.</h2>
+      <!-- Register at formspree.io and replace action URL -->
+      <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <div class="form-group">
+          <label for="contact-name">Name</label>
+          <input type="text" id="contact-name" name="name" placeholder="Your name" required autocomplete="name">
+        </div>
+        <div class="form-group">
+          <label for="contact-email">Email</label>
+          <input type="email" id="contact-email" name="email" placeholder="your@email.com" required autocomplete="email">
+        </div>
+        <div class="form-group">
+          <label for="contact-message">Message</label>
+          <textarea id="contact-message" name="message" placeholder="What's on your mind?" required></textarea>
+        </div>
+        <button type="submit" class="form-submit">Send Message →</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ─── MAP ─── -->
+  <section id="map" aria-label="Location map">
+    <div class="map-inner">
+      <p class="map-label">Find me on the courts in Steamboat Springs, CO</p>
+      <iframe
+        class="map-embed"
+        title="Steamboat Springs, Colorado map"
+        src="https://maps.google.com/maps?q=Steamboat+Springs+CO&output=embed"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        allowfullscreen>
+      </iframe>
+    </div>
+  </section>
+
+  <!-- ─── COURT DIRECTORY ─── -->
+  <section id="courts" aria-label="Local court directory">
+    <div class="courts-header container">
+      <span class="section-label">Local Courts</span>
+      <h2 class="section-heading white">Best Places to Play in Steamboat Springs</h2>
+    </div>
+    <p class="courts-subheading container">Recommended by Sean — courts worth your time in Steamboat Springs, CO.</p>
+    <div class="courts-grid container">
+      <div class="court-card">
+        <h3>Steamboat Tennis &amp; Pickleball Complex</h3>
+        <p class="court-address">2500 Pine Grove Rd, Steamboat Springs, CO 80487</p>
+        <p class="court-desc">12 indoor + 8 outdoor pickleball courts. Pro shop, clinics, open play. USTA Outstanding Facility Award winner.</p>
+        <div class="court-badges">
+          <span class="badge badge-indoor">Indoor</span>
+          <span class="badge badge-outdoor">Outdoor</span>
+          <span class="badge badge-public">Public</span>
+        </div>
+        <p class="court-phone">(970) 879-8400</p>
+      </div>
+      <div class="court-card">
+        <h3>Howelsen Hill Park Courts</h3>
+        <p class="court-address">Howelsen Pkwy, Steamboat Springs, CO</p>
+        <p class="court-desc">Outdoor public courts near downtown. Great for casual play with mountain views.</p>
+        <div class="court-badges">
+          <span class="badge badge-outdoor">Outdoor</span>
+          <span class="badge badge-free">Free</span>
+        </div>
+      </div>
+      <div class="court-card">
+        <h3>Steamboat Springs Community Center</h3>
+        <p class="court-address">1605 Lincoln Ave, Steamboat Springs, CO</p>
+        <p class="court-desc">Indoor recreation center with gym courts available for pickleball.</p>
+        <div class="court-badges">
+          <span class="badge badge-indoor">Indoor</span>
+          <span class="badge badge-public">Public</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── FOOTER ─── -->
+  <footer id="footer" role="contentinfo">
+    <p class="footer-copy">© 2026 Sean Pummill · Pickleball Coaching in Steamboat Springs, CO</p>
+    <p class="footer-built">Built by <a href="https://scrollfinity.com" target="_blank" rel="noopener noreferrer">Scrollfinity</a></p>
+  </footer>
+
+  <!-- ─── JAVASCRIPT ─── -->
+  <script>
+    // ── NAV SCROLL BEHAVIOR ──
+    (function() {
+      var nav = document.getElementById('main-nav');
+      function handleScroll() {
+        if (window.scrollY > 40) {
+          nav.classList.add('scrolled');
+        } else {
+          nav.classList.remove('scrolled');
+        }
+      }
+      window.addEventListener('scroll', handleScroll, { passive: true });
+      handleScroll();
+    })();
+
+    // ── HAMBURGER MENU ──
+    (function() {
+      var btn = document.getElementById('hamburger-btn');
+      var menu = document.getElementById('mobile-menu');
+      var links = menu.querySelectorAll('a');
+
+      btn.addEventListener('click', function() {
+        var isOpen = menu.classList.toggle('open');
+        btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      });
+
+      links.forEach(function(link) {
+        link.addEventListener('click', function() {
+          menu.classList.remove('open');
+          btn.setAttribute('aria-expanded', 'false');
+        });
+      });
+    })();
+
+    // ── QUIZ OPTION VISUAL SELECTION ──
+    (function() {
+      var options = document.querySelectorAll('.quiz-option');
+      options.forEach(function(opt) {
+        opt.addEventListener('click', function() {
+          var name = opt.querySelector('input').name;
+          document.querySelectorAll('.quiz-option input[name="' + name + '"]').forEach(function(inp) {
+            inp.closest('.quiz-option').classList.remove('selected');
+          });
+          opt.classList.add('selected');
+        });
+      });
+    })();
+
+    // ── QUIZ LOGIC ──
+    (function() {
+      var programs = {
+        A: {
+          name: 'Beginner Fundamentals',
+          desc: 'A four-session starter program built for you. Grip, serve, dink, basic court positioning — no experience needed. This is exactly where to start.'
+        },
+        B: {
+          name: 'Group Clinics',
+          desc: 'Small-group sessions (4–8 players) covering drills, point play, and doubles strategy. Perfect for building consistency alongside other developing players.'
+        },
+        C: {
+          name: 'Private Coaching',
+          desc: 'One-on-one sessions tailored to your skill level, technique, and match strategy. Work directly with Sean to sharpen the details that win points.'
+        },
+        D: {
+          name: 'Tournament Prep',
+          desc: 'Intensive sessions for competitive players. Game plans, mental toughness, match simulation. Built for players who want to win.'
+        }
+      };
+
+      var form = document.getElementById('quiz-form');
+      var resultEl = document.getElementById('quiz-result');
+      var resultProgram = document.getElementById('result-program');
+      var resultDesc = document.getElementById('result-desc');
+
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        var q1 = form.querySelector('input[name="q1"]:checked');
+        var q2 = form.querySelector('input[name="q2"]:checked');
+        var q3 = form.querySelector('input[name="q3"]:checked');
+
+        if (!q1 || !q2 || !q3) {
+          alert('Please answer all three questions to find your program.');
+          return;
+        }
+
+        var counts = { A: 0, B: 0, C: 0, D: 0 };
+        counts[q1.value]++;
+        counts[q2.value]++;
+        counts[q3.value]++;
+
+        var topKey = 'A';
+        var topVal = 0;
+        Object.keys(counts).forEach(function(k) {
+          if (counts[k] > topVal) {
+            topVal = counts[k];
+            topKey = k;
+          }
+        });
+
+        var prog = programs[topKey];
+        resultProgram.textContent = 'Your Program: ' + prog.name;
+        resultDesc.textContent = prog.desc;
+        resultEl.classList.add('visible');
+        resultEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      });
+    })();
+
+    // ── DAILY COURT QUOTE ──
+    (function() {
+      var quotes = [
+        "The serve is the only shot in pickleball you have complete control over. Own it.",
+        "Dinking is not giving up the point. It is setting up the winner.",
+        "Your third shot doesn't have to be perfect. It has to be better than your opponent expects.",
+        "The kitchen is where games are won. Live there.",
+        "Play the ball, not the score.",
+        "Patience is a weapon. Most players don't have it.",
+        "The best pickleball players make the simple shot look easy because they practiced it ten thousand times."
+      ];
+
+      var dayIndex = Math.floor(Date.now() / 86400000) % quotes.length;
+      var quoteEl = document.getElementById('daily-quote');
+      if (quoteEl) {
+        quoteEl.textContent = '“' + quotes[dayIndex] + '”';
+      }
+    })();
+
+    // ── WEATHER WIDGET ──
+    (function() {
+      var widget = document.getElementById('weather-widget');
+      var tempEl = document.getElementById('weather-temp');
+      var msgEl = document.getElementById('weather-msg');
+
+      var controller = new AbortController();
+      var timeout = setTimeout(function() { controller.abort(); }, 3000);
+
+      fetch('https://geocoding-api.open-meteo.com/v1/search?name=Steamboat%20Springs&count=1', {
+        signal: controller.signal
+      })
+        .then(function(r) { return r.json(); })
+        .then(function(geo) {
+          clearTimeout(timeout);
+          if (!geo.results || !geo.results.length) return;
+          var lat = geo.results[0].latitude;
+          var lon = geo.results[0].longitude;
+
+          var controller2 = new AbortController();
+          var timeout2 = setTimeout(function() { controller2.abort(); }, 3000);
+
+          return fetch(
+            'https://api.open-meteo.com/v1/forecast?latitude=' + lat + '&longitude=' + lon +
+            '&current=temperature_2m,weather_code&temperature_unit=fahrenheit',
+            { signal: controller2.signal }
+          )
+            .then(function(r) { return r.json(); })
+            .then(function(wx) {
+              clearTimeout(timeout2);
+              var temp = wx.current.temperature_2m;
+              var code = wx.current.weather_code;
+              var msg = '';
+
+              if (temp < 45) {
+                msg = '🧤 Bundle up — courts are open';
+              } else if (code <= 1) {
+                msg = '☀️ Perfect day for outdoor courts';
+              } else if (code <= 3) {
+                msg = '⛅ Good day to work on your game';
+              } else if (code <= 44) {
+                msg = '☁️ Great day for indoor drills';
+              } else if (code >= 61) {
+                msg = '🌧️ Perfect day for drill videos';
+              } else {
+                msg = '☁️ Great day for indoor drills';
+              }
+
+              tempEl.textContent = Math.round(temp) + '°F in Steamboat';
+              msgEl.textContent = msg;
+              widget.style.display = 'block';
+            });
+        })
+        .catch(function() {
+          // Hide widget silently on any error
+        });
+    })();
+  </script>
+</body>
+</html>
