@@ -1,0 +1,1671 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jonathan Stueve — Pickleball Coach in Colorado Springs, Colorado</title>
+  <meta name="description" content="Jonathan Stueve is a pickleball coach in Colorado Springs, CO — private lessons, group clinics, and tournament prep for all skill levels." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800&family=Satisfy&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ===== RESET & VARIABLES ===== */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --primary: #1A1A2E;
+      --accent: #00B4D8;
+      --bg: #F4F6F9;
+      --text: #1a1a1a;
+      --card: #FFFFFF;
+      --dark: #1A1A2E;
+      --font-head: 'Outfit', sans-serif;
+      --font-script: 'Satisfy', cursive;
+      --font-body: 'DM Sans', sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--font-body);
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    img { max-width: 100%; display: block; }
+    a { color: inherit; text-decoration: none; }
+
+    .section-label {
+      font-family: var(--font-head);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.6rem;
+    }
+
+    .section-heading {
+      font-family: var(--font-head);
+      font-weight: 800;
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      line-height: 1.15;
+      color: var(--primary);
+      text-transform: uppercase;
+      letter-spacing: -0.01em;
+    }
+
+    .section-heading.light { color: #fff; }
+
+    .section-sub {
+      font-size: 1.05rem;
+      color: #555;
+      margin-top: 0.75rem;
+      max-width: 560px;
+    }
+
+    .section-sub.light { color: rgba(255,255,255,0.75); }
+
+    .btn {
+      display: inline-block;
+      font-family: var(--font-head);
+      font-weight: 700;
+      font-size: 0.9rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      padding: 0.85rem 2rem;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      border: 2px solid transparent;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: var(--primary);
+    }
+
+    .btn-primary:hover {
+      background: #009bbf;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0,180,216,0.35);
+    }
+
+    .btn-outline {
+      background: transparent;
+      border-color: rgba(255,255,255,0.7);
+      color: #fff;
+    }
+
+    .btn-outline:hover {
+      background: rgba(255,255,255,0.1);
+      border-color: #fff;
+      transform: translateY(-2px);
+    }
+
+    .btn-accent-outline {
+      background: transparent;
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    .btn-accent-outline:hover {
+      background: var(--accent);
+      color: var(--primary);
+      transform: translateY(-2px);
+    }
+
+    /* ===== NAV ===== */
+    #nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      background: rgba(26, 26, 46, 0.95);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(0,180,216,0.15);
+      padding: 0 5%;
+      height: 68px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav-brand {
+      font-family: var(--font-head);
+      font-weight: 800;
+      font-size: 1.15rem;
+      color: #fff;
+      letter-spacing: 0.01em;
+    }
+
+    .nav-brand span { color: var(--accent); }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-family: var(--font-head);
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.8);
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--accent); }
+
+    .nav-cta {
+      background: var(--accent);
+      color: var(--primary) !important;
+      padding: 0.55rem 1.3rem;
+      border-radius: 4px;
+      font-weight: 700 !important;
+    }
+
+    .nav-cta:hover {
+      background: #009bbf !important;
+      color: var(--primary) !important;
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 4px;
+      background: none;
+      border: none;
+    }
+
+    .hamburger span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: #fff;
+      border-radius: 2px;
+      transition: all 0.3s ease;
+    }
+
+    .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      top: 68px;
+      left: 0;
+      width: 100%;
+      background: rgba(26,26,46,0.98);
+      backdrop-filter: blur(12px);
+      z-index: 999;
+      padding: 1.5rem 5%;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .mobile-menu.open { display: flex; }
+
+    .mobile-menu a {
+      font-family: var(--font-head);
+      font-size: 1rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.85);
+      padding: 0.6rem 0;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      transition: color 0.2s;
+    }
+
+    .mobile-menu a:hover { color: var(--accent); }
+
+    .mobile-menu .btn {
+      margin-top: 0.5rem;
+      text-align: center;
+    }
+
+    /* ===== HERO ===== */
+    #hero {
+      min-height: 100vh;
+      background:
+        linear-gradient(to bottom, rgba(26,26,46,0.72) 0%, rgba(26,26,46,0.55) 40%, rgba(26,26,46,0.82) 100%),
+        url('https://images.unsplash.com/photo-1737476997205-b3336182f215?w=800&q=80&fit=crop') center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      padding: 120px 5% 80px;
+      position: relative;
+    }
+
+    .hero-inner {
+      max-width: 760px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-script {
+      font-family: var(--font-script);
+      font-size: clamp(1.5rem, 3.5vw, 2.2rem);
+      color: var(--accent);
+      margin-bottom: 0.8rem;
+      display: block;
+    }
+
+    .hero-heading {
+      font-family: var(--font-head);
+      font-weight: 800;
+      font-size: clamp(2.6rem, 6vw, 4.5rem);
+      line-height: 1.07;
+      color: #fff;
+      text-transform: uppercase;
+      letter-spacing: -0.02em;
+      margin-bottom: 1.25rem;
+    }
+
+    .hero-heading em {
+      font-style: normal;
+      color: var(--accent);
+    }
+
+    .hero-sub {
+      font-size: clamp(1rem, 2vw, 1.2rem);
+      color: rgba(255,255,255,0.82);
+      margin-bottom: 2.2rem;
+      max-width: 540px;
+      line-height: 1.65;
+    }
+
+    .hero-ctas {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      align-items: center;
+    }
+
+    /* Weather widget */
+    #weather-widget {
+      position: absolute;
+      top: 90px;
+      right: 5%;
+      background: rgba(26,26,46,0.82);
+      border: 1px solid rgba(0,180,216,0.3);
+      border-radius: 8px;
+      padding: 0.75rem 1.1rem;
+      color: #fff;
+      font-family: var(--font-body);
+      font-size: 0.82rem;
+      max-width: 260px;
+      backdrop-filter: blur(8px);
+      display: none;
+      z-index: 3;
+    }
+
+    #weather-widget .weather-temp {
+      font-family: var(--font-head);
+      font-weight: 700;
+      font-size: 1.3rem;
+      color: var(--accent);
+      display: block;
+      margin-bottom: 0.2rem;
+    }
+
+    #weather-widget .weather-msg {
+      color: rgba(255,255,255,0.85);
+      line-height: 1.4;
+    }
+
+    /* ===== STATS BAR ===== */
+    #stats {
+      background: var(--primary);
+      padding: 3.5rem 5%;
+    }
+
+    .stats-grid {
+      max-width: 900px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      text-align: center;
+    }
+
+    .stat-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .stat-icon {
+      width: 68px;
+      height: 68px;
+      border-radius: 50%;
+      background: rgba(0,180,216,0.15);
+      border: 2px solid rgba(0,180,216,0.4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.6rem;
+    }
+
+    .stat-value {
+      font-family: var(--font-head);
+      font-weight: 800;
+      font-size: 2rem;
+      color: var(--accent);
+      line-height: 1;
+    }
+
+    .stat-label {
+      font-family: var(--font-head);
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.65);
+    }
+
+    /* ===== ABOUT ===== */
+    #about {
+      background: var(--bg);
+      padding: 6rem 5%;
+    }
+
+    .about-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    .about-img-wrap {
+      position: relative;
+    }
+
+    .about-img-wrap img {
+      width: 100%;
+      border-radius: 6px;
+      object-fit: cover;
+      aspect-ratio: 4/5;
+    }
+
+    .about-img-accent {
+      position: absolute;
+      bottom: -16px;
+      right: -16px;
+      width: 120px;
+      height: 120px;
+      background: var(--accent);
+      border-radius: 4px;
+      z-index: -1;
+    }
+
+    .about-content .section-label { margin-bottom: 0.5rem; }
+
+    .about-bio {
+      font-size: 1.05rem;
+      line-height: 1.75;
+      color: #444;
+      margin: 1.25rem 0 2rem;
+    }
+
+    .trust-signals {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-bottom: 2rem;
+    }
+
+    .trust-badge {
+      background: rgba(0,180,216,0.1);
+      border: 1px solid rgba(0,180,216,0.3);
+      color: var(--primary);
+      font-family: var(--font-head);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      padding: 0.45rem 0.9rem;
+      border-radius: 100px;
+    }
+
+    /* ===== SERVICES ===== */
+    #services {
+      background: var(--primary);
+      padding: 6rem 5%;
+    }
+
+    .services-header {
+      text-align: center;
+      margin-bottom: 3.5rem;
+    }
+
+    .services-grid {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .service-card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-top: 3px solid var(--accent);
+      border-radius: 6px;
+      padding: 2rem 1.75rem;
+      transition: transform 0.25s, box-shadow 0.25s;
+    }
+
+    .service-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 16px 40px rgba(0,0,0,0.35);
+    }
+
+    .service-icon {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .service-name {
+      font-family: var(--font-head);
+      font-weight: 700;
+      font-size: 1.05rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: #fff;
+      margin-bottom: 0.7rem;
+    }
+
+    .service-desc {
+      font-size: 0.92rem;
+      color: rgba(255,255,255,0.65);
+      line-height: 1.65;
+    }
+
+    /* ===== COURT QUOTE ===== */
+    #quote {
+      background: var(--bg);
+      padding: 5rem 5%;
+      text-align: center;
+    }
+
+    .quote-block {
+      max-width: 780px;
+      margin: 0 auto;
+      background: var(--primary);
+      border-left: 6px solid var(--accent);
+      border-radius: 6px;
+      padding: 3rem 3.5rem;
+      text-align: left;
+      position: relative;
+    }
+
+    .quote-block::before {
+      content: '\201C';
+      font-family: var(--font-script);
+      font-size: 6rem;
+      color: var(--accent);
+      opacity: 0.25;
+      position: absolute;
+      top: -0.5rem;
+      left: 1.5rem;
+      line-height: 1;
+    }
+
+    .quote-text {
+      font-family: var(--font-head);
+      font-weight: 600;
+      font-size: clamp(1.15rem, 2.5vw, 1.5rem);
+      color: #fff;
+      line-height: 1.55;
+      position: relative;
+      z-index: 1;
+    }
+
+    .quote-attr {
+      display: block;
+      margin-top: 1.25rem;
+      font-family: var(--font-body);
+      font-size: 0.82rem;
+      color: var(--accent);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+
+    /* ===== QUIZ ===== */
+    #quiz {
+      background: var(--primary);
+      padding: 6rem 5%;
+    }
+
+    .quiz-header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .quiz-card {
+      max-width: 720px;
+      margin: 0 auto;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 8px;
+      padding: 2.5rem;
+    }
+
+    .quiz-question {
+      font-family: var(--font-head);
+      font-weight: 700;
+      font-size: 1rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 1rem;
+    }
+
+    .quiz-question-text {
+      font-size: 1.05rem;
+      color: #fff;
+      margin-bottom: 1.1rem;
+      font-weight: 500;
+    }
+
+    .quiz-options {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.65rem;
+      margin-bottom: 1.75rem;
+    }
+
+    .quiz-option {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 5px;
+      padding: 0.7rem 0.9rem;
+      color: rgba(255,255,255,0.8);
+      font-size: 0.88rem;
+      cursor: pointer;
+      transition: all 0.2s;
+      text-align: left;
+    }
+
+    .quiz-option:hover {
+      border-color: var(--accent);
+      background: rgba(0,180,216,0.1);
+      color: #fff;
+    }
+
+    .quiz-option.selected {
+      border-color: var(--accent);
+      background: rgba(0,180,216,0.2);
+      color: #fff;
+    }
+
+    .quiz-option strong {
+      color: var(--accent);
+      margin-right: 0.4rem;
+    }
+
+    .quiz-progress {
+      display: flex;
+      gap: 0.4rem;
+      margin-bottom: 2rem;
+    }
+
+    .quiz-dot {
+      height: 4px;
+      flex: 1;
+      background: rgba(255,255,255,0.15);
+      border-radius: 2px;
+      transition: background 0.3s;
+    }
+
+    .quiz-dot.active { background: var(--accent); }
+
+    .quiz-result {
+      display: none;
+    }
+
+    .quiz-result-card {
+      background: rgba(0,180,216,0.1);
+      border: 1px solid rgba(0,180,216,0.3);
+      border-radius: 6px;
+      padding: 1.75rem;
+      text-align: center;
+    }
+
+    .quiz-result-label {
+      font-family: var(--font-head);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.5rem;
+    }
+
+    .quiz-result-name {
+      font-family: var(--font-head);
+      font-weight: 800;
+      font-size: 1.5rem;
+      color: #fff;
+      text-transform: uppercase;
+      margin-bottom: 0.75rem;
+    }
+
+    .quiz-result-desc {
+      color: rgba(255,255,255,0.75);
+      font-size: 0.92rem;
+      margin-bottom: 1.5rem;
+      line-height: 1.6;
+    }
+
+    /* ===== TESTIMONIALS ===== */
+    #testimonials {
+      background: var(--bg);
+      padding: 6rem 5%;
+    }
+
+    .testimonials-header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .testimonials-grid {
+      max-width: 900px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.75rem;
+    }
+
+    .testimonial-card {
+      background: var(--card);
+      border-radius: 8px;
+      padding: 2rem;
+      box-shadow: 0 4px 20px rgba(26,26,46,0.08);
+      border-top: 3px solid var(--accent);
+    }
+
+    .testimonial-stars {
+      color: #f5a623;
+      font-size: 1rem;
+      margin-bottom: 0.9rem;
+      letter-spacing: 0.1em;
+    }
+
+    .testimonial-text {
+      font-size: 0.97rem;
+      line-height: 1.7;
+      color: #444;
+      margin-bottom: 1.2rem;
+      font-style: italic;
+    }
+
+    .testimonial-name {
+      font-family: var(--font-head);
+      font-weight: 700;
+      font-size: 0.82rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--primary);
+    }
+
+    /* ===== FAQ ===== */
+    #faq {
+      background: var(--primary);
+      padding: 6rem 5%;
+    }
+
+    .faq-header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .faq-list {
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    details {
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    details:first-of-type { border-top: 1px solid rgba(255,255,255,0.1); }
+
+    summary {
+      list-style: none;
+      cursor: pointer;
+      padding: 1.4rem 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: var(--font-head);
+      font-weight: 700;
+      font-size: 0.97rem;
+      letter-spacing: 0.02em;
+      color: #fff;
+      user-select: none;
+    }
+
+    summary::-webkit-details-marker { display: none; }
+
+    summary::after {
+      content: '+';
+      font-size: 1.4rem;
+      color: var(--accent);
+      font-weight: 400;
+      transition: transform 0.25s;
+      flex-shrink: 0;
+      margin-left: 1rem;
+    }
+
+    details[open] summary::after {
+      content: '−';
+    }
+
+    .faq-answer {
+      padding: 0 0 1.5rem;
+      font-size: 0.93rem;
+      color: rgba(255,255,255,0.68);
+      line-height: 1.75;
+    }
+
+    /* ===== BOOKING ===== */
+    #booking {
+      background: var(--accent);
+      padding: 6rem 5%;
+      text-align: center;
+    }
+
+    #booking .section-label { color: var(--primary); }
+
+    #booking .section-heading {
+      color: var(--primary);
+      font-size: clamp(2rem, 4.5vw, 3.2rem);
+    }
+
+    #booking .section-sub {
+      color: rgba(26,26,46,0.75);
+      margin: 0.75rem auto 2.5rem;
+    }
+
+    #booking .btn-primary {
+      background: var(--primary);
+      color: #fff;
+      font-size: 1rem;
+      padding: 1rem 2.5rem;
+    }
+
+    #booking .btn-primary:hover {
+      background: #12122a;
+      box-shadow: 0 8px 24px rgba(26,26,46,0.3);
+    }
+
+    /* ===== CONTACT FORM ===== */
+    #contact {
+      background: var(--bg);
+      padding: 6rem 5%;
+    }
+
+    .contact-inner {
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    .contact-inner .section-heading { margin-bottom: 2rem; }
+
+    .form-group {
+      margin-bottom: 1.25rem;
+    }
+
+    .form-group label {
+      display: block;
+      font-family: var(--font-head);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--primary);
+      margin-bottom: 0.45rem;
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      width: 100%;
+      padding: 0.85rem 1rem;
+      border: 1.5px solid #d8dde6;
+      border-radius: 5px;
+      font-family: var(--font-body);
+      font-size: 0.95rem;
+      color: var(--text);
+      background: #fff;
+      transition: border-color 0.2s;
+      outline: none;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus,
+    .form-group select:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(0,180,216,0.12);
+    }
+
+    .form-group textarea {
+      resize: vertical;
+      min-height: 130px;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
+    /* ===== MAP ===== */
+    #map {
+      background: var(--primary);
+      padding: 4rem 5%;
+    }
+
+    .map-label {
+      text-align: center;
+      font-family: var(--font-head);
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 1.25rem;
+    }
+
+    .map-wrap {
+      max-width: 1100px;
+      margin: 0 auto;
+      border-radius: 8px;
+      overflow: hidden;
+      border: 1px solid rgba(0,180,216,0.2);
+    }
+
+    .map-wrap iframe {
+      width: 100%;
+      height: 300px;
+      border: none;
+      display: block;
+    }
+
+    /* ===== COURT DIRECTORY ===== */
+    #courts {
+      background: var(--bg);
+      padding: 6rem 5%;
+    }
+
+    .courts-header {
+      text-align: center;
+      margin-bottom: 0.75rem;
+    }
+
+    .courts-coach-note {
+      text-align: center;
+      font-style: italic;
+      color: #777;
+      font-size: 0.9rem;
+      max-width: 560px;
+      margin: 0 auto 3rem;
+    }
+
+    .courts-grid {
+      max-width: 1100px;
+      margin: 0 auto 2.5rem;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+
+    .court-card {
+      background: var(--card);
+      border-radius: 8px;
+      padding: 1.75rem;
+      box-shadow: 0 4px 18px rgba(26,26,46,0.07);
+      border-top: 3px solid var(--accent);
+    }
+
+    .court-badge {
+      display: inline-block;
+      background: #e6f9f0;
+      color: #1a7a4a;
+      font-family: var(--font-head);
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 0.25rem 0.7rem;
+      border-radius: 100px;
+      margin-bottom: 0.8rem;
+    }
+
+    .court-name {
+      font-family: var(--font-head);
+      font-weight: 700;
+      font-size: 1rem;
+      color: var(--primary);
+      margin-bottom: 0.6rem;
+    }
+
+    .court-desc {
+      font-size: 0.87rem;
+      color: #555;
+      line-height: 1.6;
+      margin-bottom: 1.2rem;
+    }
+
+    .court-link {
+      font-family: var(--font-head);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--accent);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      transition: gap 0.2s;
+    }
+
+    .court-link:hover { gap: 0.65rem; }
+
+    .courts-callout {
+      max-width: 1100px;
+      margin: 0 auto;
+      background: var(--primary);
+      border-radius: 8px;
+      padding: 2.25rem 2.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    }
+
+    .courts-callout-text {
+      color: #fff;
+    }
+
+    .courts-callout-text p {
+      font-family: var(--font-head);
+      font-weight: 700;
+      font-size: 1.05rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .courts-callout-text small {
+      color: rgba(255,255,255,0.65);
+      font-size: 0.88rem;
+    }
+
+    /* ===== FOOTER ===== */
+    #footer {
+      background: #0f0f22;
+      padding: 1.75rem 5%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+
+    .footer-copy {
+      font-size: 0.83rem;
+      color: rgba(255,255,255,0.5);
+    }
+
+    .footer-built {
+      font-size: 0.83rem;
+      color: rgba(255,255,255,0.35);
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 900px) {
+      .about-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+      .about-img-wrap { max-width: 420px; margin: 0 auto; }
+      .testimonials-grid { grid-template-columns: 1fr; }
+      .courts-grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 680px) {
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+
+      #hero { padding: 110px 5% 70px; }
+      #weather-widget { top: auto; bottom: 80px; right: 5%; left: 5%; max-width: none; }
+
+      .stats-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+
+      .quiz-options { grid-template-columns: 1fr; }
+
+      .form-row { grid-template-columns: 1fr; }
+
+      .courts-grid { grid-template-columns: 1fr; }
+
+      .courts-callout { flex-direction: column; text-align: center; }
+
+      #footer { flex-direction: column; text-align: center; }
+
+      .about-img-accent { display: none; }
+
+      .quote-block { padding: 2rem 1.75rem; }
+    }
+
+    @media (max-width: 400px) {
+      .hero-ctas { flex-direction: column; }
+      .hero-ctas .btn { text-align: center; width: 100%; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ===== NAV ===== -->
+<nav id="nav" role="navigation" aria-label="Main navigation">
+  <div class="nav-brand">
+    <span>Jonathan</span> Stueve<span style="color:var(--accent);">.</span>
+  </div>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#quiz">Quiz</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="mailto:stuevejohnny@yahoo.com" class="nav-cta btn">Book Now</a></li>
+  </ul>
+  <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="mobile-menu" id="mobile-menu" role="menu">
+  <a href="#about" role="menuitem">About</a>
+  <a href="#services" role="menuitem">Services</a>
+  <a href="#quiz" role="menuitem">Quiz</a>
+  <a href="#contact" role="menuitem">Contact</a>
+  <a href="mailto:stuevejohnny@yahoo.com" class="btn btn-primary" role="menuitem">Book Now</a>
+</div>
+
+<!-- ===== HERO ===== -->
+<section id="hero" aria-label="Hero">
+  <div id="weather-widget" aria-live="polite" aria-label="Current weather">
+    <span class="weather-temp" id="weather-temp"></span>
+    <span class="weather-msg" id="weather-msg"></span>
+  </div>
+
+  <div class="hero-inner">
+    <span class="hero-script">Play Fearless.</span>
+    <h1 class="hero-heading">
+      Train Smart.<br><em>Win More.</em>
+    </h1>
+    <p class="hero-sub">
+      Personalized pickleball coaching that builds real skills, real confidence, and real results — for every player at every level.
+    </p>
+    <div class="hero-ctas">
+      <a href="mailto:stuevejohnny@yahoo.com" class="btn btn-primary">Book a Session</a>
+      <a href="#about" class="btn btn-outline">Learn More</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== STATS BAR ===== -->
+<section id="stats" aria-label="Coach stats">
+  <div class="stats-grid">
+    <div class="stat-item">
+      <div class="stat-icon">🏆</div>
+      <div class="stat-value">5+</div>
+      <div class="stat-label">Years Coaching</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-icon">🎾</div>
+      <div class="stat-value">150+</div>
+      <div class="stat-label">Players Trained</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-icon">🎯</div>
+      <div class="stat-value">All</div>
+      <div class="stat-label">Skill Levels Welcome</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ABOUT ===== -->
+<section id="about" aria-label="About Jonathan">
+  <div class="about-inner">
+    <div class="about-img-wrap">
+      <img
+        src="https://images.unsplash.com/photo-1737476997205-b3336182f215?w=800&q=80&fit=crop"
+        alt="Jonathan Stueve — Pickleball Coach in Colorado Springs"
+        loading="lazy"
+        width="560"
+        height="700"
+      />
+      <div class="about-img-accent" aria-hidden="true"></div>
+    </div>
+    <div class="about-content">
+      <p class="section-label">About Your Coach</p>
+      <h2 class="section-heading">Hi, I'm Jonathan.</h2>
+      <p class="about-bio">
+        I'm a pickleball instructor based in Colorado Springs, and I genuinely love what I do. Whether you're stepping onto the court for the first time or grinding to compete at the tournament level, I'll meet you exactly where you are. My coaching is hands-on, specific, and built around one goal: helping you play better and have more fun doing it. Colorado Springs has incredible courts and an amazing pickleball community — I'm here to help you make the most of it.
+      </p>
+      <div class="trust-signals">
+        <span class="trust-badge">Colorado Springs Local</span>
+        <span class="trust-badge">All Skill Levels</span>
+        <span class="trust-badge">Beginner to Competitive</span>
+      </div>
+      <a href="mailto:stuevejohnny@yahoo.com" class="btn btn-primary">Book a Session</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SERVICES ===== -->
+<section id="services" aria-label="Coaching services">
+  <div class="services-header">
+    <p class="section-label">What I Offer</p>
+    <h2 class="section-heading light">Programs Built for Your Game</h2>
+  </div>
+  <div class="services-grid">
+    <div class="service-card">
+      <div class="service-icon">🥇</div>
+      <div class="service-name">Private Coaching</div>
+      <p class="service-desc">One-on-one sessions tailored to your skill level, technique, and match strategy. Maximum focus, maximum improvement.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">👥</div>
+      <div class="service-name">Group Clinics</div>
+      <p class="service-desc">Small-group sessions (4–8 players) covering drills, point play, and doubles strategy. Learn together, improve together.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">⚡</div>
+      <div class="service-name">Tournament Prep</div>
+      <p class="service-desc">Intensive sessions for competitive players. Game plans, mental toughness, match simulation — get ready to compete.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">🏁</div>
+      <div class="service-name">Beginner Fundamentals</div>
+      <p class="service-desc">A four-session starter program covering grip, serve, dink, and basic court positioning. No experience needed — just show up ready to learn.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== COURT QUOTE ===== -->
+<section id="quote" aria-label="Daily inspiration">
+  <p class="section-label" style="text-align:center; margin-bottom:0;">Daily Court Wisdom</p>
+  <div style="height:1rem;"></div>
+  <div class="quote-block" aria-live="polite">
+    <p class="quote-text" id="daily-quote">Loading today's quote...</p>
+    <span class="quote-attr">— Daily Inspiration from Jonathan</span>
+  </div>
+</section>
+
+<!-- ===== QUIZ ===== -->
+<section id="quiz" aria-label="Skill level quiz">
+  <div class="quiz-header">
+    <p class="section-label">Find Your Fit</p>
+    <h2 class="section-heading light">What kind of player are you?</h2>
+    <p class="section-sub light" style="margin: 0.75rem auto 0; max-width:500px; text-align:center;">Answer 3 quick questions and I'll match you with the right program.</p>
+  </div>
+
+  <div class="quiz-card">
+    <div class="quiz-progress" id="quiz-progress">
+      <div class="quiz-dot active" id="dot-0"></div>
+      <div class="quiz-dot" id="dot-1"></div>
+      <div class="quiz-dot" id="dot-2"></div>
+    </div>
+
+    <div id="quiz-questions">
+      <!-- Q1 -->
+      <div class="quiz-step" data-step="0">
+        <p class="quiz-question">Question 1 of 3</p>
+        <p class="quiz-question-text">How long have you been playing?</p>
+        <div class="quiz-options">
+          <button class="quiz-option" data-step="0" data-val="A"><strong>A)</strong> Never picked up a paddle</button>
+          <button class="quiz-option" data-step="0" data-val="B"><strong>B)</strong> Less than 1 year</button>
+          <button class="quiz-option" data-step="0" data-val="C"><strong>C)</strong> 1–3 years</button>
+          <button class="quiz-option" data-step="0" data-val="D"><strong>D)</strong> 3+ years / I compete</button>
+        </div>
+      </div>
+
+      <!-- Q2 -->
+      <div class="quiz-step" data-step="1" style="display:none;">
+        <p class="quiz-question">Question 2 of 3</p>
+        <p class="quiz-question-text">What's your biggest challenge on the court?</p>
+        <div class="quiz-options">
+          <button class="quiz-option" data-step="1" data-val="A"><strong>A)</strong> I don't know where to start</button>
+          <button class="quiz-option" data-step="1" data-val="B"><strong>B)</strong> My shots are inconsistent</button>
+          <button class="quiz-option" data-step="1" data-val="C"><strong>C)</strong> I lose points at the net</button>
+          <button class="quiz-option" data-step="1" data-val="D"><strong>D)</strong> I struggle in tournament pressure</button>
+        </div>
+      </div>
+
+      <!-- Q3 -->
+      <div class="quiz-step" data-step="2" style="display:none;">
+        <p class="quiz-question">Question 3 of 3</p>
+        <p class="quiz-question-text">What's your main goal?</p>
+        <div class="quiz-options">
+          <button class="quiz-option" data-step="2" data-val="A"><strong>A)</strong> Learn the basics and have fun</button>
+          <button class="quiz-option" data-step="2" data-val="B"><strong>B)</strong> Improve my consistency</button>
+          <button class="quiz-option" data-step="2" data-val="C"><strong>C)</strong> Beat players at my level</button>
+          <button class="quiz-option" data-step="2" data-val="D"><strong>D)</strong> Win tournaments</button>
+        </div>
+      </div>
+    </div>
+
+    <div style="display:flex; justify-content:center; margin-top:0.5rem;">
+      <button class="btn btn-primary" id="quiz-submit" style="display:none;">Find My Program →</button>
+    </div>
+
+    <div class="quiz-result" id="quiz-result">
+      <div class="quiz-result-card">
+        <p class="quiz-result-label">Your Best Fit</p>
+        <p class="quiz-result-name" id="result-name"></p>
+        <p class="quiz-result-desc" id="result-desc"></p>
+        <a href="mailto:stuevejohnny@yahoo.com" class="btn btn-primary" id="result-cta">Book This Session →</a>
+      </div>
+      <div style="text-align:center; margin-top:1.25rem;">
+        <button class="btn btn-accent-outline" id="quiz-reset" style="font-size:0.8rem; padding:0.55rem 1.2rem;">Start Over</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TESTIMONIALS ===== -->
+<!-- PLACEHOLDER: Replace with real testimonials after claiming site -->
+<section id="testimonials" aria-label="Testimonials">
+  <div class="testimonials-header">
+    <p class="section-label">What Players Say</p>
+    <h2 class="section-heading">Real Results, Real Players</h2>
+  </div>
+  <div class="testimonials-grid">
+    <div class="testimonial-card">
+      <div class="testimonial-stars">★★★★★</div>
+      <p class="testimonial-text">"Jonathan completely changed how I think about the third shot drop. My rating jumped from 3.0 to 3.5 in three months."</p>
+      <p class="testimonial-name">Sarah M. — Colorado Springs</p>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">★★★★★</div>
+      <p class="testimonial-text">"Best investment I've made in my pickleball game. Jonathan is patient, specific, and genuinely fun to learn from."</p>
+      <p class="testimonial-name">David K. — Colorado Springs</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section id="faq" aria-label="Frequently asked questions">
+  <div class="faq-header">
+    <p class="section-label">FAQ</p>
+    <h2 class="section-heading light">Common Questions</h2>
+  </div>
+  <div class="faq-list">
+    <details>
+      <summary>Do I need any experience to book a session?</summary>
+      <div class="faq-answer">Not at all. The Beginner Fundamentals program is designed for players who've never touched a paddle. If you're brand new, that's the perfect starting point — we'll build your game from the ground up.</div>
+    </details>
+    <details>
+      <summary>Where do coaching sessions take place in Colorado Springs?</summary>
+      <div class="faq-answer">Sessions are held at some of Colorado Springs' best public courts, including Monument Valley Park and John Venezia Community Park. Court location is confirmed when you book based on availability and your preference.</div>
+    </details>
+    <details>
+      <summary>What equipment do I need to bring?</summary>
+      <div class="faq-answer">Just bring yourself and athletic shoes. Paddles and balls are available to borrow for your first session if you don't have your own gear yet. We can also talk about equipment recommendations for your skill level.</div>
+    </details>
+    <details>
+      <summary>How often should I take lessons to improve?</summary>
+      <div class="faq-answer">For most players, one session per week paired with two to three hours of open play produces noticeable results within a month. More serious players preparing for tournaments often do two or three sessions per week.</div>
+    </details>
+    <details>
+      <summary>Can I book a session as a gift for someone in Colorado Springs?</summary>
+      <div class="faq-answer">Absolutely. Gift sessions are a popular option. Just reach out via email and mention it's a gift — I'll make sure everything is set up smoothly for the recipient.</div>
+    </details>
+    <details>
+      <summary>What's your cancellation policy?</summary>
+      <div class="faq-answer">Life happens. Just give me at least 24 hours notice and we'll reschedule at no charge. Late cancellations or no-shows on the day of the session are subject to a cancellation fee.</div>
+    </details>
+  </div>
+</section>
+
+<!-- ===== BOOKING ===== -->
+<section id="booking" aria-label="Book a session">
+  <p class="section-label">Get on the Court</p>
+  <h2 class="section-heading">Ready to Level Up Your Game?</h2>
+  <p class="section-sub" style="margin: 0.75rem auto 2.5rem; text-align:center;">Spots are limited — serious players only.</p>
+  <a href="mailto:stuevejohnny@yahoo.com" class="btn btn-primary">Book a Session</a>
+</section>
+
+<!-- ===== CONTACT FORM ===== -->
+<section id="contact" aria-label="Contact Jonathan">
+  <div class="contact-inner">
+    <p class="section-label">Get in Touch</p>
+    <h2 class="section-heading">Have a question? Send Jonathan a message.</h2>
+    <!-- Replace YOUR_FORM_ID with your Formspree endpoint -->
+    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" novalidate>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="contact-name">Your Name</label>
+          <input type="text" id="contact-name" name="name" placeholder="First &amp; Last Name" required />
+        </div>
+        <div class="form-group">
+          <label for="contact-email">Email Address</label>
+          <input type="email" id="contact-email" name="email" placeholder="you@example.com" required />
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="contact-skill">Your Skill Level</label>
+        <select id="contact-skill" name="skill_level">
+          <option value="">Select your level...</option>
+          <option value="beginner">Beginner — Never played</option>
+          <option value="developing">Developing — Under 1 year</option>
+          <option value="intermediate">Intermediate — 1–3 years</option>
+          <option value="advanced">Advanced — 3+ years / Compete</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="contact-message">Your Message</label>
+        <textarea id="contact-message" name="message" placeholder="Tell me about your goals, schedule, or any questions..." required></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary" style="width:100%; font-size:0.95rem; padding:1rem;">Send Message</button>
+    </form>
+  </div>
+</section>
+
+<!-- ===== MAP ===== -->
+<section id="map" aria-label="Location map">
+  <p class="map-label">Find me on the courts in Colorado Springs, CO</p>
+  <div class="map-wrap">
+    <iframe
+      src="https://maps.google.com/maps?q=Colorado+Springs+CO&output=embed"
+      title="Colorado Springs, CO map"
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+    ></iframe>
+  </div>
+</section>
+
+<!-- ===== COURT DIRECTORY ===== -->
+<section id="courts" aria-label="Court directory">
+  <div class="courts-header">
+    <p class="section-label">Local Courts</p>
+    <h2 class="section-heading">Best Places to Play in Colorado Springs</h2>
+  </div>
+  <p class="courts-coach-note">"These are my go-to courts in Colorado Springs. Each one has its own vibe — I'll share my honest take once you book a session."</p>
+  <div class="courts-grid">
+    <div class="court-card">
+      <span class="court-badge">Outdoor</span>
+      <p class="court-name">Monument Valley Park</p>
+      <p class="court-desc">15 free public outdoor courts — Colorado Springs' premier pickleball destination. Stunning mountain views and great surface conditions.</p>
+      <a
+        href="https://www.google.com/maps/search/Monument+Valley+Park+Pickleball+Colorado+Springs+CO"
+        class="court-link"
+        target="_blank"
+        rel="noopener noreferrer"
+      >Get Directions →</a>
+    </div>
+    <div class="court-card">
+      <span class="court-badge">Outdoor</span>
+      <p class="court-name">John Venezia Community Park</p>
+      <p class="court-desc">8 courts with lights for evening play. Popular for competitive games and a go-to spot for regular open play groups.</p>
+      <a
+        href="https://www.google.com/maps/search/John+Venezia+Community+Park+Pickleball+Colorado+Springs+CO"
+        class="court-link"
+        target="_blank"
+        rel="noopener noreferrer"
+      >Get Directions →</a>
+    </div>
+    <div class="court-card">
+      <span class="court-badge">Outdoor</span>
+      <p class="court-name">Mid Shooks Run Park</p>
+      <p class="court-desc">2 free courts in a quiet neighborhood setting. Great for morning sessions, focused drilling, and low-key games.</p>
+      <a
+        href="https://www.google.com/maps/search/Mid+Shooks+Run+Park+Pickleball+Colorado+Springs+CO"
+        class="court-link"
+        target="_blank"
+        rel="noopener noreferrer"
+      >Get Directions →</a>
+    </div>
+  </div>
+  <div class="courts-callout">
+    <div class="courts-callout-text">
+      <p>Jonathan runs open play sessions at select courts in Colorado Springs.</p>
+      <small>Join the community — all skill levels welcome.</small>
+    </div>
+    <a href="mailto:stuevejohnny@yahoo.com" class="btn btn-primary">Book a Spot →</a>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer id="footer" aria-label="Footer">
+  <p class="footer-copy">© 2026 Jonathan Stueve · Pickleball Coaching in Colorado Springs, CO</p>
+  <p class="footer-built">Built by Scrollfinity</p>
+</footer>
+
+<!-- ===== JAVASCRIPT ===== -->
+<script>
+(function () {
+  'use strict';
+
+  /* --- Hamburger Menu --- */
+  var hamburger = document.getElementById('hamburger');
+  var mobileMenu = document.getElementById('mobile-menu');
+
+  hamburger.addEventListener('click', function () {
+    var open = mobileMenu.classList.toggle('open');
+    hamburger.classList.toggle('open', open);
+    hamburger.setAttribute('aria-expanded', String(open));
+  });
+
+  mobileMenu.querySelectorAll('a').forEach(function (link) {
+    link.addEventListener('click', function () {
+      mobileMenu.classList.remove('open');
+      hamburger.classList.remove('open');
+      hamburger.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  /* --- Daily Court Quote --- */
+  var quotes = [
+    "The serve is the only shot in pickleball you have complete control over. Own it.",
+    "Dinking is not giving up the point. It is setting up the winner.",
+    "Your third shot doesn't have to be perfect. It has to be better than your opponent expects.",
+    "The kitchen is where games are won. Live there.",
+    "Play the ball, not the score.",
+    "Patience is a weapon. Most players don't have it.",
+    "The best pickleball players make the simple shot look easy because they practiced it ten thousand times."
+  ];
+
+  var now = new Date();
+  var start = new Date(now.getFullYear(), 0, 0);
+  var diff = now - start;
+  var oneDay = 1000 * 60 * 60 * 24;
+  var dayOfYear = Math.floor(diff / oneDay);
+  var quoteIndex = dayOfYear % quotes.length;
+
+  var quoteEl = document.getElementById('daily-quote');
+  if (quoteEl) quoteEl.textContent = quotes[quoteIndex];
+
+  /* --- Weather Widget --- */
+  function getWeatherMessage(code, tempF) {
+    if (tempF < 45) return { icon: '🧤', msg: 'Bundle up — courts are open' };
+    if (code === 0 || code === 1) return { icon: '☀️', msg: 'Perfect day for outdoor courts' };
+    if (code === 2 || code === 3) return { icon: '⛅', msg: 'Good day to work on your game' };
+    if (code >= 45 && code < 61) return { icon: '☁️', msg: 'Great day for indoor drills' };
+    if (code >= 61) return { icon: '🌧️', msg: 'Perfect day for drill videos' };
+    return { icon: '⛅', msg: 'Good day to work on your game' };
+  }
+
+  function showWeather(tempF, code) {
+    var info = getWeatherMessage(code, tempF);
+    var widget = document.getElementById('weather-widget');
+    var tempEl = document.getElementById('weather-temp');
+    var msgEl = document.getElementById('weather-msg');
+    tempEl.textContent = Math.round(tempF) + '°F';
+    msgEl.textContent = info.icon + ' ' + info.msg;
+    widget.style.display = 'block';
+  }
+
+  var weatherTimeout;
+
+  function fetchWeather(lat, lon) {
+    var url = 'https://api.open-meteo.com/v1/forecast?latitude=' + lat + '&longitude=' + lon + '&current=temperature_2m,weather_code&temperature_unit=fahrenheit';
+    var ctrl = new AbortController();
+    weatherTimeout = setTimeout(function () { ctrl.abort(); }, 3000);
+
+    fetch(url, { signal: ctrl.signal })
+      .then(function (r) { return r.json(); })
+      .then(function (data) {
+        clearTimeout(weatherTimeout);
+        if (data && data.current) {
+          showWeather(data.current.temperature_2m, data.current.weather_code);
+        }
+      })
+      .catch(function () { /* hide on failure — already hidden */ });
+  }
+
+  function initWeather() {
+    var geoUrl = 'https://geocoding-api.open-meteo.com/v1/search?name=Colorado+Springs&count=1';
+    var ctrl = new AbortController();
+    var geoTimeout = setTimeout(function () { ctrl.abort(); }, 3000);
+
+    fetch(geoUrl, { signal: ctrl.signal })
+      .then(function (r) { return r.json(); })
+      .then(function (data) {
+        clearTimeout(geoTimeout);
+        if (data && data.results && data.results.length > 0) {
+          var result = data.results[0];
+          fetchWeather(result.latitude, result.longitude);
+        }
+      })
+      .catch(function () { /* hide on failure */ });
+  }
+
+  initWeather();
+
+  /* --- Skill Quiz --- */
+  var answers = [null, null, null];
+  var currentStep = 0;
+  var steps = document.querySelectorAll('.quiz-step');
+  var dots = [
+    document.getElementById('dot-0'),
+    document.getElementById('dot-1'),
+    document.getElementById('dot-2')
+  ];
+  var submitBtn = document.getElementById('quiz-submit');
+  var quizQuestions = document.getElementById('quiz-questions');
+  var quizResult = document.getElementById('quiz-result');
+  var resultName = document.getElementById('result-name');
+  var resultDesc = document.getElementById('result-desc');
+  var quizResetBtn = document.getElementById('quiz-reset');
+
+  var programs = {
+    A: {
+      name: 'Beginner Fundamentals',
+      desc: 'A four-session starter program covering grip, serve, dink, and basic court positioning. No experience needed — just show up ready to have fun and learn.'
+    },
+    B: {
+      name: 'Group Clinics',
+      desc: 'Small-group sessions (4–8 players) covering drills, point play, and doubles strategy. Build consistency in a motivated, supportive environment.'
+    },
+    C: {
+      name: 'Private Coaching',
+      desc: 'One-on-one sessions tailored to your skill level, technique, and match strategy. Targeted feedback that fixes the specific gaps costing you points.'
+    },
+    D: {
+      name: 'Tournament Prep',
+      desc: 'Intensive sessions for competitive players. Game plans, mental toughness, and match simulation — everything you need to step up your tournament game.'
+    }
+  };
+
+  document.querySelectorAll('.quiz-option').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var step = parseInt(this.getAttribute('data-step'), 10);
+      var val = this.getAttribute('data-val');
+
+      // Clear same-step selections
+      document.querySelectorAll('.quiz-option[data-step="' + step + '"]').forEach(function (b) {
+        b.classList.remove('selected');
+      });
+      this.classList.add('selected');
+      answers[step] = val;
+
+      // Short delay then advance
+      setTimeout(function () {
+        if (step < 2) {
+          steps[step].style.display = 'none';
+          steps[step + 1].style.display = 'block';
+          currentStep = step + 1;
+          dots[currentStep].classList.add('active');
+          if (currentStep === 2) {
+            submitBtn.style.display = 'inline-block';
+          }
+        } else {
+          submitBtn.style.display = 'inline-block';
+        }
+      }, 220);
+    });
+  });
+
+  submitBtn.addEventListener('click', function () {
+    if (answers[0] === null || answers[1] === null || answers[2] === null) {
+      return;
+    }
+    var counts = { A: 0, B: 0, C: 0, D: 0 };
+    answers.forEach(function (a) { if (a) counts[a]++; });
+    var top = Object.keys(counts).reduce(function (a, b) { return counts[a] >= counts[b] ? a : b; });
+    var prog = programs[top];
+
+    resultName.textContent = prog.name;
+    resultDesc.textContent = prog.desc;
+
+    quizQuestions.style.display = 'none';
+    submitBtn.style.display = 'none';
+    quizResult.style.display = 'block';
+  });
+
+  quizResetBtn.addEventListener('click', function () {
+    answers = [null, null, null];
+    currentStep = 0;
+
+    steps.forEach(function (s, i) { s.style.display = i === 0 ? 'block' : 'none'; });
+    document.querySelectorAll('.quiz-option').forEach(function (b) { b.classList.remove('selected'); });
+    dots.forEach(function (d, i) {
+      d.classList.toggle('active', i === 0);
+    });
+
+    quizResult.style.display = 'none';
+    submitBtn.style.display = 'none';
+    quizQuestions.style.display = 'block';
+  });
+
+  /* --- Smooth scroll for all nav anchors --- */
+  document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
+    anchor.addEventListener('click', function (e) {
+      var target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+
+})();
+</script>
+
+</body>
+</html>
